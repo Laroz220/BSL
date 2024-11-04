@@ -30,7 +30,7 @@ sudo apt-get install -y python3.9-tk python3.8-tk && sudo apt-get update
 
 ### 1.) Clone to desired install path
 ```
-git clone git@github.com:Laroz220/BrainSurf.git && cd BrainSurf
+git clone git@github.com:Laroz220/BrainSurf.git && cd BSL
 ```
 ### 2.) Install and configure
 
