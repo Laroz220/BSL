@@ -561,7 +561,7 @@ def edit_heuristic_file():
     subprocess.run(['xdg-open', file_path])  # Opens file in the default editor
 
 # Example button for editing heuristic
-edit_button = tk.Button(root, text="Edit heuristic", command=None, fg='#000000', bg='#FFFFFF', padx=5, pady=5)
+edit_button = tk.Button(root, text="Edit heuristic", command=edit_heuristic_file, fg='#000000', bg='#FFFFFF', padx=5, pady=5)
 edit_button.grid(row=len(scripts)+3, column=5, padx=1, pady=1, sticky="E")  # Same row, adjust column as needed
 
 # RUN FULL PIPELINE BUTTON / TEXT SIZE (potential spot for other monitoring)
