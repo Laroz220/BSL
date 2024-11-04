@@ -1,0 +1,1154 @@
+ non-interactive mode
+
+[0;32m
+*******************************
+* Welcome to SCT installation *
+*******************************
+[0m
+
+
+[0;32mChecking OS type and version...[0m
+
+Linux Laroz 6.8.0-47-generic #47-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep 27 21:40:26 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+[0;32mChecking requirements...[0m
+
+
+[0;32mOK![0m
+
+Source files not present. Downloading source files (@ 6.4) to /tmp/tmp.3CQDMhQRad/spinalcordtoolbox.
+Cloning into '/tmp/tmp.3CQDMhQRad/spinalcordtoolbox'...
+Note: switching to '06cceb585baacccff0385324f69a637b2dde65ab'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+
+SCT version ......... 6.4
+Installation type ... package
+Operating system .... linux (unknown)
+Shell config ........ /home/hurricane/.bashrc
+
+[0;32mSCT will be installed here: [/home/hurricane/sct_6.4][0m
+
+
+[0;32mCopying source files from /tmp/tmp.3CQDMhQRad/spinalcordtoolbox to /home/hurricane/sct_6.4[0m
+
+.........................................................................................................................................................................................................................................................................................................................................................................................................................................
+[0;32mRemoving sct and isct softlink from /home/hurricane/sct_6.4/bin[0m
+
+
+[0;34mrm -rf /home/hurricane/sct_6.4/python[0m
+
+
+[0;34mmkdir -p /home/hurricane/sct_6.4/python[0m
+
+
+[0;34mrm -rf /home/hurricane/sct_6.4/spinalcordtoolbox.egg-info[0m
+
+
+[0;32mDownloading Miniconda...[0m
+
+
+[0;34mwget -nv -O /tmp/tmp.3CQDMhQRad/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh[0m
+
+2024-11-03 23:56:58 URL:https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh [148337011/148337011] -> "/tmp/tmp.3CQDMhQRad/miniconda.sh" [1]
+
+[0;32mInstalling Miniconda...[0m
+
+
+[0;34mbash /tmp/tmp.3CQDMhQRad/miniconda.sh -p /home/hurricane/sct_6.4/python -b -f[0m
+
+PREFIX=/home/hurricane/sct_6.4/python
+Unpacking payload ...
+
+Installing base environment...
+
+Preparing transaction: ...working... done
+Executing transaction: ...working... done
+installation finished.
+
+[0;32mCreating conda environment...[0m
+
+Retrieving notices: ...working... done
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /home/hurricane/sct_6.4/python/envs/venv_sct
+
+  added / updated specs:
+    - python=3.9
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    pip-24.2                   |   py39h06a4308_0         2.2 MB
+    python-3.9.20              |       he870216_1        25.1 MB
+    setuptools-75.1.0          |   py39h06a4308_0         1.7 MB
+    wheel-0.44.0               |   py39h06a4308_0         108 KB
+    ------------------------------------------------------------
+                                           Total:        29.1 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu 
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2024.9.24-h06a4308_0 
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.40-h12ee557_0 
+  libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_1 
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1 
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1 
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1 
+  ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0 
+  openssl            pkgs/main/linux-64::openssl-3.0.15-h5eee18b_0 
+  pip                pkgs/main/linux-64::pip-24.2-py39h06a4308_0 
+  python             pkgs/main/linux-64::python-3.9.20-he870216_1 
+  readline           pkgs/main/linux-64::readline-8.2-h5eee18b_0 
+  setuptools         pkgs/main/linux-64::setuptools-75.1.0-py39h06a4308_0 
+  sqlite             pkgs/main/linux-64::sqlite-3.45.3-h5eee18b_0 
+  tk                 pkgs/main/linux-64::tk-8.6.14-h39e8969_0 
+  tzdata             pkgs/main/noarch::tzdata-2024b-h04d1e81_0 
+  wheel              pkgs/main/linux-64::wheel-0.44.0-py39h06a4308_0 
+  xz                 pkgs/main/linux-64::xz-5.4.6-h5eee18b_1 
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_1 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate /home/hurricane/sct_6.4/python/envs/venv_sct
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /home/hurricane/sct_6.4/python/envs/venv_sct
+
+  added / updated specs:
+    - libstdcxx-ng
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _libgcc_mutex-0.1          |      conda_forge           3 KB  conda-forge
+    _openmp_mutex-4.5          |            2_gnu          23 KB  conda-forge
+    libgcc-14.2.0              |       h77fa898_1         829 KB  conda-forge
+    libgcc-ng-14.2.0           |       h69a702a_1          53 KB  conda-forge
+    libgomp-14.2.0             |       h77fa898_1         450 KB  conda-forge
+    libstdcxx-14.2.0           |       hc0a3c3a_1         3.7 MB  conda-forge
+    libstdcxx-ng-14.2.0        |       h4852527_1          53 KB  conda-forge
+    openssl-3.3.2              |       hb9d3cd8_0         2.8 MB  conda-forge
+    ------------------------------------------------------------
+                                           Total:         7.8 MB
+
+The following NEW packages will be INSTALLED:
+
+  libgcc             conda-forge/linux-64::libgcc-14.2.0-h77fa898_1 
+  libstdcxx          conda-forge/linux-64::libstdcxx-14.2.0-hc0a3c3a_1 
+
+The following packages will be UPDATED:
+
+  libgcc-ng          pkgs/main::libgcc-ng-11.2.0-h1234567_1 --> conda-forge::libgcc-ng-14.2.0-h69a702a_1 
+  libgomp              pkgs/main::libgomp-11.2.0-h1234567_1 --> conda-forge::libgomp-14.2.0-h77fa898_1 
+  libstdcxx-ng       pkgs/main::libstdcxx-ng-11.2.0-h12345~ --> conda-forge::libstdcxx-ng-14.2.0-h4852527_1 
+  openssl              pkgs/main::openssl-3.0.15-h5eee18b_0 --> conda-forge::openssl-3.3.2-hb9d3cd8_0 
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  _libgcc_mutex           pkgs/main::_libgcc_mutex-0.1-main --> conda-forge::_libgcc_mutex-0.1-conda_forge 
+  _openmp_mutex          pkgs/main::_openmp_mutex-5.1-1_gnu --> conda-forge::_openmp_mutex-4.5-2_gnu 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+# All requested packages already installed.
+
+Requirement already satisfied: pip!=21.2.* in ./python/envs/venv_sct/lib/python3.9/site-packages (24.2)
+Collecting pip!=21.2.*
+  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 262.0 kB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.2
+    Uninstalling pip-24.2:
+      Successfully uninstalled pip-24.2
+Successfully installed pip-24.3.1
+
+[0;32mInstalling Python dependencies...[0m
+
+
+[0;32mUsing requirements-freeze.txt (release installation)[0m
+
+Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/cpu
+Ignoring msvc-runtime: markers 'sys_platform == "win32"' don't match your environment
+Collecting certifi
+  Using cached certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
+Collecting absl-py==2.1.0 (from -r requirements-freeze.txt (line 1))
+  Using cached absl_py-2.1.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting acvl_utils==0.2 (from -r requirements-freeze.txt (line 2))
+  Using cached acvl_utils-0.2-py3-none-any.whl
+Collecting astor==0.8.1 (from -r requirements-freeze.txt (line 3))
+  Using cached astor-0.8.1-py2.py3-none-any.whl.metadata (4.2 kB)
+Collecting attrs==24.2.0 (from -r requirements-freeze.txt (line 4))
+  Using cached attrs-24.2.0-py3-none-any.whl.metadata (11 kB)
+Collecting batchgenerators==0.25 (from -r requirements-freeze.txt (line 5))
+  Using cached batchgenerators-0.25-py3-none-any.whl
+Collecting bids-validator==1.14.7.post0 (from -r requirements-freeze.txt (line 6))
+  Using cached bids_validator-1.14.7.post0-py3-none-any.whl.metadata (39 kB)
+Collecting bidsschematools==0.10.0 (from -r requirements-freeze.txt (line 7))
+  Using cached bidsschematools-0.10.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting certifi
+  Using cached certifi-2024.7.4-py3-none-any.whl.metadata (2.2 kB)
+Collecting charset-normalizer==3.3.2 (from -r requirements-freeze.txt (line 9))
+  Using cached charset_normalizer-3.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (33 kB)
+Collecting click==8.1.7 (from -r requirements-freeze.txt (line 10))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting coloredlogs==15.0.1 (from -r requirements-freeze.txt (line 11))
+  Using cached coloredlogs-15.0.1-py2.py3-none-any.whl.metadata (12 kB)
+Collecting connected-components-3d==3.18.0 (from -r requirements-freeze.txt (line 12))
+  Using cached connected_components_3d-3.18.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (31 kB)
+Collecting contourpy==1.2.1 (from -r requirements-freeze.txt (line 13))
+  Using cached contourpy-1.2.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting coverage==7.6.1 (from -r requirements-freeze.txt (line 14))
+  Using cached coverage-7.6.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.3 kB)
+Collecting csv-diff==1.1 (from -r requirements-freeze.txt (line 15))
+  Using cached csv_diff-1.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting cycler==0.12.1 (from -r requirements-freeze.txt (line 16))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting Cython==3.0.11 (from -r requirements-freeze.txt (line 17))
+  Using cached Cython-3.0.11-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+Collecting deepdiff==7.0.1 (from -r requirements-freeze.txt (line 18))
+  Using cached deepdiff-7.0.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting Deprecated==1.2.14 (from -r requirements-freeze.txt (line 19))
+  Using cached Deprecated-1.2.14-py2.py3-none-any.whl.metadata (5.4 kB)
+Collecting dicom2nifti==2.4.11 (from -r requirements-freeze.txt (line 20))
+  Using cached dicom2nifti-2.4.11-py3-none-any.whl.metadata (1.3 kB)
+Collecting dictdiffer==0.9.0 (from -r requirements-freeze.txt (line 21))
+  Using cached dictdiffer-0.9.0-py2.py3-none-any.whl.metadata (4.8 kB)
+Collecting dipy==1.8.0 (from -r requirements-freeze.txt (line 22))
+  Using cached dipy-1.8.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+Collecting docker-pycreds==0.4.0 (from -r requirements-freeze.txt (line 23))
+  Using cached docker_pycreds-0.4.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting docopt==0.6.2 (from -r requirements-freeze.txt (line 24))
+  Using cached docopt-0.6.2-py2.py3-none-any.whl
+Collecting dynamic_network_architectures==0.3.1 (from -r requirements-freeze.txt (line 25))
+  Using cached dynamic_network_architectures-0.3.1-py3-none-any.whl
+Collecting exceptiongroup==1.2.2 (from -r requirements-freeze.txt (line 26))
+  Using cached exceptiongroup-1.2.2-py3-none-any.whl.metadata (6.6 kB)
+Collecting filelock==3.15.4 (from -r requirements-freeze.txt (line 27))
+  Using cached filelock-3.15.4-py3-none-any.whl.metadata (2.9 kB)
+Collecting flatbuffers==24.3.25 (from -r requirements-freeze.txt (line 28))
+  Using cached flatbuffers-24.3.25-py2.py3-none-any.whl.metadata (850 bytes)
+Collecting fonttools==4.53.1 (from -r requirements-freeze.txt (line 29))
+  Using cached fonttools-4.53.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (162 kB)
+Collecting formulaic==0.3.4 (from -r requirements-freeze.txt (line 30))
+  Using cached formulaic-0.3.4-py3-none-any.whl.metadata (5.6 kB)
+Collecting fsspec==2024.6.1 (from -r requirements-freeze.txt (line 31))
+  Using cached fsspec-2024.6.1-py3-none-any.whl.metadata (11 kB)
+Collecting future==1.0.0 (from -r requirements-freeze.txt (line 32))
+  Using cached future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting gitdb==4.0.11 (from -r requirements-freeze.txt (line 33))
+  Using cached gitdb-4.0.11-py3-none-any.whl.metadata (1.2 kB)
+Collecting GitPython==3.1.43 (from -r requirements-freeze.txt (line 34))
+  Using cached GitPython-3.1.43-py3-none-any.whl.metadata (13 kB)
+Collecting graphviz==0.20.3 (from -r requirements-freeze.txt (line 35))
+  Using cached graphviz-0.20.3-py3-none-any.whl.metadata (12 kB)
+Collecting grpcio==1.65.4 (from -r requirements-freeze.txt (line 36))
+  Using cached grpcio-1.65.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.3 kB)
+Collecting h5py==3.11.0 (from -r requirements-freeze.txt (line 37))
+  Using cached h5py-3.11.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+Collecting humanfriendly==10.0 (from -r requirements-freeze.txt (line 38))
+  Using cached humanfriendly-10.0-py2.py3-none-any.whl.metadata (9.2 kB)
+Collecting humanize==4.10.0 (from -r requirements-freeze.txt (line 39))
+  Using cached humanize-4.10.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting idna==3.7 (from -r requirements-freeze.txt (line 40))
+  Using cached idna-3.7-py3-none-any.whl.metadata (9.9 kB)
+Collecting imagecodecs==2024.6.1 (from -r requirements-freeze.txt (line 41))
+  Using cached imagecodecs-2024.6.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting imageio==2.34.2 (from -r requirements-freeze.txt (line 42))
+  Using cached imageio-2.34.2-py3-none-any.whl.metadata (4.9 kB)
+Collecting importlib_metadata==8.2.0 (from -r requirements-freeze.txt (line 43))
+  Using cached importlib_metadata-8.2.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting importlib_resources==6.4.0 (from -r requirements-freeze.txt (line 44))
+  Using cached importlib_resources-6.4.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting iniconfig==2.0.0 (from -r requirements-freeze.txt (line 45))
+  Using cached iniconfig-2.0.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting interface-meta==1.3.0 (from -r requirements-freeze.txt (line 46))
+  Using cached interface_meta-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting ivadomed==2.9.10 (from -r requirements-freeze.txt (line 47))
+  Using cached ivadomed-2.9.10-py3-none-any.whl.metadata (6.4 kB)
+Collecting Jinja2==3.1.4 (from -r requirements-freeze.txt (line 48))
+  Using cached jinja2-3.1.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting joblib==1.4.2 (from -r requirements-freeze.txt (line 49))
+  Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting jsonschema==4.23.0 (from -r requirements-freeze.txt (line 50))
+  Using cached jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting jsonschema-specifications==2023.12.1 (from -r requirements-freeze.txt (line 51))
+  Using cached jsonschema_specifications-2023.12.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting kiwisolver==1.4.5 (from -r requirements-freeze.txt (line 52))
+  Using cached kiwisolver-1.4.5-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.4 kB)
+Collecting lazy_loader==0.4 (from -r requirements-freeze.txt (line 53))
+  Using cached lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+Collecting linecache2==1.0.0 (from -r requirements-freeze.txt (line 54))
+  Using cached linecache2-1.0.0-py2.py3-none-any.whl.metadata (1000 bytes)
+Collecting loguru==0.7.2 (from -r requirements-freeze.txt (line 55))
+  Using cached loguru-0.7.2-py3-none-any.whl.metadata (23 kB)
+Collecting lxml==5.2.2 (from -r requirements-freeze.txt (line 56))
+  Using cached lxml-5.2.2-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (3.4 kB)
+Collecting Markdown==3.6 (from -r requirements-freeze.txt (line 57))
+  Using cached Markdown-3.6-py3-none-any.whl.metadata (7.0 kB)
+Collecting markdown-it-py==3.0.0 (from -r requirements-freeze.txt (line 58))
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting MarkupSafe==2.1.5 (from -r requirements-freeze.txt (line 59))
+  Using cached https://download.pytorch.org/whl/MarkupSafe-2.1.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Collecting matplotlib==3.9.1.post1 (from -r requirements-freeze.txt (line 60))
+  Using cached matplotlib-3.9.1.post1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting matplotlib-inline==0.1.7 (from -r requirements-freeze.txt (line 61))
+  Using cached matplotlib_inline-0.1.7-py3-none-any.whl.metadata (3.9 kB)
+Collecting mdurl==0.1.2 (from -r requirements-freeze.txt (line 62))
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting monai==1.3.2 (from -r requirements-freeze.txt (line 63))
+  Using cached monai-1.3.2-py3-none-any.whl.metadata (10 kB)
+Collecting mpmath==1.3.0 (from -r requirements-freeze.txt (line 64))
+  Using cached https://download.pytorch.org/whl/mpmath-1.3.0-py3-none-any.whl (536 kB)
+Collecting networkx==3.2.1 (from -r requirements-freeze.txt (line 65))
+  Using cached https://download.pytorch.org/whl/networkx-3.2.1-py3-none-any.whl (1.6 MB)
+Collecting neurite==0.2 (from -r requirements-freeze.txt (line 66))
+  Using cached neurite-0.2-py3-none-any.whl.metadata (653 bytes)
+Collecting nibabel==5.2.1 (from -r requirements-freeze.txt (line 67))
+  Using cached nibabel-5.2.1-py3-none-any.whl.metadata (8.8 kB)
+Collecting nilearn==0.10.4 (from -r requirements-freeze.txt (line 68))
+  Using cached nilearn-0.10.4-py3-none-any.whl.metadata (7.8 kB)
+Collecting nnunetv2==2.3.1 (from -r requirements-freeze.txt (line 69))
+  Using cached nnunetv2-2.3.1-py3-none-any.whl
+Collecting num2words==0.5.13 (from -r requirements-freeze.txt (line 70))
+  Using cached num2words-0.5.13-py3-none-any.whl.metadata (12 kB)
+Collecting numpy==1.26.4 (from -r requirements-freeze.txt (line 71))
+  Using cached numpy-1.26.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting onnx==1.16.2 (from -r requirements-freeze.txt (line 72))
+  Using cached onnx-1.16.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (16 kB)
+Collecting onnxruntime==1.18.1 (from -r requirements-freeze.txt (line 73))
+  Using cached onnxruntime-1.18.1-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (4.3 kB)
+Collecting ordered-set==4.1.0 (from -r requirements-freeze.txt (line 74))
+  Using cached ordered_set-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+Collecting packaging==24.1 (from -r requirements-freeze.txt (line 75))
+  Downloading https://download.pytorch.org/whl/packaging-24.1-py3-none-any.whl (53 kB)
+Collecting pandas==1.5.3 (from -r requirements-freeze.txt (line 76))
+  Using cached pandas-1.5.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting pillow==10.4.0 (from -r requirements-freeze.txt (line 77))
+  Using cached pillow-10.4.0-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+Collecting platformdirs==4.2.2 (from -r requirements-freeze.txt (line 78))
+  Using cached platformdirs-4.2.2-py3-none-any.whl.metadata (11 kB)
+Collecting pluggy==1.5.0 (from -r requirements-freeze.txt (line 79))
+  Using cached pluggy-1.5.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting portalocker==2.10.1 (from -r requirements-freeze.txt (line 80))
+  Downloading https://download.pytorch.org/whl/portalocker-2.10.1-py3-none-any.whl (18 kB)
+Collecting protobuf==4.25.4 (from -r requirements-freeze.txt (line 81))
+  Using cached protobuf-4.25.4-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Collecting psutil==6.0.0 (from -r requirements-freeze.txt (line 82))
+  Using cached psutil-6.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting pybids==0.15.5 (from -r requirements-freeze.txt (line 83))
+  Using cached pybids-0.15.5-py3-none-any.whl.metadata (3.2 kB)
+Collecting pydicom==2.4.4 (from -r requirements-freeze.txt (line 84))
+  Using cached pydicom-2.4.4-py3-none-any.whl.metadata (7.8 kB)
+Collecting Pygments==2.18.0 (from -r requirements-freeze.txt (line 85))
+  Using cached pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting pyparsing==3.1.2 (from -r requirements-freeze.txt (line 86))
+  Using cached pyparsing-3.1.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting PyQt5==5.12.3 (from -r requirements-freeze.txt (line 87))
+  Using cached PyQt5-5.12.3-5.12.10-cp35.cp36.cp37.cp38.cp39-abi3-manylinux1_x86_64.whl.metadata (2.2 kB)
+Collecting PyQt5-sip==12.12.2 (from -r requirements-freeze.txt (line 88))
+  Using cached PyQt5_sip-12.12.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (504 bytes)
+Collecting pystrum==0.4 (from -r requirements-freeze.txt (line 89))
+  Using cached pystrum-0.4-py3-none-any.whl
+Collecting pytest==8.3.2 (from -r requirements-freeze.txt (line 90))
+  Using cached pytest-8.3.2-py3-none-any.whl.metadata (7.5 kB)
+Collecting pytest-console-scripts==1.4.1 (from -r requirements-freeze.txt (line 91))
+  Using cached pytest_console_scripts-1.4.1-py3-none-any.whl.metadata (11 kB)
+Collecting pytest-cov==5.0.0 (from -r requirements-freeze.txt (line 92))
+  Using cached pytest_cov-5.0.0-py3-none-any.whl.metadata (27 kB)
+Collecting python-dateutil==2.9.0.post0 (from -r requirements-freeze.txt (line 93))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting python-gdcm==3.0.24.1 (from -r requirements-freeze.txt (line 94))
+  Using cached python_gdcm-3.0.24.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.7 kB)
+Collecting pytz==2024.1 (from -r requirements-freeze.txt (line 95))
+  Using cached pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting PyYAML==6.0.2 (from -r requirements-freeze.txt (line 96))
+  Using cached PyYAML-6.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting referencing==0.35.1 (from -r requirements-freeze.txt (line 97))
+  Using cached referencing-0.35.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting requests==2.32.3 (from -r requirements-freeze.txt (line 98))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting requirements-parser==0.10.2 (from -r requirements-freeze.txt (line 99))
+  Using cached requirements_parser-0.10.2-py3-none-any.whl.metadata (4.7 kB)
+Collecting rich==13.7.1 (from -r requirements-freeze.txt (line 100))
+  Using cached rich-13.7.1-py3-none-any.whl.metadata (18 kB)
+Collecting rpds-py==0.20.0 (from -r requirements-freeze.txt (line 101))
+  Using cached rpds_py-0.20.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting scikit-image==0.24.0 (from -r requirements-freeze.txt (line 102))
+  Using cached scikit_image-0.24.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+Collecting scikit-learn==1.5.1 (from -r requirements-freeze.txt (line 103))
+  Using cached scikit_learn-1.5.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting scipy==1.13.1 (from -r requirements-freeze.txt (line 104))
+  Using cached scipy-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+Collecting seaborn==0.13.2 (from -r requirements-freeze.txt (line 105))
+  Using cached seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting sentry-sdk==2.12.0 (from -r requirements-freeze.txt (line 106))
+  Using cached sentry_sdk-2.12.0-py2.py3-none-any.whl.metadata (9.8 kB)
+Collecting setproctitle==1.3.3 (from -r requirements-freeze.txt (line 107))
+  Using cached setproctitle-1.3.3-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.9 kB)
+Collecting setuptools-scm==8.1.0 (from -r requirements-freeze.txt (line 108))
+  Using cached setuptools_scm-8.1.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting shellingham==1.5.4 (from -r requirements-freeze.txt (line 109))
+  Using cached shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting SimpleITK==2.3.1 (from -r requirements-freeze.txt (line 110))
+  Using cached SimpleITK-2.3.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.9 kB)
+Collecting six==1.16.0 (from -r requirements-freeze.txt (line 111))
+  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting smmap==5.0.1 (from -r requirements-freeze.txt (line 112))
+  Using cached smmap-5.0.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting SQLAlchemy==1.3.24 (from -r requirements-freeze.txt (line 113))
+  Using cached SQLAlchemy-1.3.24-cp39-cp39-manylinux2010_x86_64.whl.metadata (7.9 kB)
+Collecting sympy==1.13.1 (from -r requirements-freeze.txt (line 114))
+  Using cached https://download.pytorch.org/whl/sympy-1.13.1-py3-none-any.whl (6.2 MB)
+Collecting tensorboard==2.17.0 (from -r requirements-freeze.txt (line 115))
+  Using cached tensorboard-2.17.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting tensorboard-data-server==0.7.2 (from -r requirements-freeze.txt (line 116))
+  Using cached tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+Collecting threadpoolctl==3.5.0 (from -r requirements-freeze.txt (line 117))
+  Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+Collecting tifffile==2024.7.24 (from -r requirements-freeze.txt (line 118))
+  Using cached tifffile-2024.7.24-py3-none-any.whl.metadata (31 kB)
+Collecting tomli==2.0.1 (from -r requirements-freeze.txt (line 119))
+  Using cached tomli-2.0.1-py3-none-any.whl.metadata (8.9 kB)
+Collecting tqdm==4.66.5 (from -r requirements-freeze.txt (line 120))
+  Downloading https://download.pytorch.org/whl/tqdm-4.66.5-py3-none-any.whl (78 kB)
+Collecting traceback2==1.4.0 (from -r requirements-freeze.txt (line 121))
+  Using cached traceback2-1.4.0-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting traitlets==5.14.3 (from -r requirements-freeze.txt (line 122))
+  Using cached traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+Collecting transforms3d==0.4.2 (from -r requirements-freeze.txt (line 123))
+  Using cached transforms3d-0.4.2-py3-none-any.whl.metadata (2.8 kB)
+Collecting trx-python==0.3 (from -r requirements-freeze.txt (line 124))
+  Using cached trx_python-0.3-py3-none-any.whl.metadata (2.7 kB)
+Collecting typer==0.12.3 (from -r requirements-freeze.txt (line 125))
+  Using cached typer-0.12.3-py3-none-any.whl.metadata (15 kB)
+Collecting types-setuptools==71.1.0.20240806 (from -r requirements-freeze.txt (line 126))
+  Using cached types_setuptools-71.1.0.20240806-py3-none-any.whl.metadata (1.8 kB)
+Collecting typing_extensions==4.12.2 (from -r requirements-freeze.txt (line 127))
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting unittest2==1.1.0 (from -r requirements-freeze.txt (line 128))
+  Using cached unittest2-1.1.0-py2.py3-none-any.whl.metadata (15 kB)
+Collecting urllib3==2.2.2 (from -r requirements-freeze.txt (line 129))
+  Using cached urllib3-2.2.2-py3-none-any.whl.metadata (6.4 kB)
+Collecting voxelmorph==0.2 (from -r requirements-freeze.txt (line 130))
+  Using cached voxelmorph-0.2-py3-none-any.whl.metadata (660 bytes)
+Collecting wandb==0.17.6 (from -r requirements-freeze.txt (line 131))
+  Using cached wandb-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting Werkzeug==3.0.3 (from -r requirements-freeze.txt (line 132))
+  Using cached werkzeug-3.0.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting wquantiles==0.6 (from -r requirements-freeze.txt (line 133))
+  Using cached wquantiles-0.6-py3-none-any.whl.metadata (1.1 kB)
+Collecting wrapt==1.16.0 (from -r requirements-freeze.txt (line 134))
+  Using cached wrapt-1.16.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting XlsxWriter==3.2.0 (from -r requirements-freeze.txt (line 135))
+  Using cached XlsxWriter-3.2.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting xlwt==1.3.0 (from -r requirements-freeze.txt (line 136))
+  Using cached xlwt-1.3.0-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting yacs==0.1.8 (from -r requirements-freeze.txt (line 137))
+  Using cached yacs-0.1.8-py3-none-any.whl.metadata (639 bytes)
+Collecting zipp==3.19.2 (from -r requirements-freeze.txt (line 138))
+  Using cached zipp-3.19.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting torch (from acvl_utils==0.2->-r requirements-freeze.txt (line 2))
+  Downloading https://download.pytorch.org/whl/cpu/torch-2.5.1%2Bcpu-cp39-cp39-linux_x86_64.whl (174.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 174.7/174.7 MB 3.2 MB/s eta 0:00:00
+Collecting torchio>=0.18.68 (from ivadomed==2.9.10->-r requirements-freeze.txt (line 47))
+  Using cached torchio-0.20.1-py3-none-any.whl.metadata (50 kB)
+Collecting torchvision>=0.9.1 (from ivadomed==2.9.10->-r requirements-freeze.txt (line 47))
+  Downloading https://download.pytorch.org/whl/cpu/torchvision-0.20.1%2Bcpu-cp39-cp39-linux_x86_64.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 1.8 MB/s eta 0:00:00
+Collecting setuptools (from setuptools-scm==8.1.0->-r requirements-freeze.txt (line 108))
+  Downloading setuptools-75.3.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting argparse (from unittest2==1.1.0->-r requirements-freeze.txt (line 128))
+  Using cached argparse-1.4.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Using cached certifi-2024.7.4-py3-none-any.whl (162 kB)
+Using cached absl_py-2.1.0-py3-none-any.whl (133 kB)
+Using cached astor-0.8.1-py2.py3-none-any.whl (27 kB)
+Using cached attrs-24.2.0-py3-none-any.whl (63 kB)
+Using cached bids_validator-1.14.7.post0-py3-none-any.whl (23 kB)
+Using cached bidsschematools-0.10.0-py3-none-any.whl (2.7 MB)
+Using cached charset_normalizer-3.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+Using cached connected_components_3d-3.18.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.7 MB)
+Using cached contourpy-1.2.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (304 kB)
+Using cached coverage-7.6.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (234 kB)
+Using cached csv_diff-1.1-py3-none-any.whl (12 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached Cython-3.0.11-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+Using cached deepdiff-7.0.1-py3-none-any.whl (80 kB)
+Using cached Deprecated-1.2.14-py2.py3-none-any.whl (9.6 kB)
+Using cached dicom2nifti-2.4.11-py3-none-any.whl (43 kB)
+Using cached dictdiffer-0.9.0-py2.py3-none-any.whl (16 kB)
+Using cached dipy-1.8.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.0 MB)
+Using cached docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Using cached exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
+Using cached filelock-3.15.4-py3-none-any.whl (16 kB)
+Using cached flatbuffers-24.3.25-py2.py3-none-any.whl (26 kB)
+Using cached fonttools-4.53.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+Using cached formulaic-0.3.4-py3-none-any.whl (68 kB)
+Using cached fsspec-2024.6.1-py3-none-any.whl (177 kB)
+Using cached future-1.0.0-py3-none-any.whl (491 kB)
+Using cached gitdb-4.0.11-py3-none-any.whl (62 kB)
+Using cached GitPython-3.1.43-py3-none-any.whl (207 kB)
+Using cached graphviz-0.20.3-py3-none-any.whl (47 kB)
+Using cached grpcio-1.65.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.7 MB)
+Using cached h5py-3.11.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.3 MB)
+Using cached humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+Using cached humanize-4.10.0-py3-none-any.whl (126 kB)
+Using cached idna-3.7-py3-none-any.whl (66 kB)
+Using cached imagecodecs-2024.6.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (39.6 MB)
+Using cached imageio-2.34.2-py3-none-any.whl (313 kB)
+Using cached importlib_metadata-8.2.0-py3-none-any.whl (25 kB)
+Using cached importlib_resources-6.4.0-py3-none-any.whl (38 kB)
+Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Using cached interface_meta-1.3.0-py3-none-any.whl (14 kB)
+Using cached ivadomed-2.9.10-py3-none-any.whl (240 kB)
+Using cached jinja2-3.1.4-py3-none-any.whl (133 kB)
+Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+Using cached jsonschema-4.23.0-py3-none-any.whl (88 kB)
+Using cached jsonschema_specifications-2023.12.1-py3-none-any.whl (18 kB)
+Using cached kiwisolver-1.4.5-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+Using cached lazy_loader-0.4-py3-none-any.whl (12 kB)
+Using cached linecache2-1.0.0-py2.py3-none-any.whl (12 kB)
+Using cached loguru-0.7.2-py3-none-any.whl (62 kB)
+Using cached lxml-5.2.2-cp39-cp39-manylinux_2_28_x86_64.whl (5.0 MB)
+Using cached Markdown-3.6-py3-none-any.whl (105 kB)
+Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Using cached matplotlib-3.9.1.post1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+Using cached matplotlib_inline-0.1.7-py3-none-any.whl (9.9 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Using cached monai-1.3.2-py3-none-any.whl (1.4 MB)
+Using cached neurite-0.2-py3-none-any.whl (108 kB)
+Using cached nibabel-5.2.1-py3-none-any.whl (3.3 MB)
+Using cached nilearn-0.10.4-py3-none-any.whl (10.4 MB)
+Using cached num2words-0.5.13-py3-none-any.whl (143 kB)
+Using cached numpy-1.26.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+Using cached onnx-1.16.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (15.9 MB)
+Using cached onnxruntime-1.18.1-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.8 MB)
+Using cached ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
+Using cached pandas-1.5.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
+Using cached pillow-10.4.0-cp39-cp39-manylinux_2_28_x86_64.whl (4.5 MB)
+Using cached platformdirs-4.2.2-py3-none-any.whl (18 kB)
+Using cached pluggy-1.5.0-py3-none-any.whl (20 kB)
+Using cached protobuf-4.25.4-cp37-abi3-manylinux2014_x86_64.whl (294 kB)
+Using cached psutil-6.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (290 kB)
+Using cached pybids-0.15.5-py3-none-any.whl (14.9 MB)
+Using cached pydicom-2.4.4-py3-none-any.whl (1.8 MB)
+Using cached pygments-2.18.0-py3-none-any.whl (1.2 MB)
+Using cached pyparsing-3.1.2-py3-none-any.whl (103 kB)
+Using cached PyQt5-5.12.3-5.12.10-cp35.cp36.cp37.cp38.cp39-abi3-manylinux1_x86_64.whl (62.4 MB)
+Using cached PyQt5_sip-12.12.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl (335 kB)
+Using cached pytest-8.3.2-py3-none-any.whl (341 kB)
+Using cached pytest_console_scripts-1.4.1-py3-none-any.whl (10 kB)
+Using cached pytest_cov-5.0.0-py3-none-any.whl (21 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached python_gdcm-3.0.24.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+Using cached pytz-2024.1-py2.py3-none-any.whl (505 kB)
+Using cached PyYAML-6.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (737 kB)
+Using cached referencing-0.35.1-py3-none-any.whl (26 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Using cached requirements_parser-0.10.2-py3-none-any.whl (14 kB)
+Using cached rich-13.7.1-py3-none-any.whl (240 kB)
+Using cached rpds_py-0.20.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (355 kB)
+Using cached scikit_image-0.24.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.9 MB)
+Using cached scikit_learn-1.5.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.4 MB)
+Using cached scipy-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.6 MB)
+Using cached seaborn-0.13.2-py3-none-any.whl (294 kB)
+Using cached sentry_sdk-2.12.0-py2.py3-none-any.whl (301 kB)
+Using cached setproctitle-1.3.3-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (30 kB)
+Using cached setuptools_scm-8.1.0-py3-none-any.whl (43 kB)
+Using cached shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Using cached SimpleITK-2.3.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (52.7 MB)
+Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached smmap-5.0.1-py3-none-any.whl (24 kB)
+Using cached SQLAlchemy-1.3.24-cp39-cp39-manylinux2010_x86_64.whl (1.3 MB)
+Using cached tensorboard-2.17.0-py3-none-any.whl (5.5 MB)
+Using cached tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Using cached tifffile-2024.7.24-py3-none-any.whl (226 kB)
+Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Using cached traceback2-1.4.0-py2.py3-none-any.whl (16 kB)
+Using cached traitlets-5.14.3-py3-none-any.whl (85 kB)
+Using cached transforms3d-0.4.2-py3-none-any.whl (1.4 MB)
+Using cached trx_python-0.3-py3-none-any.whl (45 kB)
+Using cached typer-0.12.3-py3-none-any.whl (47 kB)
+Using cached types_setuptools-71.1.0.20240806-py3-none-any.whl (64 kB)
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Using cached unittest2-1.1.0-py2.py3-none-any.whl (96 kB)
+Using cached urllib3-2.2.2-py3-none-any.whl (121 kB)
+Using cached voxelmorph-0.2-py3-none-any.whl (54 kB)
+Using cached wandb-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.1 MB)
+Using cached werkzeug-3.0.3-py3-none-any.whl (227 kB)
+Using cached wquantiles-0.6-py3-none-any.whl (3.3 kB)
+Using cached wrapt-1.16.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (80 kB)
+Using cached XlsxWriter-3.2.0-py3-none-any.whl (159 kB)
+Using cached xlwt-1.3.0-py2.py3-none-any.whl (99 kB)
+Using cached yacs-0.1.8-py3-none-any.whl (14 kB)
+Using cached zipp-3.19.2-py3-none-any.whl (9.0 kB)
+Downloading setuptools-75.3.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 99.3 kB/s eta 0:00:00
+Using cached torchio-0.20.1-py3-none-any.whl (175 kB)
+Using cached argparse-1.4.0-py2.py3-none-any.whl (23 kB)
+Installing collected packages: xlwt, SimpleITK, pytz, mpmath, linecache2, flatbuffers, docopt, dictdiffer, argparse, zipp, XlsxWriter, wrapt, urllib3, typing_extensions, types-setuptools, traitlets, traceback2, tqdm, tomli, threadpoolctl, tensorboard-data-server, sympy, SQLAlchemy, smmap, six, shellingham, setuptools, setproctitle, rpds-py, PyYAML, python-gdcm, PyQt5-sip, pyparsing, Pygments, pydicom, psutil, protobuf, portalocker, pluggy, platformdirs, pillow, packaging, ordered-set, numpy, num2words, networkx, mdurl, MarkupSafe, lxml, loguru, kiwisolver, joblib, interface-meta, iniconfig, idna, humanize, humanfriendly, grpcio, graphviz, future, fsspec, fonttools, filelock, exceptiongroup, Cython, cycler, coverage, click, charset-normalizer, certifi, attrs, astor, absl-py, yacs, wquantiles, Werkzeug, unittest2, transforms3d, tifffile, setuptools-scm, sentry-sdk, scipy, requirements-parser, requests, referencing, python-dateutil, pytest, PyQt5, onnx, nibabel, matplotlib-inline, markdown-it-py, lazy_loader, Jinja2, importlib_resources, importlib_metadata, imageio, imagecodecs, h5py, gitdb, docker-pycreds, Deprecated, deepdiff, csv-diff, contourpy, connected-components-3d, coloredlogs, trx-python, torch, scikit-learn, scikit-image, rich, pytest-cov, pytest-console-scripts, pandas, onnxruntime, matplotlib, Markdown, jsonschema-specifications, GitPython, dicom2nifti, wandb, typer, torchvision, tensorboard, seaborn, pystrum, nilearn, monai, jsonschema, formulaic, dynamic_network_architectures, dipy, batchgenerators, torchio, neurite, bidsschematools, acvl_utils, voxelmorph, nnunetv2, bids-validator, pybids, ivadomed
+Successfully installed Cython-3.0.11 Deprecated-1.2.14 GitPython-3.1.43 Jinja2-3.1.4 Markdown-3.6 MarkupSafe-2.1.5 PyQt5-5.12.3 PyQt5-sip-12.12.2 PyYAML-6.0.2 Pygments-2.18.0 SQLAlchemy-1.3.24 SimpleITK-2.3.1 Werkzeug-3.0.3 XlsxWriter-3.2.0 absl-py-2.1.0 acvl_utils-0.2 argparse-1.4.0 astor-0.8.1 attrs-24.2.0 batchgenerators-0.25 bids-validator-1.14.7.post0 bidsschematools-0.10.0 certifi-2024.7.4 charset-normalizer-3.3.2 click-8.1.7 coloredlogs-15.0.1 connected-components-3d-3.18.0 contourpy-1.2.1 coverage-7.6.1 csv-diff-1.1 cycler-0.12.1 deepdiff-7.0.1 dicom2nifti-2.4.11 dictdiffer-0.9.0 dipy-1.8.0 docker-pycreds-0.4.0 docopt-0.6.2 dynamic_network_architectures-0.3.1 exceptiongroup-1.2.2 filelock-3.15.4 flatbuffers-24.3.25 fonttools-4.53.1 formulaic-0.3.4 fsspec-2024.6.1 future-1.0.0 gitdb-4.0.11 graphviz-0.20.3 grpcio-1.65.4 h5py-3.11.0 humanfriendly-10.0 humanize-4.10.0 idna-3.7 imagecodecs-2024.6.1 imageio-2.34.2 importlib_metadata-8.2.0 importlib_resources-6.4.0 iniconfig-2.0.0 interface-meta-1.3.0 ivadomed-2.9.10 joblib-1.4.2 jsonschema-4.23.0 jsonschema-specifications-2023.12.1 kiwisolver-1.4.5 lazy_loader-0.4 linecache2-1.0.0 loguru-0.7.2 lxml-5.2.2 markdown-it-py-3.0.0 matplotlib-3.9.1.post1 matplotlib-inline-0.1.7 mdurl-0.1.2 monai-1.3.2 mpmath-1.3.0 networkx-3.2.1 neurite-0.2 nibabel-5.2.1 nilearn-0.10.4 nnunetv2-2.3.1 num2words-0.5.13 numpy-1.26.4 onnx-1.16.2 onnxruntime-1.18.1 ordered-set-4.1.0 packaging-24.1 pandas-1.5.3 pillow-10.4.0 platformdirs-4.2.2 pluggy-1.5.0 portalocker-2.10.1 protobuf-4.25.4 psutil-6.0.0 pybids-0.15.5 pydicom-2.4.4 pyparsing-3.1.2 pystrum-0.4 pytest-8.3.2 pytest-console-scripts-1.4.1 pytest-cov-5.0.0 python-dateutil-2.9.0.post0 python-gdcm-3.0.24.1 pytz-2024.1 referencing-0.35.1 requests-2.32.3 requirements-parser-0.10.2 rich-13.7.1 rpds-py-0.20.0 scikit-image-0.24.0 scikit-learn-1.5.1 scipy-1.13.1 seaborn-0.13.2 sentry-sdk-2.12.0 setproctitle-1.3.3 setuptools-75.1.0 setuptools-scm-8.1.0 shellingham-1.5.4 six-1.16.0 smmap-5.0.1 sympy-1.13.1 tensorboard-2.17.0 tensorboard-data-server-0.7.2 threadpoolctl-3.5.0 tifffile-2024.7.24 tomli-2.0.1 torch-2.5.1+cpu torchio-0.20.1 torchvision-0.20.1+cpu tqdm-4.66.5 traceback2-1.4.0 traitlets-5.14.3 transforms3d-0.4.2 trx-python-0.3 typer-0.12.3 types-setuptools-71.1.0.20240806 typing_extensions-4.12.2 unittest2-1.1.0 urllib3-2.2.2 voxelmorph-0.2 wandb-0.17.6 wquantiles-0.6 wrapt-1.16.0 xlwt-1.3.0 yacs-0.1.8 zipp-3.19.2
+
+[0;32mInstalling spinalcordtoolbox...[0m
+
+Obtaining file:///home/hurricane/sct_6.4
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: spinalcordtoolbox
+  Building editable for spinalcordtoolbox (pyproject.toml): started
+  Building editable for spinalcordtoolbox (pyproject.toml): finished with status 'done'
+  Created wheel for spinalcordtoolbox: filename=spinalcordtoolbox-6.4-0.editable-py3-none-any.whl size=9683 sha256=c549e4796fc71b2f506c2458ce801090f77cbf91025d81f70afcd10810518c2f
+  Stored in directory: /tmp/pip-ephem-wheel-cache-cifdun_b/wheels/b1/0b/c6/0b65e233a4bc9fb749c7b1db3819b9f0fef31da3f513b2a89d
+Successfully built spinalcordtoolbox
+Installing collected packages: spinalcordtoolbox
+Successfully installed spinalcordtoolbox-6.4
+
+[0;32mCreating launchers for Python scripts...[0m
+
+
+[0;32mInstalling binaries...[0m
+
+
+[0;34msct_download_data -d binaries_linux -k[0m
+
+
+--
+Spinal Cord Toolbox (6.4)
+
+sct_download_data -d binaries_linux -k
+--
+
+Trying URL: https://github.com/spinalcordtoolbox/spinalcordtoolbox-binaries/releases/download/r20221109/spinalcordtoolbox-binaries_linux.tar.gz
+Downloading: spinalcordtoolbox-binaries_linux.tar.gz
+Status:   0%|          | 0.00/83.7M [00:00<?, ?B/s]Status:   0%|          | 57.3k/83.7M [00:00<05:51, 238kB/s]Status:   0%|          | 81.9k/83.7M [00:00<05:51, 238kB/s]Status:   0%|          | 180k/83.7M [00:00<03:20, 417kB/s] Status:   0%|          | 229k/83.7M [00:00<03:35, 387kB/s]Status:   0%|          | 270k/83.7M [00:00<04:23, 317kB/s]Status:   0%|          | 303k/83.7M [00:01<05:31, 252kB/s]Status:   0%|          | 336k/83.7M [00:01<05:40, 245kB/s]Status:   0%|          | 369k/83.7M [00:01<05:44, 242kB/s]Status:   0%|          | 401k/83.7M [00:01<05:59, 232kB/s]Status:   1%|          | 426k/83.7M [00:01<06:38, 209kB/s]Status:   1%|          | 451k/83.7M [00:01<06:24, 216kB/s]Status:   1%|          | 475k/83.7M [00:01<07:38, 181kB/s]Status:   1%|          | 508k/83.7M [00:02<08:32, 162kB/s]Status:   1%|          | 541k/83.7M [00:02<07:09, 193kB/s]Status:   1%|          | 573k/83.7M [00:02<07:41, 180kB/s]Status:   1%|          | 606k/83.7M [00:02<07:12, 192kB/s]Status:   1%|          | 639k/83.7M [00:02<07:36, 182kB/s]Status:   1%|          | 672k/83.7M [00:02<07:13, 192kB/s]Status:   1%|          | 705k/83.7M [00:03<06:45, 205kB/s]Status:   1%|          | 737k/83.7M [00:03<06:40, 207kB/s]Status:   1%|          | 770k/83.7M [00:03<06:05, 227kB/s]Status:   1%|          | 803k/83.7M [00:03<06:01, 229kB/s]Status:   1%|          | 827k/83.7M [00:03<05:58, 231kB/s]Status:   1%|          | 852k/83.7M [00:03<07:16, 190kB/s]Status:   1%|          | 885k/83.7M [00:04<07:39, 180kB/s]Status:   1%|          | 909k/83.7M [00:04<07:08, 193kB/s]Status:   1%|          | 934k/83.7M [00:04<09:03, 152kB/s]Status:   1%|          | 958k/83.7M [00:04<08:46, 157kB/s]Status:   1%|          | 983k/83.7M [00:04<09:33, 144kB/s]Status:   1%|          | 999k/83.7M [00:04<10:06, 136kB/s]Status:   1%|          | 1.02M/83.7M [00:04<09:44, 141kB/s]Status:   1%|▏         | 1.05M/83.7M [00:05<09:13, 149kB/s]Status:   1%|▏         | 1.06M/83.7M [00:05<09:09, 150kB/s]Status:   1%|▏         | 1.08M/83.7M [00:05<11:56, 115kB/s]Status:   1%|▏         | 1.10M/83.7M [00:05<14:10, 97.1kB/s]Status:   1%|▏         | 1.11M/83.7M [00:05<14:57, 92.0kB/s]Status:   1%|▏         | 1.13M/83.7M [00:06<14:09, 97.2kB/s]Status:   1%|▏         | 1.15M/83.7M [00:06<12:36, 109kB/s] Status:   1%|▏         | 1.18M/83.7M [00:06<10:35, 130kB/s]Status:   1%|▏         | 1.21M/83.7M [00:06<08:57, 153kB/s]Status:   1%|▏         | 1.25M/83.7M [00:06<07:20, 187kB/s]Status:   2%|▏         | 1.28M/83.7M [00:06<06:53, 199kB/s]Status:   2%|▏         | 1.31M/83.7M [00:06<06:00, 228kB/s]Status:   2%|▏         | 1.34M/83.7M [00:07<05:27, 251kB/s]Status:   2%|▏         | 1.39M/83.7M [00:07<04:59, 275kB/s]Status:   2%|▏         | 1.43M/83.7M [00:07<05:14, 261kB/s]Status:   2%|▏         | 1.46M/83.7M [00:07<04:59, 275kB/s]Status:   2%|▏         | 1.49M/83.7M [00:07<05:16, 259kB/s]Status:   2%|▏         | 1.52M/83.7M [00:07<06:20, 216kB/s]Status:   2%|▏         | 1.56M/83.7M [00:07<06:49, 201kB/s]Status:   2%|▏         | 1.59M/83.7M [00:08<07:13, 189kB/s]Status:   2%|▏         | 1.61M/83.7M [00:08<06:52, 199kB/s]Status:   2%|▏         | 1.64M/83.7M [00:08<07:15, 188kB/s]Status:   2%|▏         | 1.67M/83.7M [00:08<06:56, 197kB/s]Status:   2%|▏         | 1.70M/83.7M [00:08<06:45, 202kB/s]Status:   2%|▏         | 1.73M/83.7M [00:08<07:03, 194kB/s]Status:   2%|▏         | 1.75M/83.7M [00:09<15:40, 87.1kB/s]Status:   2%|▏         | 1.77M/83.7M [00:09<16:39, 81.9kB/s]Status:   2%|▏         | 1.79M/83.7M [00:10<19:31, 69.9kB/s]Status:   2%|▏         | 1.80M/83.7M [00:10<18:58, 71.9kB/s]Status:   2%|▏         | 1.82M/83.7M [00:10<20:15, 67.3kB/s]Status:   2%|▏         | 1.84M/83.7M [00:10<19:24, 70.3kB/s]Status:   2%|▏         | 1.85M/83.7M [00:11<19:39, 69.3kB/s]Status:   2%|▏         | 1.87M/83.7M [00:11<21:25, 63.6kB/s]Status:   2%|▏         | 1.88M/83.7M [00:11<20:58, 65.0kB/s]Status:   2%|▏         | 1.90M/83.7M [00:11<18:29, 73.7kB/s]Status:   2%|▏         | 1.92M/83.7M [00:12<18:11, 74.9kB/s]Status:   2%|▏         | 1.93M/83.7M [00:12<17:37, 77.3kB/s]Status:   2%|▏         | 1.95M/83.7M [00:12<18:27, 73.8kB/s]Status:   2%|▏         | 1.97M/83.7M [00:12<20:32, 66.3kB/s]Status:   2%|▏         | 1.98M/83.7M [00:13<20:27, 66.6kB/s]Status:   2%|▏         | 2.00M/83.7M [00:13<20:45, 65.6kB/s]Status:   2%|▏         | 2.02M/83.7M [00:13<20:33, 66.2kB/s]Status:   2%|▏         | 2.03M/83.7M [00:13<23:07, 58.8kB/s]Status:   2%|▏         | 2.05M/83.7M [00:14<28:52, 47.1kB/s]Status:   2%|▏         | 2.06M/83.7M [00:14<28:42, 47.4kB/s]Status:   2%|▏         | 2.08M/83.7M [00:15<33:57, 40.0kB/s]Status:   3%|▎         | 2.10M/83.7M [00:15<31:12, 43.5kB/s]Status:   3%|▎         | 2.11M/83.7M [00:15<28:03, 48.4kB/s]Status:   3%|▎         | 2.13M/83.7M [00:15<23:15, 58.4kB/s]Status:   3%|▎         | 2.15M/83.7M [00:16<18:47, 72.3kB/s]Status:   3%|▎         | 2.16M/83.7M [00:16<15:45, 86.2kB/s]Status:   3%|▎         | 2.20M/83.7M [00:16<11:28, 118kB/s] Status:   3%|▎         | 2.21M/83.7M [00:16<10:47, 126kB/s]Status:   3%|▎         | 2.24M/83.7M [00:16<09:34, 142kB/s]Status:   3%|▎         | 2.28M/83.7M [00:16<08:20, 163kB/s]Status:   3%|▎         | 2.31M/83.7M [00:17<08:22, 162kB/s]Status:   3%|▎         | 2.34M/83.7M [00:17<07:31, 180kB/s]Status:   3%|▎         | 2.38M/83.7M [00:17<07:08, 190kB/s]Status:   3%|▎         | 2.41M/83.7M [00:17<06:46, 200kB/s]Status:   3%|▎         | 2.44M/83.7M [00:17<06:48, 199kB/s]Status:   3%|▎         | 2.47M/83.7M [00:17<08:26, 160kB/s]Status:   3%|▎         | 2.50M/83.7M [00:18<09:46, 138kB/s]Status:   3%|▎         | 2.51M/83.7M [00:18<10:58, 123kB/s]Status:   3%|▎         | 2.53M/83.7M [00:18<12:03, 112kB/s]Status:   3%|▎         | 2.55M/83.7M [00:18<14:15, 94.8kB/s]Status:   3%|▎         | 2.56M/83.7M [00:19<16:44, 80.7kB/s]Status:   3%|▎         | 2.58M/83.7M [00:19<16:49, 80.3kB/s]Status:   3%|▎         | 2.60M/83.7M [00:19<15:01, 89.9kB/s]Status:   3%|▎         | 2.61M/83.7M [00:19<14:53, 90.7kB/s]Status:   3%|▎         | 2.63M/83.7M [00:19<14:08, 95.4kB/s]Status:   3%|▎         | 2.65M/83.7M [00:19<12:36, 107kB/s] Status:   3%|▎         | 2.67M/83.7M [00:20<11:51, 114kB/s]Status:   3%|▎         | 2.70M/83.7M [00:20<09:28, 142kB/s]Status:   3%|▎         | 2.74M/83.7M [00:20<08:16, 163kB/s]Status:   3%|▎         | 2.77M/83.7M [00:20<07:26, 181kB/s]Status:   3%|▎         | 2.79M/83.7M [00:20<07:03, 191kB/s]Status:   3%|▎         | 2.82M/83.7M [00:21<14:52, 90.6kB/s]Status:   3%|▎         | 2.83M/83.7M [00:21<16:01, 84.0kB/s]Status:   3%|▎         | 2.85M/83.7M [00:21<15:14, 88.3kB/s]Status:   3%|▎         | 2.87M/83.7M [00:22<18:54, 71.2kB/s]Status:   3%|▎         | 2.88M/83.7M [00:22<27:38, 48.7kB/s]Status:   3%|▎         | 2.90M/83.7M [00:22<24:49, 54.2kB/s]Status:   3%|▎         | 2.92M/83.7M [00:23<23:27, 57.4kB/s]Status:   4%|▎         | 2.93M/83.7M [00:23<30:46, 43.7kB/s]Status:   4%|▎         | 2.95M/83.7M [00:23<25:27, 52.8kB/s]Status:   4%|▎         | 2.97M/83.7M [00:23<21:24, 62.8kB/s]Status:   4%|▎         | 2.98M/83.7M [00:24<17:40, 76.1kB/s]Status:   4%|▎         | 3.01M/83.7M [00:24<15:09, 88.6kB/s]Status:   4%|▎         | 3.03M/83.7M [00:24<18:31, 72.5kB/s]Status:   4%|▎         | 3.05M/83.7M [00:25<26:54, 49.9kB/s]Status:   4%|▎         | 3.06M/83.7M [00:25<29:06, 46.1kB/s]Status:   4%|▎         | 3.08M/83.7M [00:26<28:05, 47.8kB/s]Status:   4%|▎         | 3.10M/83.7M [00:26<25:50, 52.0kB/s]Status:   4%|▎         | 3.11M/83.7M [00:26<23:02, 58.3kB/s]Status:   4%|▎         | 3.13M/83.7M [00:26<23:28, 57.2kB/s]Status:   4%|▍         | 3.15M/83.7M [00:27<21:35, 62.1kB/s]Status:   4%|▍         | 3.16M/83.7M [00:27<23:22, 57.4kB/s]Status:   4%|▍         | 3.18M/83.7M [00:27<23:53, 56.2kB/s]Status:   4%|▍         | 3.19M/83.7M [00:27<21:32, 62.3kB/s]Status:   4%|▍         | 3.21M/83.7M [00:28<22:32, 59.5kB/s]Status:   4%|▍         | 3.23M/83.7M [00:28<19:34, 68.5kB/s]Status:   4%|▍         | 3.24M/83.7M [00:28<18:30, 72.4kB/s]Status:   4%|▍         | 3.26M/83.7M [00:28<18:56, 70.8kB/s]Status:   4%|▍         | 3.28M/83.7M [00:29<19:32, 68.5kB/s]Status:   4%|▍         | 3.29M/83.7M [00:29<22:08, 60.5kB/s]Status:   4%|▍         | 3.31M/83.7M [00:29<21:45, 61.6kB/s]Status:   4%|▍         | 3.33M/83.7M [00:29<21:13, 63.1kB/s]Status:   4%|▍         | 3.34M/83.7M [00:30<24:43, 54.2kB/s]Status:   4%|▍         | 3.36M/83.7M [00:30<27:06, 49.4kB/s]Status:   4%|▍         | 3.38M/83.7M [00:31<27:33, 48.6kB/s]Status:   4%|▍         | 3.39M/83.7M [00:31<25:32, 52.4kB/s]Status:   4%|▍         | 3.41M/83.7M [00:31<25:10, 53.1kB/s]Status:   4%|▍         | 3.42M/83.7M [00:31<24:49, 53.9kB/s]Status:   4%|▍         | 3.44M/83.7M [00:32<22:28, 59.5kB/s]Status:   4%|▍         | 3.46M/83.7M [00:32<25:19, 52.8kB/s]Status:   4%|▍         | 3.47M/83.7M [00:32<27:30, 48.6kB/s]Status:   4%|▍         | 3.49M/83.7M [00:33<25:28, 52.4kB/s]Status:   4%|▍         | 3.51M/83.7M [00:33<23:58, 55.7kB/s]Status:   4%|▍         | 3.52M/83.7M [00:33<20:25, 65.4kB/s]Status:   4%|▍         | 3.54M/83.7M [00:33<17:54, 74.6kB/s]Status:   4%|▍         | 3.56M/83.7M [00:33<15:25, 86.5kB/s]Status:   4%|▍         | 3.59M/83.7M [00:34<11:49, 113kB/s] Status:   4%|▍         | 3.60M/83.7M [00:34<11:50, 113kB/s]Status:   4%|▍         | 3.62M/83.7M [00:34<11:59, 111kB/s]Status:   4%|▍         | 3.64M/83.7M [00:34<12:59, 103kB/s]Status:   4%|▍         | 3.65M/83.7M [00:34<16:21, 81.5kB/s]Status:   4%|▍         | 3.67M/83.7M [00:34<15:11, 87.8kB/s]Status:   4%|▍         | 3.69M/83.7M [00:35<14:10, 94.0kB/s]Status:   4%|▍         | 3.70M/83.7M [00:35<12:26, 107kB/s] Status:   4%|▍         | 3.74M/83.7M [00:35<09:40, 138kB/s]Status:   5%|▍         | 3.77M/83.7M [00:35<08:05, 165kB/s]Status:   5%|▍         | 3.79M/83.7M [00:35<09:47, 136kB/s]Status:   5%|▍         | 3.81M/83.7M [00:35<11:12, 119kB/s]Status:   5%|▍         | 3.84M/83.7M [00:36<09:17, 143kB/s]Status:   5%|▍         | 3.86M/83.7M [00:36<09:05, 146kB/s]Status:   5%|▍         | 3.89M/83.7M [00:36<10:53, 122kB/s]Status:   5%|▍         | 3.92M/83.7M [00:36<11:18, 117kB/s]Status:   5%|▍         | 3.94M/83.7M [00:37<14:06, 94.2kB/s]Status:   5%|▍         | 3.96M/83.7M [00:37<15:17, 86.8kB/s]Status:   5%|▍         | 3.97M/83.7M [00:37<16:37, 79.9kB/s]Status:   5%|▍         | 3.99M/83.7M [00:37<17:34, 75.6kB/s]Status:   5%|▍         | 4.01M/83.7M [00:38<17:04, 77.8kB/s]Status:   5%|▍         | 4.02M/83.7M [00:38<14:40, 90.4kB/s]Status:   5%|▍         | 4.06M/83.7M [00:38<11:46, 113kB/s] Status:   5%|▍         | 4.09M/83.7M [00:38<09:38, 138kB/s]Status:   5%|▍         | 4.10M/83.7M [00:38<10:00, 133kB/s]Status:   5%|▍         | 4.14M/83.7M [00:38<09:19, 142kB/s]Status:   5%|▍         | 4.15M/83.7M [00:39<10:49, 122kB/s]Status:   5%|▍         | 4.17M/83.7M [00:39<13:03, 101kB/s]Status:   5%|▌         | 4.19M/83.7M [00:39<13:44, 96.3kB/s]Status:   5%|▌         | 4.22M/83.7M [00:39<11:25, 116kB/s] Status:   5%|▌         | 4.25M/83.7M [00:39<10:09, 130kB/s]Status:   5%|▌         | 4.28M/83.7M [00:40<08:40, 153kB/s]Status:   5%|▌         | 4.30M/83.7M [00:40<09:23, 141kB/s]Status:   5%|▌         | 4.33M/83.7M [00:40<07:28, 177kB/s]Status:   5%|▌         | 4.37M/83.7M [00:40<07:01, 188kB/s]Status:   5%|▌         | 4.40M/83.7M [00:40<06:36, 200kB/s]Status:   5%|▌         | 4.43M/83.7M [00:40<05:53, 224kB/s]Status:   5%|▌         | 4.46M/83.7M [00:40<05:49, 226kB/s]Status:   5%|▌         | 4.50M/83.7M [00:41<05:17, 250kB/s]Status:   5%|▌         | 4.55M/83.7M [00:41<04:17, 308kB/s]Status:   5%|▌         | 4.59M/83.7M [00:41<04:25, 298kB/s]Status:   6%|▌         | 4.64M/83.7M [00:41<03:49, 344kB/s]Status:   6%|▌         | 4.69M/83.7M [00:41<03:27, 381kB/s]Status:   6%|▌         | 4.74M/83.7M [00:41<03:02, 433kB/s]Status:   6%|▌         | 4.80M/83.7M [00:41<03:09, 415kB/s]Status:   6%|▌         | 4.87M/83.7M [00:41<02:45, 475kB/s]Status:   6%|▌         | 4.93M/83.7M [00:41<02:49, 464kB/s]Status:   6%|▌         | 5.00M/83.7M [00:42<02:33, 512kB/s]Status:   6%|▌         | 5.06M/83.7M [00:42<02:26, 538kB/s]Status:   6%|▌         | 5.16M/83.7M [00:42<02:22, 552kB/s]Status:   6%|▋         | 5.24M/83.7M [00:42<02:33, 509kB/s]Status:   6%|▋         | 5.39M/83.7M [00:42<01:56, 675kB/s]Status:   7%|▋         | 5.47M/83.7M [00:42<01:50, 705kB/s]Status:   7%|▋         | 5.57M/83.7M [00:42<01:41, 769kB/s]Status:   7%|▋         | 5.65M/83.7M [00:42<01:39, 782kB/s]Status:   7%|▋         | 5.73M/83.7M [00:43<01:41, 771kB/s]Status:   7%|▋         | 5.85M/83.7M [00:43<01:37, 799kB/s]Status:   7%|▋         | 5.93M/83.7M [00:43<01:38, 789kB/s]Status:   7%|▋         | 6.03M/83.7M [00:43<01:43, 750kB/s]Status:   7%|▋         | 6.11M/83.7M [00:43<01:41, 763kB/s]Status:   7%|▋         | 6.21M/83.7M [00:43<01:45, 733kB/s]Status:   8%|▊         | 6.29M/83.7M [00:43<01:42, 752kB/s]Status:   8%|▊         | 6.37M/83.7M [00:43<01:40, 767kB/s]Status:   8%|▊         | 6.47M/83.7M [00:44<01:33, 822kB/s]Status:   8%|▊         | 6.56M/83.7M [00:44<01:43, 748kB/s]Status:   8%|▊         | 6.64M/83.7M [00:44<01:55, 665kB/s]Status:   8%|▊         | 6.72M/83.7M [00:44<02:45, 464kB/s]Status:   8%|▊         | 6.77M/83.7M [00:44<03:08, 407kB/s]Status:   8%|▊         | 6.82M/83.7M [00:44<03:20, 383kB/s]Status:   8%|▊         | 6.87M/83.7M [00:45<03:45, 341kB/s]Status:   8%|▊         | 6.91M/83.7M [00:45<03:58, 322kB/s]Status:   8%|▊         | 6.96M/83.7M [00:45<03:54, 327kB/s]Status:   8%|▊         | 7.01M/83.7M [00:45<03:34, 357kB/s]Status:   8%|▊         | 7.06M/83.7M [00:45<03:20, 381kB/s]Status:   9%|▊         | 7.12M/83.7M [00:45<03:18, 385kB/s]Status:   9%|▊         | 7.18M/83.7M [00:45<03:06, 410kB/s]Status:   9%|▊         | 7.23M/83.7M [00:46<03:00, 424kB/s]Status:   9%|▊         | 7.32M/83.7M [00:46<02:43, 468kB/s]Status:   9%|▉         | 7.38M/83.7M [00:46<02:29, 511kB/s]Status:   9%|▉         | 7.46M/83.7M [00:46<02:12, 573kB/s]Status:   9%|▉         | 7.54M/83.7M [00:46<02:11, 580kB/s]Status:   9%|▉         | 7.61M/83.7M [00:46<02:07, 598kB/s]Status:   9%|▉         | 7.68M/83.7M [00:46<02:06, 601kB/s]Status:   9%|▉         | 7.77M/83.7M [00:46<01:59, 636kB/s]Status:   9%|▉         | 7.86M/83.7M [00:47<01:51, 679kB/s]Status:   9%|▉         | 7.93M/83.7M [00:47<02:02, 618kB/s]Status:  10%|▉         | 8.00M/83.7M [00:47<02:04, 609kB/s]Status:  10%|▉         | 8.06M/83.7M [00:47<02:03, 613kB/s]Status:  10%|▉         | 8.13M/83.7M [00:47<02:12, 572kB/s]Status:  10%|▉         | 8.19M/83.7M [00:47<02:07, 591kB/s]Status:  10%|▉         | 8.26M/83.7M [00:47<02:05, 602kB/s]Status:  10%|▉         | 8.32M/83.7M [00:47<02:35, 485kB/s]Status:  10%|█         | 8.39M/83.7M [00:48<03:29, 359kB/s]Status:  10%|█         | 8.44M/83.7M [00:48<04:37, 271kB/s]Status:  10%|█         | 8.48M/83.7M [00:48<04:29, 279kB/s]Status:  10%|█         | 8.52M/83.7M [00:48<04:33, 274kB/s]Status:  10%|█         | 8.57M/83.7M [00:48<04:19, 289kB/s]Status:  10%|█         | 8.60M/83.7M [00:49<04:13, 296kB/s]Status:  10%|█         | 8.63M/83.7M [00:49<04:35, 273kB/s]Status:  10%|█         | 8.67M/83.7M [00:49<04:25, 283kB/s]Status:  10%|█         | 8.70M/83.7M [00:49<04:17, 291kB/s]Status:  10%|█         | 8.73M/83.7M [00:49<04:35, 272kB/s]Status:  10%|█         | 8.77M/83.7M [00:49<05:21, 233kB/s]Status:  11%|█         | 8.80M/83.7M [00:49<05:27, 229kB/s]Status:  11%|█         | 8.83M/83.7M [00:50<05:31, 226kB/s]Status:  11%|█         | 8.86M/83.7M [00:50<05:35, 223kB/s]Status:  11%|█         | 8.90M/83.7M [00:50<05:06, 244kB/s]Status:  11%|█         | 8.93M/83.7M [00:50<04:47, 260kB/s]Status:  11%|█         | 8.96M/83.7M [00:50<04:31, 275kB/s]Status:  11%|█         | 8.99M/83.7M [00:50<04:44, 263kB/s]Status:  11%|█         | 9.03M/83.7M [00:50<05:03, 246kB/s]Status:  11%|█         | 9.06M/83.7M [00:51<08:07, 153kB/s]Status:  11%|█         | 9.08M/83.7M [00:51<07:56, 156kB/s]Status:  11%|█         | 9.11M/83.7M [00:51<08:35, 145kB/s]Status:  11%|█         | 9.14M/83.7M [00:51<08:06, 153kB/s]Status:  11%|█         | 9.18M/83.7M [00:51<06:51, 181kB/s]Status:  11%|█         | 9.21M/83.7M [00:52<06:19, 196kB/s]Status:  11%|█         | 9.24M/83.7M [00:52<05:38, 220kB/s]Status:  11%|█         | 9.29M/83.7M [00:52<04:54, 252kB/s]Status:  11%|█         | 9.34M/83.7M [00:52<04:24, 281kB/s]Status:  11%|█         | 9.37M/83.7M [00:52<04:16, 289kB/s]Status:  11%|█▏        | 9.42M/83.7M [00:52<03:39, 338kB/s]Status:  11%|█▏        | 9.47M/83.7M [00:52<03:17, 376kB/s]Status:  11%|█▏        | 9.52M/83.7M [00:52<03:02, 406kB/s]Status:  11%|█▏        | 9.57M/83.7M [00:52<02:52, 429kB/s]Status:  11%|█▏        | 9.62M/83.7M [00:53<03:06, 396kB/s]Status:  12%|█▏        | 9.67M/83.7M [00:53<05:13, 236kB/s]Status:  12%|█▏        | 9.70M/83.7M [00:53<06:35, 187kB/s]Status:  12%|█▏        | 9.73M/83.7M [00:54<08:39, 142kB/s]Status:  12%|█▏        | 9.76M/83.7M [00:54<10:02, 123kB/s]Status:  12%|█▏        | 9.78M/83.7M [00:54<11:43, 105kB/s]Status:  12%|█▏        | 9.81M/83.7M [00:55<10:24, 118kB/s]Status:  12%|█▏        | 9.83M/83.7M [00:55<09:55, 124kB/s]Status:  12%|█▏        | 9.86M/83.7M [00:55<08:30, 144kB/s]Status:  12%|█▏        | 9.90M/83.7M [00:55<07:39, 160kB/s]Status:  12%|█▏        | 9.93M/83.7M [00:55<07:30, 164kB/s]Status:  12%|█▏        | 9.96M/83.7M [00:55<07:26, 165kB/s]Status:  12%|█▏        | 9.99M/83.7M [00:56<08:02, 153kB/s]Status:  12%|█▏        | 10.0M/83.7M [00:56<08:02, 153kB/s]Status:  12%|█▏        | 10.0M/83.7M [00:56<09:19, 132kB/s]Status:  12%|█▏        | 10.0M/83.7M [00:56<10:43, 114kB/s]Status:  12%|█▏        | 10.1M/83.7M [00:57<17:07, 71.6kB/s]Status:  12%|█▏        | 10.1M/83.7M [00:57<16:39, 73.6kB/s]Status:  12%|█▏        | 10.1M/83.7M [00:57<20:08, 60.9kB/s]Status:  12%|█▏        | 10.1M/83.7M [00:57<20:50, 58.8kB/s]Status:  12%|█▏        | 10.1M/83.7M [00:58<19:13, 63.8kB/s]Status:  12%|█▏        | 10.1M/83.7M [00:58<20:01, 61.2kB/s]Status:  12%|█▏        | 10.2M/83.7M [00:58<18:42, 65.5kB/s]Status:  12%|█▏        | 10.2M/83.7M [00:58<16:19, 75.0kB/s]Status:  12%|█▏        | 10.2M/83.7M [00:58<13:44, 89.1kB/s]Status:  12%|█▏        | 10.2M/83.7M [00:59<11:53, 103kB/s] Status:  12%|█▏        | 10.2M/83.7M [00:59<09:02, 135kB/s]Status:  12%|█▏        | 10.3M/83.7M [00:59<07:45, 158kB/s]Status:  12%|█▏        | 10.3M/83.7M [00:59<08:14, 148kB/s]Status:  12%|█▏        | 10.3M/83.7M [00:59<09:34, 128kB/s]Status:  12%|█▏        | 10.3M/83.7M [00:59<10:44, 114kB/s]Status:  12%|█▏        | 10.4M/83.7M [01:00<12:40, 96.4kB/s]Status:  12%|█▏        | 10.4M/83.7M [01:00<20:00, 61.1kB/s]Status:  12%|█▏        | 10.4M/83.7M [01:00<18:50, 64.8kB/s]Status:  12%|█▏        | 10.4M/83.7M [01:01<19:41, 62.0kB/s]Status:  12%|█▏        | 10.4M/83.7M [01:01<22:27, 54.3kB/s]Status:  12%|█▏        | 10.4M/83.7M [01:01<21:29, 56.8kB/s]Status:  12%|█▏        | 10.5M/83.7M [01:02<21:34, 56.6kB/s]Status:  13%|█▎        | 10.5M/83.7M [01:02<20:43, 58.8kB/s]Status:  13%|█▎        | 10.5M/83.7M [01:02<21:18, 57.2kB/s]Status:  13%|█▎        | 10.5M/83.7M [01:03<18:40, 65.3kB/s]Status:  13%|█▎        | 10.5M/83.7M [01:03<15:33, 78.3kB/s]Status:  13%|█▎        | 10.5M/83.7M [01:03<13:18, 91.6kB/s]Status:  13%|█▎        | 10.6M/83.7M [01:03<10:35, 115kB/s] Status:  13%|█▎        | 10.6M/83.7M [01:03<10:39, 114kB/s]Status:  13%|█▎        | 10.6M/83.7M [01:03<07:50, 155kB/s]Status:  13%|█▎        | 10.6M/83.7M [01:03<07:03, 172kB/s]Status:  13%|█▎        | 10.7M/83.7M [01:04<10:03, 121kB/s]Status:  13%|█▎        | 10.7M/83.7M [01:04<11:56, 102kB/s]Status:  13%|█▎        | 10.7M/83.7M [01:04<17:18, 70.2kB/s]Status:  13%|█▎        | 10.7M/83.7M [01:05<18:34, 65.4kB/s]Status:  13%|█▎        | 10.7M/83.7M [01:05<19:27, 62.5kB/s]Status:  13%|█▎        | 10.8M/83.7M [01:05<18:07, 67.0kB/s]Status:  13%|█▎        | 10.8M/83.7M [01:05<16:14, 74.8kB/s]Status:  13%|█▎        | 10.8M/83.7M [01:06<17:49, 68.1kB/s]Status:  13%|█▎        | 10.8M/83.7M [01:06<15:36, 77.7kB/s]Status:  13%|█▎        | 10.8M/83.7M [01:06<15:31, 78.2kB/s]Status:  13%|█▎        | 10.9M/83.7M [01:06<17:19, 70.1kB/s]Status:  13%|█▎        | 10.9M/83.7M [01:07<16:35, 73.1kB/s]Status:  13%|█▎        | 10.9M/83.7M [01:07<16:00, 75.7kB/s]Status:  13%|█▎        | 10.9M/83.7M [01:07<12:14, 99.1kB/s]Status:  13%|█▎        | 10.9M/83.7M [01:07<11:52, 102kB/s] Status:  13%|█▎        | 11.0M/83.7M [01:07<10:49, 112kB/s]Status:  13%|█▎        | 11.0M/83.7M [01:07<08:34, 141kB/s]Status:  13%|█▎        | 11.0M/83.7M [01:08<08:18, 146kB/s]Status:  13%|█▎        | 11.0M/83.7M [01:08<07:09, 169kB/s]Status:  13%|█▎        | 11.1M/83.7M [01:08<05:57, 203kB/s]Status:  13%|█▎        | 11.1M/83.7M [01:08<06:58, 173kB/s]Status:  13%|█▎        | 11.1M/83.7M [01:08<06:29, 186kB/s]Status:  13%|█▎        | 11.2M/83.7M [01:08<06:44, 179kB/s]Status:  13%|█▎        | 11.2M/83.7M [01:09<07:35, 159kB/s]Status:  13%|█▎        | 11.2M/83.7M [01:09<07:39, 157kB/s]Status:  13%|█▎        | 11.2M/83.7M [01:09<07:33, 160kB/s]Status:  13%|█▎        | 11.3M/83.7M [01:09<08:08, 148kB/s]Status:  13%|█▎        | 11.3M/83.7M [01:09<07:59, 151kB/s]Status:  14%|█▎        | 11.3M/83.7M [01:09<06:58, 173kB/s]Status:  14%|█▎        | 11.3M/83.7M [01:09<05:50, 206kB/s]Status:  14%|█▎        | 11.4M/83.7M [01:10<05:20, 225kB/s]Status:  14%|█▎        | 11.4M/83.7M [01:10<04:36, 261kB/s]Status:  14%|█▎        | 11.5M/83.7M [01:10<04:08, 291kB/s]Status:  14%|█▍        | 11.5M/83.7M [01:10<03:54, 307kB/s]Status:  14%|█▍        | 11.6M/83.7M [01:10<04:52, 247kB/s]Status:  14%|█▍        | 11.6M/83.7M [01:10<04:02, 297kB/s]Status:  14%|█▍        | 11.6M/83.7M [01:11<04:57, 242kB/s]Status:  14%|█▍        | 11.7M/83.7M [01:11<04:51, 247kB/s]Status:  14%|█▍        | 11.7M/83.7M [01:11<04:33, 263kB/s]Status:  14%|█▍        | 11.8M/83.7M [01:11<04:04, 294kB/s]Status:  14%|█▍        | 11.8M/83.7M [01:11<07:24, 162kB/s]Status:  14%|█▍        | 11.8M/83.7M [01:12<13:57, 85.7kB/s]Status:  14%|█▍        | 11.9M/83.7M [01:13<13:00, 92.0kB/s]Status:  15%|█▍        | 12.2M/83.7M [01:13<03:42, 321kB/s] Status:  15%|█▍        | 12.3M/83.7M [01:13<03:14, 368kB/s]Status:  15%|█▍        | 12.4M/83.7M [01:13<02:49, 420kB/s]Status:  15%|█▍        | 12.4M/83.7M [01:14<03:07, 380kB/s]Status:  15%|█▌        | 12.6M/83.7M [01:14<02:09, 548kB/s]Status:  15%|█▌        | 12.7M/83.7M [01:14<01:55, 616kB/s]Status:  15%|█▌        | 12.8M/83.7M [01:14<02:14, 527kB/s]Status:  15%|█▌        | 12.9M/83.7M [01:14<02:27, 480kB/s]Status:  15%|█▌        | 12.9M/83.7M [01:14<02:30, 470kB/s]Status:  16%|█▌        | 13.0M/83.7M [01:15<02:38, 447kB/s]Status:  16%|█▌        | 13.0M/83.7M [01:15<02:44, 430kB/s]Status:  16%|█▌        | 13.1M/83.7M [01:15<02:54, 404kB/s]Status:  16%|█▌        | 13.2M/83.7M [01:15<02:57, 396kB/s]Status:  16%|█▌        | 13.2M/83.7M [01:15<02:52, 409kB/s]Status:  16%|█▌        | 13.3M/83.7M [01:15<02:33, 459kB/s]Status:  16%|█▌        | 13.3M/83.7M [01:15<02:49, 416kB/s]Status:  16%|█▌        | 13.4M/83.7M [01:15<02:29, 471kB/s]Status:  16%|█▌        | 13.5M/83.7M [01:16<02:35, 450kB/s]Status:  16%|█▌        | 13.5M/83.7M [01:16<02:34, 455kB/s]Status:  16%|█▌        | 13.6M/83.7M [01:16<02:32, 460kB/s]Status:  16%|█▋        | 13.6M/83.7M [01:16<02:33, 456kB/s]Status:  16%|█▋        | 13.7M/83.7M [01:16<02:45, 423kB/s]Status:  16%|█▋        | 13.7M/83.7M [01:16<04:02, 288kB/s]Status:  16%|█▋        | 13.7M/83.7M [01:17<04:48, 243kB/s]Status:  16%|█▋        | 13.8M/83.7M [01:17<05:20, 218kB/s]Status:  17%|█▋        | 13.8M/83.7M [01:17<06:35, 177kB/s]Status:  17%|█▋        | 13.8M/83.7M [01:17<06:16, 186kB/s]Status:  17%|█▋        | 13.9M/83.7M [01:18<08:34, 136kB/s]Status:  17%|█▋        | 13.9M/83.7M [01:18<15:49, 73.5kB/s]Status:  17%|█▋        | 13.9M/83.7M [01:19<16:42, 69.6kB/s]Status:  17%|█▋        | 13.9M/83.7M [01:19<21:29, 54.1kB/s]Status:  17%|█▋        | 13.9M/83.7M [01:19<20:40, 56.2kB/s]Status:  17%|█▋        | 14.0M/83.7M [01:20<22:29, 51.7kB/s]Status:  17%|█▋        | 14.0M/83.7M [01:20<25:59, 44.7kB/s]Status:  17%|█▋        | 14.0M/83.7M [01:21<22:45, 51.0kB/s]Status:  17%|█▋        | 14.0M/83.7M [01:21<21:21, 54.4kB/s]Status:  17%|█▋        | 14.0M/83.7M [01:21<21:20, 54.4kB/s]Status:  17%|█▋        | 14.0M/83.7M [01:22<23:20, 49.7kB/s]Status:  17%|█▋        | 14.0M/83.7M [01:22<21:38, 53.6kB/s]Status:  17%|█▋        | 14.1M/83.7M [01:22<19:24, 59.8kB/s]Status:  17%|█▋        | 14.1M/83.7M [01:22<16:45, 69.2kB/s]Status:  17%|█▋        | 14.1M/83.7M [01:22<14:53, 77.8kB/s]Status:  17%|█▋        | 14.1M/83.7M [01:22<10:38, 109kB/s] Status:  17%|█▋        | 14.2M/83.7M [01:23<09:23, 123kB/s]Status:  17%|█▋        | 14.2M/83.7M [01:23<09:43, 119kB/s]Status:  17%|█▋        | 14.2M/83.7M [01:23<08:22, 138kB/s]Status:  17%|█▋        | 14.2M/83.7M [01:23<09:36, 120kB/s]Status:  17%|█▋        | 14.2M/83.7M [01:23<11:28, 101kB/s]Status:  17%|█▋        | 14.3M/83.7M [01:24<11:23, 102kB/s]Status:  17%|█▋        | 14.3M/83.7M [01:24<11:03, 105kB/s]Status:  17%|█▋        | 14.3M/83.7M [01:24<09:59, 116kB/s]Status:  17%|█▋        | 14.3M/83.7M [01:24<08:35, 134kB/s]Status:  17%|█▋        | 14.4M/83.7M [01:24<07:19, 158kB/s]Status:  17%|█▋        | 14.4M/83.7M [01:24<06:04, 190kB/s]Status:  17%|█▋        | 14.4M/83.7M [01:24<05:18, 217kB/s]Status:  17%|█▋        | 14.5M/83.7M [01:25<04:34, 252kB/s]Status:  17%|█▋        | 14.5M/83.7M [01:25<04:17, 269kB/s]Status:  17%|█▋        | 14.6M/83.7M [01:25<03:35, 320kB/s]Status:  17%|█▋        | 14.6M/83.7M [01:25<03:31, 326kB/s]Status:  18%|█▊        | 14.7M/83.7M [01:25<03:00, 381kB/s]Status:  18%|█▊        | 14.7M/83.7M [01:25<02:49, 406kB/s]Status:  18%|█▊        | 14.8M/83.7M [01:25<02:40, 429kB/s]Status:  18%|█▊        | 14.8M/83.7M [01:25<02:34, 445kB/s]Status:  18%|█▊        | 14.9M/83.7M [01:25<02:30, 458kB/s]Status:  18%|█▊        | 15.0M/83.7M [01:26<02:06, 542kB/s]Status:  18%|█▊        | 15.0M/83.7M [01:26<02:13, 514kB/s]Status:  18%|█▊        | 15.1M/83.7M [01:26<02:00, 567kB/s]Status:  18%|█▊        | 15.2M/83.7M [01:26<01:52, 608kB/s]Status:  18%|█▊        | 15.3M/83.7M [01:26<01:39, 689kB/s]Status:  18%|█▊        | 15.4M/83.7M [01:26<01:44, 652kB/s]Status:  19%|█▊        | 15.5M/83.7M [01:26<01:32, 735kB/s]Status:  19%|█▊        | 15.6M/83.7M [01:26<01:30, 756kB/s]Status:  19%|█▊        | 15.6M/83.7M [01:27<01:28, 773kB/s]Status:  19%|█▉        | 15.7M/83.7M [01:27<01:26, 783kB/s]Status:  19%|█▉        | 15.8M/83.7M [01:27<01:21, 832kB/s]Status:  19%|█▉        | 15.9M/83.7M [01:27<01:17, 870kB/s]Status:  19%|█▉        | 16.0M/83.7M [01:27<01:23, 808kB/s]Status:  19%|█▉        | 16.1M/83.7M [01:27<01:15, 899kB/s]Status:  19%|█▉        | 16.3M/83.7M [01:27<01:09, 966kB/s]Status:  20%|█▉        | 16.4M/83.7M [01:27<01:06, 1.00MB/s]Status:  20%|█▉        | 16.5M/83.7M [01:27<01:05, 1.03MB/s]Status:  20%|█▉        | 16.6M/83.7M [01:28<01:07, 994kB/s] Status:  20%|█▉        | 16.7M/83.7M [01:28<01:04, 1.03MB/s]Status:  20%|██        | 16.9M/83.7M [01:28<00:58, 1.14MB/s]Status:  20%|██        | 17.0M/83.7M [01:28<01:02, 1.06MB/s]Status:  20%|██        | 17.1M/83.7M [01:28<00:59, 1.13MB/s]Status:  21%|██        | 17.3M/83.7M [01:28<00:57, 1.15MB/s]Status:  21%|██        | 17.4M/83.7M [01:28<00:52, 1.26MB/s]Status:  21%|██        | 17.5M/83.7M [01:28<00:51, 1.27MB/s]Status:  21%|██        | 17.7M/83.7M [01:28<00:50, 1.32MB/s]Status:  21%|██▏       | 17.8M/83.7M [01:29<01:02, 1.05MB/s]Status:  21%|██▏       | 17.9M/83.7M [01:29<01:09, 950kB/s] Status:  22%|██▏       | 18.1M/83.7M [01:29<01:38, 663kB/s]Status:  22%|██▏       | 18.1M/83.7M [01:29<02:40, 408kB/s]Status:  22%|██▏       | 18.2M/83.7M [01:30<03:08, 347kB/s]Status:  22%|██▏       | 18.3M/83.7M [01:30<03:39, 298kB/s]Status:  22%|██▏       | 18.3M/83.7M [01:30<03:49, 284kB/s]Status:  22%|██▏       | 18.4M/83.7M [01:30<03:47, 287kB/s]Status:  22%|██▏       | 18.4M/83.7M [01:31<04:07, 263kB/s]Status:  22%|██▏       | 18.4M/83.7M [01:31<04:17, 253kB/s]Status:  22%|██▏       | 18.5M/83.7M [01:31<04:28, 243kB/s]Status:  22%|██▏       | 18.5M/83.7M [01:31<04:36, 236kB/s]Status:  22%|██▏       | 18.5M/83.7M [01:31<05:00, 217kB/s]Status:  22%|██▏       | 18.5M/83.7M [01:32<06:46, 160kB/s]Status:  22%|██▏       | 18.6M/83.7M [01:32<08:24, 129kB/s]Status:  22%|██▏       | 18.6M/83.7M [01:32<07:48, 139kB/s]Status:  22%|██▏       | 18.6M/83.7M [01:32<06:57, 156kB/s]Status:  22%|██▏       | 18.7M/83.7M [01:32<06:18, 172kB/s]Status:  22%|██▏       | 18.7M/83.7M [01:32<05:24, 200kB/s]Status:  22%|██▏       | 18.7M/83.7M [01:33<05:12, 207kB/s]Status:  22%|██▏       | 18.8M/83.7M [01:33<04:38, 233kB/s]Status:  22%|██▏       | 18.8M/83.7M [01:33<04:14, 255kB/s]Status:  23%|██▎       | 18.8M/83.7M [01:33<03:41, 292kB/s]Status:  23%|██▎       | 18.9M/83.7M [01:33<03:17, 328kB/s]Status:  23%|██▎       | 18.9M/83.7M [01:33<02:55, 369kB/s]Status:  23%|██▎       | 19.0M/83.7M [01:33<02:42, 398kB/s]Status:  23%|██▎       | 19.0M/83.7M [01:33<02:34, 419kB/s]Status:  23%|██▎       | 19.1M/83.7M [01:33<02:28, 433kB/s]Status:  23%|██▎       | 19.2M/83.7M [01:34<02:17, 467kB/s]Status:  23%|██▎       | 19.3M/83.7M [01:34<02:09, 496kB/s]Status:  23%|██▎       | 19.3M/83.7M [01:34<01:52, 570kB/s]Status:  23%|██▎       | 19.4M/83.7M [01:34<01:48, 591kB/s]Status:  23%|██▎       | 19.5M/83.7M [01:34<01:47, 599kB/s]Status:  23%|██▎       | 19.5M/83.7M [01:34<01:46, 600kB/s]Status:  23%|██▎       | 19.6M/83.7M [01:34<01:40, 636kB/s]Status:  24%|██▎       | 19.7M/83.7M [01:34<01:36, 662kB/s]Status:  24%|██▎       | 19.8M/83.7M [01:35<02:16, 469kB/s]Status:  24%|██▎       | 19.8M/83.7M [01:35<02:33, 415kB/s]Status:  24%|██▍       | 19.9M/83.7M [01:35<02:45, 385kB/s]Status:  24%|██▍       | 19.9M/83.7M [01:35<02:54, 364kB/s]Status:  24%|██▍       | 20.0M/83.7M [01:35<03:07, 340kB/s]Status:  24%|██▍       | 20.0M/83.7M [01:35<03:06, 342kB/s]Status:  24%|██▍       | 20.1M/83.7M [01:36<02:50, 372kB/s]Status:  24%|██▍       | 20.1M/83.7M [01:36<02:54, 363kB/s]Status:  24%|██▍       | 20.2M/83.7M [01:36<02:41, 393kB/s]Status:  24%|██▍       | 20.2M/83.7M [01:36<02:32, 415kB/s]Status:  24%|██▍       | 20.3M/83.7M [01:36<02:25, 435kB/s]Status:  24%|██▍       | 20.3M/83.7M [01:36<02:21, 449kB/s]Status:  24%|██▍       | 20.4M/83.7M [01:36<02:18, 458kB/s]Status:  24%|██▍       | 20.4M/83.7M [01:36<02:33, 412kB/s]Status:  24%|██▍       | 20.5M/83.7M [01:36<02:26, 432kB/s]Status:  25%|██▍       | 20.5M/83.7M [01:37<02:59, 352kB/s]Status:  25%|██▍       | 20.5M/83.7M [01:37<03:11, 330kB/s]Status:  25%|██▍       | 20.6M/83.7M [01:37<02:54, 361kB/s]Status:  25%|██▍       | 20.6M/83.7M [01:37<03:30, 299kB/s]Status:  25%|██▍       | 20.7M/83.7M [01:37<03:12, 327kB/s]Status:  25%|██▍       | 20.7M/83.7M [01:37<03:11, 329kB/s]Status:  25%|██▍       | 20.8M/83.7M [01:38<03:10, 330kB/s]Status:  25%|██▍       | 20.8M/83.7M [01:38<02:53, 363kB/s]Status:  25%|██▍       | 20.9M/83.7M [01:38<02:57, 353kB/s]Status:  25%|██▌       | 21.0M/83.7M [01:38<02:45, 380kB/s]Status:  25%|██▌       | 21.0M/83.7M [01:38<02:34, 405kB/s]Status:  25%|██▌       | 21.1M/83.7M [01:38<02:26, 426kB/s]Status:  25%|██▌       | 21.1M/83.7M [01:38<02:12, 471kB/s]Status:  25%|██▌       | 21.2M/83.7M [01:38<02:01, 516kB/s]Status:  25%|██▌       | 21.3M/83.7M [01:38<01:53, 550kB/s]Status:  25%|██▌       | 21.3M/83.7M [01:39<01:52, 555kB/s]Status:  26%|██▌       | 21.4M/83.7M [01:39<01:48, 575kB/s]Status:  26%|██▌       | 21.5M/83.7M [01:39<01:44, 593kB/s]Status:  26%|██▌       | 21.5M/83.7M [01:39<01:54, 542kB/s]Status:  26%|██▌       | 21.6M/83.7M [01:39<01:52, 549kB/s]Status:  26%|██▌       | 21.7M/83.7M [01:39<01:56, 530kB/s]Status:  26%|██▌       | 21.7M/83.7M [01:39<01:46, 582kB/s]Status:  26%|██▌       | 21.8M/83.7M [01:39<01:43, 598kB/s]Status:  26%|██▌       | 21.9M/83.7M [01:40<01:42, 605kB/s]Status:  26%|██▌       | 22.0M/83.7M [01:40<01:47, 571kB/s]Status:  26%|██▋       | 22.1M/83.7M [01:40<01:42, 604kB/s]Status:  26%|██▋       | 22.1M/83.7M [01:40<01:39, 616kB/s]Status:  27%|██▋       | 22.2M/83.7M [01:40<01:31, 670kB/s]Status:  27%|██▋       | 22.3M/83.7M [01:40<01:27, 703kB/s]Status:  27%|██▋       | 22.4M/83.7M [01:40<01:19, 770kB/s]Status:  27%|██▋       | 22.5M/83.7M [01:40<01:23, 735kB/s]Status:  27%|██▋       | 22.6M/83.7M [01:40<01:12, 837kB/s]Status:  27%|██▋       | 22.7M/83.7M [01:41<01:10, 865kB/s]Status:  27%|██▋       | 22.8M/83.7M [01:41<01:15, 808kB/s]Status:  27%|██▋       | 22.9M/83.7M [01:41<01:26, 706kB/s]Status:  27%|██▋       | 23.0M/83.7M [01:41<01:41, 595kB/s]Status:  28%|██▊       | 23.1M/83.7M [01:41<02:00, 505kB/s]Status:  28%|██▊       | 23.1M/83.7M [01:41<02:07, 475kB/s]Status:  28%|██▊       | 23.2M/83.7M [01:42<02:15, 448kB/s]Status:  28%|██▊       | 23.2M/83.7M [01:42<02:15, 446kB/s]Status:  28%|██▊       | 23.3M/83.7M [01:42<02:26, 411kB/s]Status:  28%|██▊       | 23.3M/83.7M [01:42<02:20, 428kB/s]Status:  28%|██▊       | 23.4M/83.7M [01:42<02:31, 397kB/s]Status:  28%|██▊       | 23.4M/83.7M [01:42<02:31, 397kB/s]Status:  28%|██▊       | 23.5M/83.7M [01:42<03:06, 323kB/s]Status:  28%|██▊       | 23.5M/83.7M [01:43<03:05, 325kB/s]Status:  28%|██▊       | 23.6M/83.7M [01:43<02:56, 341kB/s]Status:  28%|██▊       | 23.6M/83.7M [01:43<03:26, 291kB/s]Status:  28%|██▊       | 23.6M/83.7M [01:43<03:45, 266kB/s]Status:  28%|██▊       | 23.7M/83.7M [01:43<03:57, 252kB/s]Status:  28%|██▊       | 23.7M/83.7M [01:43<04:09, 240kB/s]Status:  28%|██▊       | 23.7M/83.7M [01:44<04:29, 222kB/s]Status:  28%|██▊       | 23.8M/83.7M [01:44<05:15, 190kB/s]Status:  28%|██▊       | 23.8M/83.7M [01:44<04:54, 203kB/s]Status:  28%|██▊       | 23.8M/83.7M [01:44<05:18, 188kB/s]Status:  28%|██▊       | 23.8M/83.7M [01:44<05:13, 191kB/s]Status:  29%|██▊       | 23.9M/83.7M [01:44<04:37, 216kB/s]Status:  29%|██▊       | 23.9M/83.7M [01:44<03:27, 288kB/s]Status:  29%|██▊       | 24.0M/83.7M [01:45<03:20, 297kB/s]Status:  29%|██▊       | 24.0M/83.7M [01:45<03:16, 304kB/s]Status:  29%|██▉       | 24.1M/83.7M [01:45<02:49, 351kB/s]Status:  29%|██▉       | 24.1M/83.7M [01:45<02:35, 383kB/s]Status:  29%|██▉       | 24.2M/83.7M [01:45<02:26, 405kB/s]Status:  29%|██▉       | 24.2M/83.7M [01:45<02:12, 447kB/s]Status:  29%|██▉       | 24.3M/83.7M [01:45<02:05, 474kB/s]Status:  29%|██▉       | 24.4M/83.7M [01:45<02:07, 466kB/s]Status:  29%|██▉       | 24.4M/83.7M [01:46<01:55, 514kB/s]Status:  29%|██▉       | 24.5M/83.7M [01:46<01:48, 548kB/s]Status:  29%|██▉       | 24.6M/83.7M [01:46<01:36, 610kB/s]Status:  29%|██▉       | 24.7M/83.7M [01:46<01:38, 602kB/s]Status:  30%|██▉       | 24.7M/83.7M [01:46<01:30, 654kB/s]Status:  30%|██▉       | 24.8M/83.7M [01:46<01:25, 690kB/s]Status:  30%|██▉       | 24.9M/83.7M [01:46<01:34, 622kB/s]Status:  30%|██▉       | 25.0M/83.7M [01:46<01:30, 649kB/s]Status:  30%|██▉       | 25.0M/83.7M [01:46<01:37, 602kB/s]Status:  30%|███       | 25.1M/83.7M [01:47<01:46, 548kB/s]Status:  30%|███       | 25.2M/83.7M [01:47<01:59, 491kB/s]Status:  30%|███       | 25.2M/83.7M [01:47<01:54, 510kB/s]Status:  30%|███       | 25.3M/83.7M [01:47<01:52, 517kB/s]Status:  30%|███       | 25.3M/83.7M [01:47<01:56, 499kB/s]Status:  30%|███       | 25.4M/83.7M [01:47<01:53, 514kB/s]Status:  30%|███       | 25.5M/83.7M [01:47<01:49, 529kB/s]Status:  31%|███       | 25.5M/83.7M [01:47<01:37, 593kB/s]Status:  31%|███       | 25.6M/83.7M [01:48<02:37, 369kB/s]Status:  31%|███       | 25.7M/83.7M [01:49<07:11, 134kB/s]Status:  31%|███       | 25.7M/83.7M [01:50<10:50, 89.2kB/s]Status:  31%|███       | 25.7M/83.7M [01:50<10:28, 92.2kB/s]Status:  31%|███       | 25.8M/83.7M [01:50<09:40, 99.7kB/s]Status:  31%|███       | 25.8M/83.7M [01:51<08:38, 112kB/s] Status:  31%|███       | 25.8M/83.7M [01:51<07:07, 135kB/s]Status:  31%|███       | 25.9M/83.7M [01:51<06:03, 159kB/s]Status:  31%|███       | 25.9M/83.7M [01:51<05:33, 173kB/s]Status:  31%|███       | 25.9M/83.7M [01:51<04:53, 197kB/s]Status:  31%|███       | 26.0M/83.7M [01:51<04:22, 220kB/s]Status:  31%|███       | 26.0M/83.7M [01:51<05:09, 186kB/s]Status:  31%|███       | 26.0M/83.7M [01:52<06:09, 156kB/s]Status:  31%|███       | 26.1M/83.7M [01:52<06:38, 144kB/s]Status:  31%|███       | 26.1M/83.7M [01:53<11:41, 82.0kB/s]Status:  31%|███       | 26.1M/83.7M [01:53<15:03, 63.7kB/s]Status:  31%|███       | 26.1M/83.7M [01:53<14:20, 66.8kB/s]Status:  31%|███       | 26.1M/83.7M [01:53<13:04, 73.3kB/s]Status:  31%|███▏      | 26.2M/83.7M [01:54<10:43, 89.3kB/s]Status:  31%|███▏      | 26.2M/83.7M [01:54<10:13, 93.7kB/s]Status:  31%|███▏      | 26.2M/83.7M [01:54<12:41, 75.4kB/s]Status:  31%|███▏      | 26.2M/83.7M [01:55<18:25, 51.9kB/s]Status:  31%|███▏      | 26.2M/83.7M [01:55<19:04, 50.2kB/s]Status:  31%|███▏      | 26.2M/83.7M [01:56<23:23, 40.9kB/s]Status:  31%|███▏      | 26.3M/83.7M [01:56<20:57, 45.6kB/s]Status:  31%|███▏      | 26.3M/83.7M [01:56<20:48, 45.9kB/s]Status:  31%|███▏      | 26.3M/83.7M [01:57<25:41, 37.2kB/s]Status:  31%|███▏      | 26.3M/83.7M [01:58<28:29, 33.5kB/s]Status:  31%|███▏      | 26.3M/83.7M [01:58<24:27, 39.1kB/s]Status:  31%|███▏      | 26.3M/83.7M [01:58<23:05, 41.4kB/s]Status:  32%|███▏      | 26.4M/83.7M [01:59<26:38, 35.8kB/s]Status:  32%|███▏      | 26.4M/83.7M [01:59<29:57, 31.9kB/s]Status:  32%|███▏      | 26.4M/83.7M [02:00<24:34, 38.8kB/s]Status:  32%|███▏      | 26.4M/83.7M [02:00<24:57, 38.2kB/s]Status:  32%|███▏      | 26.4M/83.7M [02:00<23:36, 40.4kB/s]Status:  32%|███▏      | 26.4M/83.7M [02:01<20:58, 45.5kB/s]Status:  32%|███▏      | 26.5M/83.7M [02:01<18:59, 50.2kB/s]Status:  32%|███▏      | 26.5M/83.7M [02:01<17:38, 54.0kB/s]Status:  32%|███▏      | 26.5M/83.7M [02:01<16:49, 56.6kB/s]Status:  32%|███▏      | 26.5M/83.7M [02:02<16:01, 59.4kB/s]Status:  32%|███▏      | 26.5M/83.7M [02:02<14:37, 65.1kB/s]Status:  32%|███▏      | 26.5M/83.7M [02:02<11:58, 79.5kB/s]Status:  32%|███▏      | 26.6M/83.7M [02:02<09:07, 104kB/s] Status:  32%|███▏      | 26.6M/83.7M [02:02<07:17, 130kB/s]Status:  32%|███▏      | 26.6M/83.7M [02:03<06:44, 141kB/s]Status:  32%|███▏      | 26.7M/83.7M [02:03<06:27, 147kB/s]Status:  32%|███▏      | 26.7M/83.7M [02:03<05:44, 165kB/s]Status:  32%|███▏      | 26.7M/83.7M [02:03<05:44, 165kB/s]Status:  32%|███▏      | 26.8M/83.7M [02:03<05:17, 179kB/s]Status:  32%|███▏      | 26.8M/83.7M [02:03<05:05, 186kB/s]Status:  32%|███▏      | 26.8M/83.7M [02:04<04:31, 210kB/s]Status:  32%|███▏      | 26.9M/83.7M [02:04<03:47, 250kB/s]Status:  32%|███▏      | 26.9M/83.7M [02:04<03:51, 246kB/s]Status:  32%|███▏      | 27.0M/83.7M [02:04<05:15, 180kB/s]Status:  32%|███▏      | 27.0M/83.7M [02:04<04:59, 189kB/s]Status:  32%|███▏      | 27.0M/83.7M [02:05<05:13, 181kB/s]Status:  32%|███▏      | 27.1M/83.7M [02:05<05:20, 177kB/s]Status:  32%|███▏      | 27.1M/83.7M [02:05<05:03, 186kB/s]Status:  32%|███▏      | 27.1M/83.7M [02:05<04:26, 212kB/s]Status:  32%|███▏      | 27.2M/83.7M [02:05<04:26, 212kB/s]Status:  33%|███▎      | 27.2M/83.7M [02:05<04:41, 200kB/s]Status:  33%|███▎      | 27.2M/83.7M [02:06<05:58, 157kB/s]Status:  33%|███▎      | 27.2M/83.7M [02:06<05:25, 173kB/s]Status:  33%|███▎      | 27.3M/83.7M [02:06<06:06, 154kB/s]Status:  33%|███▎      | 27.3M/83.7M [02:06<05:51, 160kB/s]Status:  33%|███▎      | 27.3M/83.7M [02:06<05:47, 162kB/s]Status:  33%|███▎      | 27.3M/83.7M [02:06<06:47, 138kB/s]Status:  33%|███▎      | 27.4M/83.7M [02:07<05:58, 157kB/s]Status:  33%|███▎      | 27.4M/83.7M [02:07<06:18, 149kB/s]Status:  33%|███▎      | 27.4M/83.7M [02:07<05:15, 178kB/s]Status:  33%|███▎      | 27.5M/83.7M [02:07<05:03, 185kB/s]Status:  33%|███▎      | 27.5M/83.7M [02:07<05:12, 180kB/s]Status:  33%|███▎      | 27.5M/83.7M [02:07<04:48, 194kB/s]Status:  33%|███▎      | 27.6M/83.7M [02:08<04:39, 201kB/s]Status:  33%|███▎      | 27.6M/83.7M [02:08<05:23, 173kB/s]Status:  33%|███▎      | 27.6M/83.7M [02:08<05:30, 169kB/s]Status:  33%|███▎      | 27.6M/83.7M [02:08<05:03, 185kB/s]Status:  33%|███▎      | 27.7M/83.7M [02:08<05:43, 163kB/s]Status:  33%|███▎      | 27.7M/83.7M [02:08<05:43, 163kB/s]Status:  33%|███▎      | 27.7M/83.7M [02:09<04:49, 193kB/s]Status:  33%|███▎      | 27.8M/83.7M [02:09<05:00, 186kB/s]Status:  33%|███▎      | 27.8M/83.7M [02:09<04:44, 196kB/s]Status:  33%|███▎      | 27.8M/83.7M [02:09<05:29, 170kB/s]Status:  33%|███▎      | 27.9M/83.7M [02:09<05:04, 183kB/s]Status:  33%|███▎      | 27.9M/83.7M [02:09<04:45, 195kB/s]Status:  33%|███▎      | 27.9M/83.7M [02:09<04:59, 186kB/s]Status:  33%|███▎      | 27.9M/83.7M [02:10<04:42, 197kB/s]Status:  33%|███▎      | 28.0M/83.7M [02:10<04:32, 204kB/s]Status:  33%|███▎      | 28.0M/83.7M [02:10<04:00, 231kB/s]Status:  34%|███▎      | 28.0M/83.7M [02:10<04:06, 225kB/s]Status:  34%|███▎      | 28.1M/83.7M [02:10<04:13, 219kB/s]Status:  34%|███▎      | 28.1M/83.7M [02:10<04:36, 201kB/s]Status:  34%|███▎      | 28.1M/83.7M [02:11<04:27, 208kB/s]Status:  34%|███▎      | 28.2M/83.7M [02:11<05:12, 177kB/s]Status:  34%|███▎      | 28.2M/83.7M [02:11<04:49, 191kB/s]Status:  34%|███▎      | 28.2M/83.7M [02:11<05:32, 167kB/s]Status:  34%|███▍      | 28.2M/83.7M [02:11<07:58, 116kB/s]Status:  34%|███▍      | 28.3M/83.7M [02:12<09:11, 100kB/s]Status:  34%|███▍      | 28.3M/83.7M [02:12<09:39, 95.6kB/s]Status:  34%|███▍      | 28.3M/83.7M [02:12<10:41, 86.3kB/s]Status:  34%|███▍      | 28.3M/83.7M [02:13<13:01, 70.8kB/s]Status:  34%|███▍      | 28.3M/83.7M [02:13<14:01, 65.7kB/s]Status:  34%|███▍      | 28.3M/83.7M [02:13<13:13, 69.7kB/s]Status:  34%|███▍      | 28.4M/83.7M [02:13<11:55, 77.3kB/s]Status:  34%|███▍      | 28.4M/83.7M [02:13<10:53, 84.6kB/s]Status:  34%|███▍      | 28.4M/83.7M [02:13<10:10, 90.5kB/s]Status:  34%|███▍      | 28.4M/83.7M [02:14<08:16, 111kB/s] Status:  34%|███▍      | 28.4M/83.7M [02:14<08:54, 103kB/s]Status:  34%|███▍      | 28.5M/83.7M [02:14<08:38, 106kB/s]Status:  34%|███▍      | 28.5M/83.7M [02:14<10:05, 91.1kB/s]Status:  34%|███▍      | 28.5M/83.7M [02:14<09:38, 95.4kB/s]Status:  34%|███▍      | 28.5M/83.7M [02:15<09:17, 99.0kB/s]Status:  34%|███▍      | 28.5M/83.7M [02:15<07:02, 131kB/s] Status:  34%|███▍      | 28.6M/83.7M [02:15<06:27, 142kB/s]Status:  34%|███▍      | 28.6M/83.7M [02:15<06:17, 146kB/s]Status:  34%|███▍      | 28.6M/83.7M [02:15<06:00, 153kB/s]Status:  34%|███▍      | 28.6M/83.7M [02:15<06:01, 152kB/s]Status:  34%|███▍      | 28.6M/83.7M [02:15<06:27, 142kB/s]Status:  34%|███▍      | 28.7M/83.7M [02:16<06:14, 147kB/s]Status:  34%|███▍      | 28.7M/83.7M [02:16<05:24, 169kB/s]Status:  34%|███▍      | 28.7M/83.7M [02:16<05:27, 168kB/s]Status:  34%|███▍      | 28.8M/83.7M [02:16<04:59, 184kB/s]Status:  34%|███▍      | 28.8M/83.7M [02:16<05:41, 161kB/s]Status:  34%|███▍      | 28.8M/83.7M [02:16<05:07, 178kB/s]Status:  34%|███▍      | 28.8M/83.7M [02:16<05:19, 171kB/s]Status:  34%|███▍      | 28.9M/83.7M [02:17<04:51, 188kB/s]Status:  35%|███▍      | 28.9M/83.7M [02:17<05:02, 181kB/s]Status:  35%|███▍      | 28.9M/83.7M [02:17<05:11, 175kB/s]Status:  35%|███▍      | 28.9M/83.7M [02:17<04:49, 189kB/s]Status:  35%|███▍      | 29.0M/83.7M [02:17<06:02, 151kB/s]Status:  35%|███▍      | 29.0M/83.7M [02:17<05:23, 169kB/s]Status:  35%|███▍      | 29.0M/83.7M [02:18<04:59, 182kB/s]Status:  35%|███▍      | 29.1M/83.7M [02:18<05:36, 162kB/s]Status:  35%|███▍      | 29.1M/83.7M [02:18<05:07, 177kB/s]Status:  35%|███▍      | 29.1M/83.7M [02:18<05:20, 170kB/s]Status:  35%|███▍      | 29.1M/83.7M [02:18<05:47, 157kB/s]Status:  35%|███▍      | 29.2M/83.7M [02:19<06:47, 134kB/s]Status:  35%|███▍      | 29.2M/83.7M [02:19<07:07, 128kB/s]Status:  35%|███▍      | 29.2M/83.7M [02:19<08:04, 112kB/s]Status:  35%|███▍      | 29.2M/83.7M [02:19<08:06, 112kB/s]Status:  35%|███▍      | 29.2M/83.7M [02:19<08:09, 111kB/s]Status:  35%|███▍      | 29.2M/83.7M [02:19<07:12, 126kB/s]Status:  35%|███▍      | 29.3M/83.7M [02:20<07:06, 128kB/s]Status:  35%|███▌      | 29.3M/83.7M [02:20<07:21, 123kB/s]Status:  35%|███▌      | 29.3M/83.7M [02:20<07:00, 129kB/s]Status:  35%|███▌      | 29.3M/83.7M [02:20<06:20, 143kB/s]Status:  35%|███▌      | 29.4M/83.7M [02:20<05:30, 164kB/s]Status:  35%|███▌      | 29.4M/83.7M [02:20<05:06, 177kB/s]Status:  35%|███▌      | 29.4M/83.7M [02:21<05:11, 174kB/s]Status:  35%|███▌      | 29.5M/83.7M [02:21<06:43, 134kB/s]Status:  35%|███▌      | 29.5M/83.7M [02:21<09:12, 98.0kB/s]Status:  35%|███▌      | 29.5M/83.7M [02:21<09:00, 100kB/s] Status:  35%|███▌      | 29.5M/83.7M [02:21<08:11, 110kB/s]Status:  35%|███▌      | 29.5M/83.7M [02:22<07:51, 115kB/s]Status:  35%|███▌      | 29.6M/83.7M [02:22<07:19, 123kB/s]Status:  35%|███▌      | 29.6M/83.7M [02:22<07:31, 120kB/s]Status:  35%|███▌      | 29.6M/83.7M [02:22<05:30, 163kB/s]Status:  35%|███▌      | 29.6M/83.7M [02:22<05:31, 163kB/s]Status:  35%|███▌      | 29.7M/83.7M [02:23<09:26, 95.3kB/s]Status:  35%|███▌      | 29.7M/83.7M [02:23<09:28, 94.9kB/s]Status:  35%|███▌      | 29.7M/83.7M [02:23<09:00, 99.8kB/s]Status:  36%|███▌      | 29.7M/83.7M [02:23<10:08, 88.7kB/s]Status:  36%|███▌      | 29.8M/83.7M [02:23<06:47, 132kB/s] Status:  36%|███▌      | 29.8M/83.7M [02:24<06:56, 129kB/s]Status:  36%|███▌      | 29.8M/83.7M [02:24<06:40, 134kB/s]Status:  36%|███▌      | 29.8M/83.7M [02:24<06:58, 129kB/s]Status:  36%|███▌      | 29.8M/83.7M [02:24<07:00, 128kB/s]Status:  36%|███▌      | 29.8M/83.7M [02:24<08:21, 107kB/s]Status:  36%|███▌      | 29.9M/83.7M [02:24<08:22, 107kB/s]Status:  36%|███▌      | 29.9M/83.7M [02:25<09:55, 90.3kB/s]Status:  36%|███▌      | 29.9M/83.7M [02:25<10:07, 88.5kB/s]Status:  36%|███▌      | 29.9M/83.7M [02:25<09:33, 93.7kB/s]Status:  36%|███▌      | 29.9M/83.7M [02:25<08:21, 107kB/s] Status:  36%|███▌      | 29.9M/83.7M [02:25<07:30, 119kB/s]Status:  36%|███▌      | 30.0M/83.7M [02:25<05:56, 151kB/s]Status:  36%|███▌      | 30.0M/83.7M [02:25<05:12, 172kB/s]Status:  36%|███▌      | 30.0M/83.7M [02:25<03:57, 226kB/s]Status:  36%|███▌      | 30.1M/83.7M [02:26<03:38, 246kB/s]Status:  36%|███▌      | 30.1M/83.7M [02:26<03:26, 259kB/s]Status:  36%|███▌      | 30.2M/83.7M [02:26<03:09, 283kB/s]Status:  36%|███▌      | 30.2M/83.7M [02:26<03:02, 293kB/s]Status:  36%|███▌      | 30.2M/83.7M [02:26<02:35, 344kB/s]Status:  36%|███▌      | 30.3M/83.7M [02:26<02:19, 383kB/s]Status:  36%|███▋      | 30.3M/83.7M [02:26<02:09, 413kB/s]Status:  36%|███▋      | 30.4M/83.7M [02:26<02:02, 435kB/s]Status:  36%|███▋      | 30.4M/83.7M [02:26<01:58, 451kB/s]Status:  36%|███▋      | 30.5M/83.7M [02:27<01:54, 466kB/s]Status:  37%|███▋      | 30.6M/83.7M [02:27<01:36, 549kB/s]Status:  37%|███▋      | 30.7M/83.7M [02:27<01:42, 518kB/s]Status:  37%|███▋      | 30.7M/83.7M [02:27<01:35, 552kB/s]Status:  37%|███▋      | 30.8M/83.7M [02:27<01:21, 652kB/s]Status:  37%|███▋      | 30.9M/83.7M [02:27<01:23, 629kB/s]Status:  37%|███▋      | 31.0M/83.7M [02:27<01:17, 678kB/s]Status:  37%|███▋      | 31.1M/83.7M [02:27<01:15, 693kB/s]Status:  37%|███▋      | 31.2M/83.7M [02:28<01:08, 764kB/s]Status:  37%|███▋      | 31.3M/83.7M [02:28<01:11, 732kB/s]Status:  37%|███▋      | 31.3M/83.7M [02:28<01:09, 755kB/s]Status:  38%|███▊      | 31.4M/83.7M [02:28<01:03, 817kB/s]Status:  38%|███▊      | 31.5M/83.7M [02:28<01:00, 863kB/s]Status:  38%|███▊      | 31.6M/83.7M [02:28<00:57, 897kB/s]Status:  38%|███▊      | 31.7M/83.7M [02:28<00:54, 946kB/s]Status:  38%|███▊      | 31.8M/83.7M [02:28<00:54, 956kB/s]Status:  38%|███▊      | 31.9M/83.7M [02:28<00:53, 963kB/s]Status:  38%|███▊      | 32.0M/83.7M [02:28<00:53, 968kB/s]Status:  38%|███▊      | 32.2M/83.7M [02:29<00:49, 1.04MB/s]Status:  39%|███▊      | 32.3M/83.7M [02:29<00:48, 1.07MB/s]Status:  39%|███▊      | 32.4M/83.7M [02:29<00:47, 1.08MB/s]Status:  39%|███▉      | 32.5M/83.7M [02:29<00:50, 1.01MB/s]Status:  39%|███▉      | 32.7M/83.7M [02:29<00:43, 1.18MB/s]Status:  39%|███▉      | 32.8M/83.7M [02:29<00:42, 1.20MB/s]Status:  39%|███▉      | 32.9M/83.7M [02:29<00:41, 1.23MB/s]Status:  40%|███▉      | 33.1M/83.7M [02:29<00:40, 1.24MB/s]Status:  40%|███▉      | 33.2M/83.7M [02:29<00:42, 1.18MB/s]Status:  40%|███▉      | 33.4M/83.7M [02:30<00:40, 1.24MB/s]Status:  40%|████      | 33.5M/83.7M [02:30<00:39, 1.26MB/s]Status:  40%|████      | 33.6M/83.7M [02:30<00:39, 1.27MB/s]Status:  40%|████      | 33.8M/83.7M [02:30<00:38, 1.31MB/s]Status:  41%|████      | 34.0M/83.7M [02:30<00:33, 1.47MB/s]Status:  41%|████      | 34.1M/83.7M [02:30<00:33, 1.50MB/s]Status:  41%|████      | 34.3M/83.7M [02:30<00:33, 1.50MB/s]Status:  41%|████      | 34.4M/83.7M [02:30<00:35, 1.37MB/s]Status:  41%|████▏     | 34.6M/83.7M [02:30<00:33, 1.45MB/s]Status:  42%|████▏     | 34.8M/83.7M [02:31<00:32, 1.52MB/s]Status:  42%|████▏     | 34.9M/83.7M [02:31<00:31, 1.53MB/s]Status:  42%|████▏     | 35.1M/83.7M [02:31<00:31, 1.54MB/s]Status:  42%|████▏     | 35.3M/83.7M [02:31<00:28, 1.71MB/s]Status:  42%|████▏     | 35.5M/83.7M [02:31<00:27, 1.73MB/s]Status:  43%|████▎     | 35.7M/83.7M [02:31<00:27, 1.74MB/s]Status:  43%|████▎     | 35.8M/83.7M [02:31<00:27, 1.76MB/s]Status:  43%|████▎     | 36.0M/83.7M [02:31<00:26, 1.77MB/s]Status:  43%|████▎     | 36.2M/83.7M [02:31<00:26, 1.77MB/s]Status:  44%|████▎     | 36.4M/83.7M [02:31<00:26, 1.81MB/s]Status:  44%|████▎     | 36.6M/83.7M [02:32<00:28, 1.66MB/s]Status:  44%|████▍     | 36.8M/83.7M [02:32<00:25, 1.87MB/s]Status:  44%|████▍     | 37.0M/83.7M [02:32<00:24, 1.89MB/s]Status:  45%|████▍     | 37.2M/83.7M [02:32<00:24, 1.92MB/s]Status:  45%|████▍     | 37.5M/83.7M [02:32<00:23, 1.96MB/s]Status:  45%|████▌     | 37.7M/83.7M [02:32<00:22, 2.01MB/s]Status:  45%|████▌     | 37.9M/83.7M [02:32<00:21, 2.09MB/s]Status:  46%|████▌     | 38.1M/83.7M [02:32<00:21, 2.15MB/s]Status:  46%|████▌     | 38.4M/83.7M [02:32<00:22, 2.04MB/s]Status:  46%|████▌     | 38.7M/83.7M [02:33<00:20, 2.24MB/s]Status:  47%|████▋     | 38.9M/83.7M [02:33<00:19, 2.35MB/s]Status:  47%|████▋     | 39.2M/83.7M [02:33<00:18, 2.47MB/s]Status:  47%|████▋     | 39.6M/83.7M [02:33<00:15, 2.84MB/s]Status:  48%|████▊     | 39.9M/83.7M [02:33<00:15, 2.87MB/s]Status:  48%|████▊     | 40.2M/83.7M [02:33<00:14, 3.07MB/s]Status:  49%|████▊     | 40.6M/83.7M [02:33<00:13, 3.17MB/s]Status:  49%|████▉     | 40.9M/83.7M [02:33<00:12, 3.30MB/s]Status:  49%|████▉     | 41.3M/83.7M [02:33<00:12, 3.41MB/s]Status:  50%|████▉     | 41.7M/83.7M [02:33<00:11, 3.56MB/s]Status:  50%|█████     | 42.1M/83.7M [02:34<00:11, 3.72MB/s]Status:  51%|█████     | 42.5M/83.7M [02:34<00:10, 3.83MB/s]Status:  51%|█████▏    | 43.0M/83.7M [02:34<00:10, 3.99MB/s]Status:  52%|█████▏    | 43.4M/83.7M [02:34<00:09, 4.17MB/s]Status:  52%|█████▏    | 43.9M/83.7M [02:34<00:09, 4.14MB/s]Status:  53%|█████▎    | 44.4M/83.7M [02:34<00:08, 4.53MB/s]Status:  54%|█████▎    | 44.9M/83.7M [02:34<00:08, 4.43MB/s]Status:  54%|█████▍    | 45.5M/83.7M [02:34<00:08, 4.55MB/s]Status:  55%|█████▌    | 46.0M/83.7M [02:34<00:07, 4.78MB/s]Status:  56%|█████▌    | 46.6M/83.7M [02:35<00:07, 5.04MB/s]Status:  56%|█████▋    | 47.2M/83.7M [02:35<00:06, 5.41MB/s]Status:  57%|█████▋    | 47.8M/83.7M [02:35<00:06, 5.52MB/s]Status:  58%|█████▊    | 48.5M/83.7M [02:35<00:06, 5.81MB/s]Status:  59%|█████▉    | 49.2M/83.7M [02:35<00:05, 6.32MB/s]Status:  60%|█████▉    | 49.9M/83.7M [02:35<00:05, 6.28MB/s]Status:  61%|██████    | 50.7M/83.7M [02:35<00:04, 6.91MB/s]Status:  61%|██████▏   | 51.4M/83.7M [02:35<00:04, 7.04MB/s]Status:  62%|██████▏   | 52.2M/83.7M [02:35<00:04, 7.27MB/s]Status:  63%|██████▎   | 53.0M/83.7M [02:35<00:04, 7.32MB/s]Status:  64%|██████▍   | 53.8M/83.7M [02:36<00:03, 7.66MB/s]Status:  65%|██████▌   | 54.7M/83.7M [02:36<00:03, 7.79MB/s]Status:  66%|██████▋   | 55.6M/83.7M [02:36<00:03, 8.16MB/s]Status:  67%|██████▋   | 56.4M/83.7M [02:36<00:03, 8.36MB/s]Status:  69%|██████▊   | 57.3M/83.7M [02:36<00:03, 8.55MB/s]Status:  70%|██████▉   | 58.3M/83.7M [02:36<00:02, 8.88MB/s]Status:  71%|███████   | 59.2M/83.7M [02:36<00:02, 8.94MB/s]Status:  72%|███████▏  | 60.3M/83.7M [02:36<00:02, 9.55MB/s]Status:  73%|███████▎  | 61.3M/83.7M [02:36<00:02, 9.56MB/s]Status:  75%|███████▍  | 62.4M/83.7M [02:36<00:02, 9.93MB/s]Status:  76%|███████▌  | 63.4M/83.7M [02:37<00:02, 9.95MB/s]Status:  77%|███████▋  | 64.5M/83.7M [02:37<00:01, 10.3MB/s]Status:  79%|███████▊  | 65.7M/83.7M [02:37<00:01, 10.9MB/s]Status:  80%|████████  | 66.9M/83.7M [02:37<00:01, 11.3MB/s]Status:  81%|████████▏ | 68.1M/83.7M [02:37<00:01, 11.3MB/s]Status:  83%|████████▎ | 69.4M/83.7M [02:37<00:01, 11.9MB/s]Status:  85%|████████▍ | 70.7M/83.7M [02:37<00:01, 12.2MB/s]Status:  86%|████████▌ | 71.9M/83.7M [02:37<00:00, 11.9MB/s]Status:  87%|████████▋ | 73.1M/83.7M [02:37<00:00, 10.9MB/s]Status:  89%|████████▉ | 74.4M/83.7M [02:37<00:00, 11.4MB/s]Status:  90%|█████████ | 75.6M/83.7M [02:38<00:00, 11.3MB/s]Status:  92%|█████████▏| 76.7M/83.7M [02:38<00:00, 11.3MB/s]Status:  93%|█████████▎| 77.8M/83.7M [02:38<00:00, 11.0MB/s]Status:  94%|█████████▍| 78.9M/83.7M [02:38<00:00, 10.0MB/s]Status:  96%|█████████▌| 80.0M/83.7M [02:38<00:00, 8.91MB/s]Status:  97%|█████████▋| 80.9M/83.7M [02:38<00:00, 8.87MB/s]Status:  98%|█████████▊| 81.8M/83.7M [02:38<00:00, 8.02MB/s]Status:  99%|█████████▉| 82.6M/83.7M [02:38<00:00, 8.04MB/s]Status: 100%|█████████▉| 83.5M/83.7M [02:39<00:00, 8.07MB/s]Status: 100%|██████████| 83.7M/83.7M [02:39<00:00, 526kB/s] 
+Creating temporary folder (/tmp/sct_2024-11-04_00-05-16_install-data_69uhkniw)
+Unzip data to: /tmp/sct_2024-11-04_00-05-16_install-data_69uhkniw
+Copying data to: /home/hurricane/sct_6.4/bin
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/isct_ComposeMultiTransform'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/isct_antsApplyTransforms'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/isct_antsRegistration'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/isct_antsSliceRegularizedRegistration'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/isct_dice_coefficient'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/isct_propseg'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/isct_spine_detect'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/isct_stitching'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/isct_train_svm'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/copyright/LICENSE_ANTs.txt'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/copyright/LICENSE_ctrDetect.txt'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/copyright/LICENSE_opencv.txt'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/bin/copyright/LICENSE_stitching.txt'[0m
+Removing temporary folders...
+Done!
+
+
+[0;32mAll requirements installed![0m
+
+
+[0;32mInstalling data...[0m
+
+
+[0;34mmkdir -p /home/hurricane/sct_6.4/data[0m
+
+
+[0;34msct_download_data -d default -k[0m
+
+
+--
+Spinal Cord Toolbox (6.4)
+
+sct_download_data -d default -k
+--
+
+Trying URL: https://github.com/spinalcordtoolbox/PAM50/releases/download/r20240215/PAM50-r20240215.zip
+Downloading: PAM50-r20240215.zip
+Status:   0%|          | 0.00/104M [00:00<?, ?B/s]Status:   0%|          | 262k/104M [00:00<00:48, 2.13MB/s]Status:   1%|          | 786k/104M [00:00<00:27, 3.80MB/s]Status:   1%|▏         | 1.40M/104M [00:00<00:21, 4.82MB/s]Status:   2%|▏         | 2.35M/104M [00:00<00:15, 6.59MB/s]Status:   3%|▎         | 3.28M/104M [00:00<00:13, 7.56MB/s]Status:   4%|▍         | 4.20M/104M [00:00<00:12, 8.06MB/s]Status:   5%|▍         | 5.14M/104M [00:00<00:11, 8.47MB/s]Status:   6%|▌         | 6.09M/104M [00:00<00:11, 8.78MB/s]Status:   7%|▋         | 7.08M/104M [00:00<00:10, 9.12MB/s]Status:   8%|▊         | 8.10M/104M [00:01<00:10, 9.39MB/s]Status:   9%|▊         | 9.04M/104M [00:01<00:10, 9.40MB/s]Status:  10%|▉         | 10.1M/104M [00:01<00:09, 9.68MB/s]Status:  11%|█         | 11.1M/104M [00:01<00:09, 9.70MB/s]Status:  12%|█▏        | 12.0M/104M [00:01<00:09, 9.70MB/s]Status:  13%|█▎        | 13.0M/104M [00:01<00:09, 9.75MB/s]Status:  14%|█▎        | 14.1M/104M [00:01<00:09, 9.91MB/s]Status:  15%|█▍        | 15.1M/104M [00:01<00:09, 9.82MB/s]Status:  15%|█▌        | 16.1M/104M [00:01<00:08, 9.89MB/s]Status:  16%|█▋        | 17.1M/104M [00:01<00:08, 9.94MB/s]Status:  17%|█▋        | 18.1M/104M [00:02<00:08, 10.1MB/s]Status:  18%|█▊        | 19.2M/104M [00:02<00:08, 10.1MB/s]Status:  19%|█▉        | 20.2M/104M [00:02<00:09, 9.17MB/s]Status:  20%|██        | 21.1M/104M [00:02<00:09, 9.07MB/s]Status:  21%|██        | 22.0M/104M [00:02<00:10, 7.64MB/s]Status:  22%|██▏       | 22.9M/104M [00:02<00:10, 7.51MB/s]Status:  23%|██▎       | 23.7M/104M [00:02<00:10, 7.58MB/s]Status:  24%|██▎       | 24.6M/104M [00:02<00:10, 7.78MB/s]Status:  24%|██▍       | 25.4M/104M [00:02<00:10, 7.83MB/s]Status:  25%|██▌       | 26.2M/104M [00:03<00:09, 7.85MB/s]Status:  26%|██▌       | 27.0M/104M [00:03<00:09, 7.92MB/s]Status:  27%|██▋       | 27.8M/104M [00:03<00:09, 7.94MB/s]Status:  28%|██▊       | 28.6M/104M [00:03<00:09, 7.93MB/s]Status:  28%|██▊       | 29.4M/104M [00:03<00:09, 7.89MB/s]Status:  29%|██▉       | 30.2M/104M [00:03<00:10, 7.17MB/s]Status:  30%|██▉       | 30.9M/104M [00:03<00:10, 7.11MB/s]Status:  31%|███       | 31.7M/104M [00:03<00:09, 7.37MB/s]Status:  31%|███▏      | 32.5M/104M [00:03<00:09, 7.51MB/s]Status:  32%|███▏      | 33.4M/104M [00:04<00:09, 7.74MB/s]Status:  33%|███▎      | 34.2M/104M [00:04<00:08, 8.06MB/s]Status:  34%|███▍      | 35.1M/104M [00:04<00:08, 8.06MB/s]Status:  35%|███▍      | 35.9M/104M [00:04<00:08, 8.12MB/s]Status:  35%|███▌      | 36.8M/104M [00:04<00:07, 8.42MB/s]Status:  36%|███▋      | 37.6M/104M [00:04<00:07, 8.42MB/s]Status:  37%|███▋      | 38.5M/104M [00:04<00:07, 8.42MB/s]Status:  38%|███▊      | 39.3M/104M [00:04<00:07, 8.47MB/s]Status:  39%|███▉      | 40.2M/104M [00:04<00:07, 8.48MB/s]Status:  40%|███▉      | 41.1M/104M [00:04<00:07, 8.47MB/s]Status:  40%|████      | 41.9M/104M [00:05<00:07, 8.46MB/s]Status:  41%|████▏     | 42.8M/104M [00:05<00:06, 8.71MB/s]Status:  42%|████▏     | 43.7M/104M [00:05<00:06, 8.71MB/s]Status:  43%|████▎     | 44.6M/104M [00:05<00:06, 8.67MB/s]Status:  44%|████▍     | 45.5M/104M [00:05<00:06, 8.68MB/s]Status:  45%|████▍     | 46.4M/104M [00:05<00:06, 8.71MB/s]Status:  46%|████▌     | 47.2M/104M [00:05<00:06, 8.67MB/s]Status:  46%|████▋     | 48.1M/104M [00:05<00:06, 8.65MB/s]Status:  47%|████▋     | 49.0M/104M [00:05<00:06, 8.57MB/s]Status:  48%|████▊     | 49.8M/104M [00:05<00:06, 7.82MB/s]Status:  49%|████▉     | 50.7M/104M [00:06<00:06, 8.00MB/s]Status:  50%|████▉     | 51.6M/104M [00:06<00:06, 8.31MB/s]Status:  51%|█████     | 52.4M/104M [00:06<00:06, 8.35MB/s]Status:  51%|█████▏    | 53.3M/104M [00:06<00:06, 8.35MB/s]Status:  52%|█████▏    | 54.1M/104M [00:06<00:05, 8.27MB/s]Status:  53%|█████▎    | 55.0M/104M [00:06<00:06, 7.26MB/s]Status:  54%|█████▎    | 55.7M/104M [00:06<00:08, 5.84MB/s]Status:  54%|█████▍    | 56.4M/104M [00:06<00:08, 5.37MB/s]Status:  55%|█████▍    | 57.0M/104M [00:07<00:08, 5.45MB/s]Status:  55%|█████▌    | 57.5M/104M [00:07<00:09, 4.95MB/s]Status:  56%|█████▌    | 58.1M/104M [00:07<00:09, 5.01MB/s]Status:  56%|█████▋    | 58.6M/104M [00:07<00:08, 5.06MB/s]Status:  57%|█████▋    | 59.1M/104M [00:07<00:08, 5.10MB/s]Status:  57%|█████▋    | 59.6M/104M [00:07<00:08, 5.11MB/s]Status:  58%|█████▊    | 60.2M/104M [00:07<00:08, 5.04MB/s]Status:  58%|█████▊    | 60.7M/104M [00:07<00:09, 4.61MB/s]Status:  59%|█████▉    | 61.2M/104M [00:07<00:08, 4.73MB/s]Status:  59%|█████▉    | 61.7M/104M [00:08<00:08, 4.81MB/s]Status:  60%|█████▉    | 62.2M/104M [00:08<00:08, 4.89MB/s]Status:  60%|██████    | 62.8M/104M [00:08<00:08, 5.03MB/s]Status:  61%|██████    | 63.3M/104M [00:08<00:08, 5.02MB/s]Status:  62%|██████▏   | 63.9M/104M [00:08<00:07, 5.32MB/s]Status:  62%|██████▏   | 64.4M/104M [00:08<00:07, 5.33MB/s]Status:  63%|██████▎   | 64.9M/104M [00:08<00:07, 5.33MB/s]Status:  63%|██████▎   | 65.5M/104M [00:08<00:07, 5.34MB/s]Status:  64%|██████▎   | 66.0M/104M [00:08<00:07, 5.31MB/s]Status:  64%|██████▍   | 66.6M/104M [00:08<00:07, 5.30MB/s]Status:  65%|██████▍   | 67.1M/104M [00:09<00:06, 5.30MB/s]Status:  65%|██████▌   | 67.6M/104M [00:09<00:07, 4.76MB/s]Status:  66%|██████▌   | 68.1M/104M [00:09<00:07, 4.86MB/s]Status:  66%|██████▌   | 68.7M/104M [00:09<00:07, 5.01MB/s]Status:  67%|██████▋   | 69.2M/104M [00:09<00:06, 5.12MB/s]Status:  67%|██████▋   | 69.8M/104M [00:09<00:06, 5.33MB/s]Status:  68%|██████▊   | 70.4M/104M [00:09<00:06, 5.34MB/s]Status:  68%|██████▊   | 71.0M/104M [00:09<00:05, 5.62MB/s]Status:  69%|██████▉   | 71.6M/104M [00:09<00:05, 5.57MB/s]Status:  70%|██████▉   | 72.1M/104M [00:10<00:05, 5.55MB/s]Status:  70%|███████   | 72.7M/104M [00:10<00:06, 4.97MB/s]Status:  71%|███████   | 73.4M/104M [00:10<00:05, 5.44MB/s]Status:  71%|███████   | 73.9M/104M [00:10<00:05, 5.43MB/s]Status:  72%|███████▏  | 74.5M/104M [00:10<00:05, 5.47MB/s]Status:  72%|███████▏  | 75.0M/104M [00:10<00:05, 5.48MB/s]Status:  73%|███████▎  | 75.6M/104M [00:10<00:05, 5.47MB/s]Status:  73%|███████▎  | 76.1M/104M [00:10<00:05, 5.49MB/s]Status:  74%|███████▍  | 76.7M/104M [00:10<00:04, 5.47MB/s]Status:  74%|███████▍  | 77.3M/104M [00:11<00:05, 4.97MB/s]Status:  75%|███████▌  | 77.9M/104M [00:11<00:04, 5.31MB/s]Status:  76%|███████▌  | 78.4M/104M [00:11<00:04, 5.36MB/s]Status:  76%|███████▋  | 79.1M/104M [00:11<00:04, 5.73MB/s]Status:  77%|███████▋  | 79.7M/104M [00:11<00:04, 5.73MB/s]Status:  77%|███████▋  | 80.3M/104M [00:11<00:04, 5.71MB/s]Status:  78%|███████▊  | 80.9M/104M [00:11<00:04, 5.72MB/s]Status:  79%|███████▊  | 81.4M/104M [00:11<00:03, 5.75MB/s]Status:  79%|███████▉  | 82.0M/104M [00:11<00:03, 5.78MB/s]Status:  80%|███████▉  | 82.6M/104M [00:11<00:03, 5.79MB/s]Status:  80%|████████  | 83.2M/104M [00:12<00:03, 5.74MB/s]Status:  81%|████████  | 83.8M/104M [00:12<00:03, 5.22MB/s]Status:  81%|████████▏ | 84.4M/104M [00:12<00:03, 5.45MB/s]Status:  82%|████████▏ | 85.0M/104M [00:12<00:03, 5.51MB/s]Status:  83%|████████▎ | 85.6M/104M [00:12<00:03, 5.75MB/s]Status:  83%|████████▎ | 86.2M/104M [00:12<00:02, 5.91MB/s]Status:  84%|████████▎ | 86.8M/104M [00:12<00:02, 5.91MB/s]Status:  84%|████████▍ | 87.4M/104M [00:12<00:02, 5.93MB/s]Status:  85%|████████▍ | 88.1M/104M [00:12<00:02, 6.27MB/s]Status:  86%|████████▌ | 88.8M/104M [00:12<00:02, 6.25MB/s]Status:  86%|████████▌ | 89.4M/104M [00:13<00:02, 6.20MB/s]Status:  87%|████████▋ | 90.0M/104M [00:13<00:02, 6.19MB/s]Status:  87%|████████▋ | 90.7M/104M [00:13<00:02, 6.19MB/s]Status:  88%|████████▊ | 91.3M/104M [00:13<00:02, 6.18MB/s]Status:  89%|████████▊ | 91.9M/104M [00:13<00:02, 5.56MB/s]Status:  89%|████████▉ | 92.5M/104M [00:13<00:01, 5.74MB/s]Status:  90%|████████▉ | 93.2M/104M [00:13<00:01, 5.92MB/s]Status:  90%|█████████ | 93.8M/104M [00:13<00:01, 6.09MB/s]Status:  91%|█████████ | 94.4M/104M [00:13<00:01, 6.12MB/s]Status:  92%|█████████▏| 95.3M/104M [00:14<00:01, 6.70MB/s]Status:  92%|█████████▏| 95.9M/104M [00:14<00:01, 6.66MB/s]Status:  93%|█████████▎| 96.6M/104M [00:14<00:01, 6.66MB/s]Status:  94%|█████████▍| 97.3M/104M [00:14<00:00, 6.64MB/s]Status:  94%|█████████▍| 98.0M/104M [00:14<00:00, 6.55MB/s]Status:  95%|█████████▌| 98.6M/104M [00:14<00:00, 5.97MB/s]Status:  96%|█████████▌| 99.3M/104M [00:14<00:00, 6.09MB/s]Status:  96%|█████████▋| 100M/104M [00:14<00:00, 6.56MB/s] Status:  97%|█████████▋| 101M/104M [00:14<00:00, 6.58MB/s]Status:  98%|█████████▊| 101M/104M [00:14<00:00, 6.57MB/s]Status:  98%|█████████▊| 102M/104M [00:15<00:00, 6.73MB/s]Status:  99%|█████████▉| 103M/104M [00:15<00:00, 6.80MB/s]Status: 100%|█████████▉| 103M/104M [00:15<00:00, 6.74MB/s]Status: 100%|██████████| 104M/104M [00:15<00:00, 6.77MB/s]
+Creating temporary folder (/tmp/sct_2024-11-04_00-05-35_install-data_9j3ax17f)
+Unzip data to: /tmp/sct_2024-11-04_00-05-35_install-data_9j3ax17f
+Copying data to: /home/hurricane/sct_6.4/data/PAM50
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/.distriploy.yml'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/.gitignore'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/CHANGES.md'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/README.md'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_00.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_01.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_02.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_03.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_04.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_05.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_06.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_07.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_08.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_09.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_10.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_11.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_12.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_13.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_14.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_15.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_16.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_17.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_18.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_19.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_20.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_21.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_22.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_23.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_24.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_25.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_26.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_27.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_28.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_29.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_30.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_31.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_32.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_33.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_34.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_35.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/PAM50_atlas_36.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/atlas/info_label.txt'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/histology/PAM50_200um_AVF.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/histology/PAM50_200um_Eccentricity.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/histology/PAM50_200um_EquivDiameter.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/histology/PAM50_200um_EquivDiameter14.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/histology/PAM50_200um_EquivDiameter48.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/histology/PAM50_200um_MVF.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/histology/PAM50_200um_Naxons.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/histology/info_label.txt'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/scripts/generate_spinal_levels.py'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/scripts/label_segmentation.py'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/scripts/symmetrize_cord_segmentation.py'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_centerline.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_cord.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_csf.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_gm.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_label_body.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_label_disc.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_label_discPosterior.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_levels.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_levels_continuous.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_rootlets.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_spinal_levels.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_spinal_midpoint.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_spine.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_t1.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_t2.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_t2s.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/PAM50_wm.nii.gz'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50/template/info_label.txt'[0m
+Removing temporary folders...
+Trying URL: https://github.com/spinalcordtoolbox/deepseg_gm_models/releases/download/r20180205/20220325_deepseg_gm_models_onnx.zip
+Downloading: 20220325_deepseg_gm_models_onnx.zip
+Status:   0%|          | 0.00/2.24M [00:00<?, ?B/s]Status:   5%|▍         | 106k/2.24M [00:00<00:02, 1.04MB/s]Status:  26%|██▌       | 573k/2.24M [00:00<00:00, 3.16MB/s]Status:  71%|███████   | 1.59M/2.24M [00:00<00:00, 6.34MB/s]Status: 100%|██████████| 2.24M/2.24M [00:00<00:00, 5.61MB/s]
+Creating temporary folder (/tmp/sct_2024-11-04_00-05-36_install-data_0q9vpe38)
+Unzip data to: /tmp/sct_2024-11-04_00-05-36_install-data_0q9vpe38
+Copying data to: /home/hurricane/sct_6.4/data/deepseg_gm_models
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_gm_models/README.txt'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_gm_models/challenge_model.json'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_gm_models/challenge_model.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_gm_models/large_model.json'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_gm_models/large_model.onnx'[0m
+Removing temporary folders...
+Trying URL: https://github.com/spinalcordtoolbox/deepseg_sc_models/releases/download/r20180610/20220325_deepseg_sc_models_onnx.zip
+Downloading: 20220325_deepseg_sc_models_onnx.zip
+Status:   0%|          | 0.00/19.5M [00:00<?, ?B/s]Status:   1%|          | 115k/19.5M [00:00<00:17, 1.14MB/s]Status:   3%|▎         | 623k/19.5M [00:00<00:05, 3.44MB/s]Status:   8%|▊         | 1.49M/19.5M [00:00<00:03, 5.82MB/s]Status:  12%|█▏        | 2.38M/19.5M [00:00<00:02, 7.00MB/s]Status:  17%|█▋        | 3.26M/19.5M [00:00<00:02, 7.66MB/s]Status:  21%|██        | 4.15M/19.5M [00:00<00:01, 8.06MB/s]Status:  26%|██▌       | 5.08M/19.5M [00:00<00:01, 8.48MB/s]Status:  31%|███       | 6.07M/19.5M [00:00<00:01, 8.93MB/s]Status:  36%|███▌      | 6.97M/19.5M [00:00<00:01, 8.95MB/s]Status:  41%|████      | 8.00M/19.5M [00:01<00:01, 9.34MB/s]Status:  46%|████▌     | 8.93M/19.5M [00:01<00:01, 9.33MB/s]Status:  51%|█████     | 9.88M/19.5M [00:01<00:01, 9.35MB/s]Status:  57%|█████▋    | 11.1M/19.5M [00:01<00:00, 10.1MB/s]Status:  62%|██████▏   | 12.1M/19.5M [00:01<00:00, 10.1MB/s]Status:  67%|██████▋   | 13.1M/19.5M [00:01<00:00, 10.1MB/s]Status:  72%|███████▏  | 14.1M/19.5M [00:01<00:00, 10.0MB/s]Status:  78%|███████▊  | 15.3M/19.5M [00:01<00:00, 10.5MB/s]Status:  84%|████████▎ | 16.3M/19.5M [00:01<00:00, 9.26MB/s]Status:  89%|████████▊ | 17.3M/19.5M [00:01<00:00, 9.33MB/s]Status:  93%|█████████▎| 18.2M/19.5M [00:02<00:00, 9.18MB/s]Status:  98%|█████████▊| 19.2M/19.5M [00:02<00:00, 7.27MB/s]Status: 100%|██████████| 19.5M/19.5M [00:02<00:00, 8.40MB/s]
+Creating temporary folder (/tmp/sct_2024-11-04_00-05-40_install-data_ta_ywj2i)
+Unzip data to: /tmp/sct_2024-11-04_00-05-40_install-data_ta_ywj2i
+Copying data to: /home/hurricane/sct_6.4/data/deepseg_sc_models
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/README.txt'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/dwi_ctr.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/dwi_sc.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/t1_ctr.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/t1_sc.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/t1_sc_3D.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/t2_ctr.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/t2_sc.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/t2_sc_3D.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/t2s_ctr.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/t2s_sc.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_sc_models/t2s_sc_3D.onnx'[0m
+Removing temporary folders...
+Trying URL: https://github.com/spinalcordtoolbox/deepseg_lesion_models/releases/download/r20180613/20220325_deepseg_lesion_models_onnx.zip
+Downloading: 20220325_deepseg_lesion_models_onnx.zip
+Status:   0%|          | 0.00/5.35M [00:00<?, ?B/s]Status:   5%|▍         | 246k/5.35M [00:00<00:02, 2.03MB/s]Status:  14%|█▍        | 770k/5.35M [00:00<00:01, 3.72MB/s]Status:  33%|███▎      | 1.79M/5.35M [00:00<00:00, 6.51MB/s]Status:  47%|████▋     | 2.54M/5.35M [00:00<00:00, 6.89MB/s]Status:  63%|██████▎   | 3.36M/5.35M [00:00<00:00, 7.35MB/s]Status:  80%|███████▉  | 4.28M/5.35M [00:00<00:00, 7.96MB/s]Status:  95%|█████████▌| 5.09M/5.35M [00:00<00:00, 7.97MB/s]Status: 100%|██████████| 5.35M/5.35M [00:00<00:00, 7.30MB/s]
+Creating temporary folder (/tmp/sct_2024-11-04_00-05-42_install-data_w518xg2m)
+Unzip data to: /tmp/sct_2024-11-04_00-05-42_install-data_w518xg2m
+Copying data to: /home/hurricane/sct_6.4/data/deepseg_lesion_models
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_lesion_models/t2_ax_lesion.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_lesion_models/t2_lesion.onnx'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepseg_lesion_models/t2s_lesion.onnx'[0m
+Removing temporary folders...
+Trying URL: https://github.com/ivadomed/multimodal-registration/releases/download/r20220512/models.zip
+Downloading: models.zip
+Status:   0%|          | 0.00/158M [00:00<?, ?B/s]Status:   0%|          | 98.3k/158M [00:00<02:42, 977kB/s]Status:   0%|          | 623k/158M [00:00<00:45, 3.46MB/s]Status:   1%|          | 1.69M/158M [00:00<00:23, 6.66MB/s]Status:   2%|▏         | 2.47M/158M [00:00<00:21, 7.13MB/s]Status:   2%|▏         | 3.44M/158M [00:00<00:19, 8.02MB/s]Status:   3%|▎         | 4.29M/158M [00:00<00:18, 8.16MB/s]Status:   3%|▎         | 5.13M/158M [00:00<00:18, 8.21MB/s]Status:   4%|▍         | 6.09M/158M [00:00<00:17, 8.63MB/s]Status:   4%|▍         | 7.03M/158M [00:00<00:17, 8.83MB/s]Status:   5%|▌         | 7.96M/158M [00:01<00:16, 8.98MB/s]Status:   6%|▌         | 8.88M/158M [00:01<00:16, 9.04MB/s]Status:   6%|▌         | 9.82M/158M [00:01<00:16, 9.13MB/s]Status:   7%|▋         | 10.7M/158M [00:01<00:16, 9.15MB/s]Status:   7%|▋         | 11.7M/158M [00:01<00:15, 9.25MB/s]Status:   8%|▊         | 12.7M/158M [00:01<00:15, 9.60MB/s]Status:   9%|▊         | 13.7M/158M [00:01<00:16, 8.78MB/s]Status:   9%|▉         | 14.7M/158M [00:01<00:15, 9.10MB/s]Status:  10%|▉         | 15.8M/158M [00:01<00:15, 9.40MB/s]Status:  11%|█         | 16.8M/158M [00:01<00:14, 9.60MB/s]Status:  11%|█▏        | 17.8M/158M [00:02<00:14, 9.86MB/s]Status:  12%|█▏        | 18.8M/158M [00:02<00:14, 9.95MB/s]Status:  13%|█▎        | 19.9M/158M [00:02<00:13, 10.1MB/s]Status:  13%|█▎        | 21.0M/158M [00:02<00:13, 10.5MB/s]Status:  14%|█▍        | 22.1M/158M [00:02<00:16, 8.09MB/s]Status:  15%|█▍        | 23.0M/158M [00:02<00:16, 8.18MB/s]Status:  15%|█▌        | 23.9M/158M [00:02<00:17, 7.55MB/s]Status:  16%|█▌        | 24.7M/158M [00:02<00:17, 7.64MB/s]Status:  16%|█▌        | 25.6M/158M [00:03<00:16, 8.03MB/s]Status:  17%|█▋        | 26.4M/158M [00:03<00:16, 8.02MB/s]Status:  17%|█▋        | 27.3M/158M [00:03<00:16, 8.06MB/s]Status:  18%|█▊        | 28.1M/158M [00:03<00:17, 7.27MB/s]Status:  18%|█▊        | 29.0M/158M [00:03<00:16, 7.85MB/s]Status:  19%|█▉        | 29.9M/158M [00:03<00:16, 7.88MB/s]Status:  19%|█▉        | 30.7M/158M [00:03<00:15, 8.06MB/s]Status:  20%|█▉        | 31.5M/158M [00:03<00:15, 8.09MB/s]Status:  20%|██        | 32.4M/158M [00:03<00:15, 8.27MB/s]Status:  21%|██        | 33.3M/158M [00:03<00:14, 8.37MB/s]Status:  22%|██▏       | 34.1M/158M [00:04<00:14, 8.38MB/s]Status:  22%|██▏       | 35.0M/158M [00:04<00:14, 8.36MB/s]Status:  23%|██▎       | 35.8M/158M [00:04<00:14, 8.38MB/s]Status:  23%|██▎       | 36.7M/158M [00:04<00:14, 8.54MB/s]Status:  24%|██▎       | 37.6M/158M [00:04<00:14, 8.53MB/s]Status:  24%|██▍       | 38.5M/158M [00:04<00:15, 7.75MB/s]Status:  25%|██▍       | 39.4M/158M [00:04<00:14, 8.13MB/s]Status:  25%|██▌       | 40.3M/158M [00:04<00:14, 8.29MB/s]Status:  26%|██▌       | 41.1M/158M [00:04<00:14, 8.32MB/s]Status:  27%|██▋       | 42.0M/158M [00:04<00:13, 8.67MB/s]Status:  27%|██▋       | 42.9M/158M [00:05<00:13, 8.60MB/s]Status:  28%|██▊       | 43.9M/158M [00:05<00:12, 8.94MB/s]Status:  28%|██▊       | 44.8M/158M [00:05<00:12, 8.95MB/s]Status:  29%|██▉       | 45.7M/158M [00:05<00:12, 9.09MB/s]Status:  29%|██▉       | 46.7M/158M [00:05<00:12, 9.05MB/s]Status:  30%|███       | 47.6M/158M [00:05<00:12, 9.03MB/s]Status:  31%|███       | 48.5M/158M [00:05<00:12, 9.02MB/s]Status:  31%|███       | 49.4M/158M [00:05<00:12, 8.98MB/s]Status:  32%|███▏      | 50.3M/158M [00:05<00:13, 8.13MB/s]Status:  32%|███▏      | 51.2M/158M [00:06<00:12, 8.29MB/s]Status:  33%|███▎      | 52.1M/158M [00:06<00:12, 8.43MB/s]Status:  34%|███▎      | 53.1M/158M [00:06<00:11, 8.86MB/s]Status:  34%|███▍      | 54.0M/158M [00:06<00:11, 8.83MB/s]Status:  35%|███▍      | 54.9M/158M [00:06<00:11, 9.00MB/s]Status:  35%|███▌      | 56.0M/158M [00:06<00:10, 9.54MB/s]Status:  36%|███▌      | 57.0M/158M [00:06<00:10, 9.43MB/s]Status:  37%|███▋      | 57.9M/158M [00:06<00:11, 8.47MB/s]Status:  37%|███▋      | 58.8M/158M [00:06<00:11, 8.69MB/s]Status:  38%|███▊      | 59.7M/158M [00:06<00:11, 8.71MB/s]Status:  38%|███▊      | 60.7M/158M [00:07<00:10, 8.96MB/s]Status:  39%|███▉      | 61.7M/158M [00:07<00:10, 9.34MB/s]Status:  40%|███▉      | 62.7M/158M [00:07<00:10, 9.25MB/s]Status:  40%|████      | 63.6M/158M [00:07<00:10, 9.38MB/s]Status:  41%|████      | 64.6M/158M [00:07<00:10, 8.84MB/s]Status:  41%|████▏     | 65.5M/158M [00:07<00:11, 8.37MB/s]Status:  42%|████▏     | 66.3M/158M [00:07<00:11, 8.08MB/s]Status:  42%|████▏     | 67.1M/158M [00:07<00:11, 8.11MB/s]Status:  43%|████▎     | 68.0M/158M [00:07<00:10, 8.31MB/s]Status:  44%|████▎     | 69.1M/158M [00:08<00:10, 8.22MB/s]Status:  44%|████▍     | 70.0M/158M [00:08<00:10, 8.41MB/s]Status:  45%|████▍     | 71.0M/158M [00:08<00:09, 8.80MB/s]Status:  45%|████▌     | 71.9M/158M [00:08<00:09, 8.95MB/s]Status:  46%|████▌     | 72.8M/158M [00:08<00:09, 8.93MB/s]Status:  47%|████▋     | 73.9M/158M [00:08<00:09, 9.38MB/s]Status:  47%|████▋     | 74.8M/158M [00:08<00:08, 9.32MB/s]Status:  48%|████▊     | 75.8M/158M [00:08<00:08, 9.38MB/s]Status:  48%|████▊     | 76.7M/158M [00:08<00:08, 9.38MB/s]Status:  49%|████▉     | 77.7M/158M [00:09<00:08, 9.32MB/s]Status:  50%|████▉     | 78.6M/158M [00:09<00:08, 9.30MB/s]Status:  50%|█████     | 79.5M/158M [00:09<00:08, 9.28MB/s]Status:  51%|█████     | 80.5M/158M [00:09<00:08, 9.27MB/s]Status:  51%|█████▏    | 81.4M/158M [00:09<00:09, 8.35MB/s]Status:  52%|█████▏    | 82.4M/158M [00:09<00:08, 8.71MB/s]Status:  53%|█████▎    | 83.3M/158M [00:09<00:08, 8.76MB/s]Status:  53%|█████▎    | 84.2M/158M [00:09<00:08, 8.87MB/s]Status:  54%|█████▍    | 85.1M/158M [00:09<00:08, 9.01MB/s]Status:  54%|█████▍    | 86.1M/158M [00:09<00:07, 9.25MB/s]Status:  55%|█████▍    | 87.0M/158M [00:10<00:07, 9.32MB/s]Status:  56%|█████▌    | 88.0M/158M [00:10<00:07, 9.34MB/s]Status:  56%|█████▌    | 89.0M/158M [00:10<00:07, 9.55MB/s]Status:  57%|█████▋    | 90.0M/158M [00:10<00:07, 9.45MB/s]Status:  57%|█████▋    | 91.0M/158M [00:10<00:06, 9.71MB/s]Status:  58%|█████▊    | 92.0M/158M [00:10<00:06, 9.72MB/s]Status:  59%|█████▊    | 93.0M/158M [00:10<00:06, 9.70MB/s]Status:  59%|█████▉    | 93.9M/158M [00:10<00:06, 9.69MB/s]Status:  60%|█████▉    | 94.9M/158M [00:10<00:06, 9.65MB/s]Status:  61%|██████    | 95.9M/158M [00:10<00:07, 8.75MB/s]Status:  61%|██████    | 96.9M/158M [00:11<00:06, 9.03MB/s]Status:  62%|██████▏   | 97.8M/158M [00:11<00:06, 9.18MB/s]Status:  62%|██████▏   | 98.9M/158M [00:11<00:06, 9.47MB/s]Status:  63%|██████▎   | 99.8M/158M [00:11<00:06, 9.55MB/s]Status:  64%|██████▎   | 101M/158M [00:11<00:06, 9.58MB/s] Status:  64%|██████▍   | 102M/158M [00:11<00:05, 9.81MB/s]Status:  65%|██████▍   | 103M/158M [00:11<00:05, 9.81MB/s]Status:  66%|██████▌   | 104M/158M [00:11<00:05, 9.94MB/s]Status:  66%|██████▌   | 105M/158M [00:11<00:05, 9.95MB/s]Status:  67%|██████▋   | 106M/158M [00:12<00:05, 10.0MB/s]Status:  68%|██████▊   | 107M/158M [00:12<00:05, 10.0MB/s]Status:  68%|██████▊   | 108M/158M [00:12<00:04, 10.1MB/s]Status:  69%|██████▉   | 109M/158M [00:12<00:04, 10.1MB/s]Status:  69%|██████▉   | 110M/158M [00:12<00:04, 9.98MB/s]Status:  70%|███████   | 111M/158M [00:12<00:05, 8.89MB/s]Status:  71%|███████   | 112M/158M [00:12<00:04, 9.32MB/s]Status:  71%|███████▏  | 113M/158M [00:12<00:05, 8.28MB/s]Status:  72%|███████▏  | 114M/158M [00:12<00:05, 8.34MB/s]Status:  72%|███████▏  | 115M/158M [00:13<00:05, 8.26MB/s]Status:  73%|███████▎  | 116M/158M [00:13<00:05, 7.50MB/s]Status:  73%|███████▎  | 116M/158M [00:13<00:05, 7.52MB/s]Status:  74%|███████▍  | 117M/158M [00:13<00:05, 7.91MB/s]Status:  75%|███████▍  | 118M/158M [00:13<00:05, 7.89MB/s]Status:  75%|███████▌  | 119M/158M [00:13<00:04, 8.16MB/s]Status:  76%|███████▌  | 120M/158M [00:13<00:04, 8.25MB/s]Status:  76%|███████▌  | 121M/158M [00:13<00:04, 8.26MB/s]Status:  77%|███████▋  | 121M/158M [00:13<00:04, 8.26MB/s]Status:  77%|███████▋  | 122M/158M [00:13<00:04, 8.36MB/s]Status:  78%|███████▊  | 123M/158M [00:14<00:04, 7.71MB/s]Status:  78%|███████▊  | 124M/158M [00:14<00:04, 8.26MB/s]Status:  79%|███████▉  | 125M/158M [00:14<00:03, 8.43MB/s]Status:  80%|███████▉  | 126M/158M [00:14<00:03, 8.46MB/s]Status:  80%|████████  | 127M/158M [00:14<00:03, 8.50MB/s]Status:  81%|████████  | 128M/158M [00:14<00:03, 8.54MB/s]Status:  81%|████████  | 129M/158M [00:14<00:03, 8.65MB/s]Status:  82%|████████▏ | 130M/158M [00:14<00:03, 9.32MB/s]Status:  83%|████████▎ | 131M/158M [00:14<00:02, 9.35MB/s]Status:  83%|████████▎ | 132M/158M [00:15<00:02, 9.27MB/s]Status:  84%|████████▎ | 133M/158M [00:15<00:02, 9.34MB/s]Status:  84%|████████▍ | 133M/158M [00:15<00:02, 9.36MB/s]Status:  85%|████████▍ | 134M/158M [00:15<00:02, 9.40MB/s]Status:  86%|████████▌ | 135M/158M [00:15<00:02, 9.40MB/s]Status:  86%|████████▌ | 136M/158M [00:15<00:02, 9.51MB/s]Status:  87%|████████▋ | 137M/158M [00:15<00:02, 9.55MB/s]Status:  87%|████████▋ | 138M/158M [00:15<00:02, 9.45MB/s]Status:  88%|████████▊ | 139M/158M [00:15<00:02, 8.68MB/s]Status:  89%|████████▊ | 140M/158M [00:15<00:01, 9.30MB/s]Status:  89%|████████▉ | 141M/158M [00:16<00:01, 9.45MB/s]Status:  90%|████████▉ | 142M/158M [00:16<00:01, 9.43MB/s]Status:  91%|█████████ | 143M/158M [00:16<00:01, 9.55MB/s]Status:  91%|█████████ | 144M/158M [00:16<00:01, 9.70MB/s]Status:  92%|█████████▏| 145M/158M [00:16<00:01, 10.3MB/s]Status:  93%|█████████▎| 147M/158M [00:16<00:01, 10.1MB/s]Status:  93%|█████████▎| 148M/158M [00:16<00:01, 9.18MB/s]Status:  94%|█████████▍| 149M/158M [00:16<00:01, 9.27MB/s]Status:  94%|█████████▍| 149M/158M [00:16<00:00, 9.39MB/s]Status:  95%|█████████▌| 151M/158M [00:16<00:00, 9.61MB/s]Status:  96%|█████████▌| 152M/158M [00:17<00:00, 9.87MB/s]Status:  96%|█████████▋| 153M/158M [00:17<00:00, 9.83MB/s]Status:  97%|█████████▋| 154M/158M [00:17<00:00, 9.64MB/s]Status:  98%|█████████▊| 155M/158M [00:17<00:00, 8.59MB/s]Status:  98%|█████████▊| 155M/158M [00:17<00:00, 7.71MB/s]Status:  99%|█████████▊| 156M/158M [00:17<00:00, 7.77MB/s]Status:  99%|█████████▉| 157M/158M [00:17<00:00, 7.97MB/s]Status: 100%|█████████▉| 158M/158M [00:17<00:00, 7.85MB/s]Status: 100%|██████████| 158M/158M [00:17<00:00, 8.80MB/s]
+Creating temporary folder (/tmp/sct_2024-11-04_00-06-01_install-data_egkuvsj4)
+Unzip data to: /tmp/sct_2024-11-04_00-06-01_install-data_egkuvsj4
+Copying data to: /home/hurricane/sct_6.4/data/deepreg_models
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepreg_models/pt_cascaded_first_model.pt'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/deepreg_models/pt_cascaded_second_model.pt'[0m
+Removing temporary folders...
+Trying URL: https://github.com/spinalcordtoolbox/PAM50-normalized-metrics/archive/refs/tags/r20230222.zip
+Downloading: PAM50-normalized-metrics-r20230222.zip
+Status:   0%|          | 0.00/1.00 [00:00<?, ?B/s]Status: 91.0kB [00:00, 669kB/s]                   Status: 622kB [00:00, 2.09MB/s]Status: 1.05MB [00:00, 2.81MB/s]Status: 1.52MB [00:00, 3.43MB/s]Status: 1.91MB [00:00, 3.08MB/s]Status: 2.23MB [00:00, 3.12MB/s]Status: 2.74MB [00:00, 3.66MB/s]Status: 3.26MB [00:01, 3.61MB/s]Status: 3.71MB [00:01, 3.86MB/s]Status: 4.17MB [00:01, 4.05MB/s]Status: 4.66MB [00:01, 4.30MB/s]Status: 5.17MB [00:01, 4.51MB/s]Status: 5.63MB [00:01, 4.54MB/s]Status: 6.09MB [00:01, 3.99MB/s]Status: 6.60MB [00:01, 4.28MB/s]Status: 6.92MB [00:01, 3.79MB/s]
+Creating temporary folder (/tmp/sct_2024-11-04_00-06-04_install-data_7chdo_fl)
+Unzip data to: /tmp/sct_2024-11-04_00-06-04_install-data_7chdo_fl
+Copying data to: /home/hurricane/sct_6.4/data/PAM50_normalized_metrics
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/README.md'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/participants.tsv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-amu01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-amu02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-amu03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-amu04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-amu05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-balgrist01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-balgrist02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-balgrist03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-balgrist04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-balgrist05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-balgrist06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-barcelona05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-barcelona06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-beijingGE01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-beijingGE02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-beijingGE03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-beijingPrisma01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-beijingPrisma04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-beijingPrisma05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-beijingVerio01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-beijingVerio02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-beijingVerio03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoCeitec01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoCeitec02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoCeitec03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoCeitec05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoCeitec06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoUhb01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoUhb02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoUhb03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoUhb04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoUhb05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoUhb06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoUhb07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-brnoUhb08_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cardiff01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cardiff02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cardiff03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cardiff04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrra01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrra02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrra03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrra04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrra05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrra06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrrb01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrrb02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrrb03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrrb04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-cmrrb07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-dresden01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-dresden02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-fslAchieva01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-fslAchieva02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-fslAchieva03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-fslAchieva04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-fslAchieva05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-fslPrisma01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-fslPrisma03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-fslPrisma04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-fslPrisma05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-fslPrisma06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-geneva01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-geneva02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-geneva03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-geneva04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-geneva05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-hamburg01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-hamburg03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-hamburg04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-hamburg06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-juntendo750w01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-juntendo750w02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-juntendo750w05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-juntendo750w06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mgh01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mgh02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mgh04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mgh05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mgh06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-milan01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-milan02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-milan03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-milan04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-milan05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-milan06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-milan07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mniPilot1_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mniS01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mniS02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mniS03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mniS04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mniS07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mniS08_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mniS09_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mountSinai02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mountSinai05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mountSinai06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mpicbs01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mpicbs02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mpicbs03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mpicbs05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mpicbs06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-mpicbs07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nottwil01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nottwil02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nottwil03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nottwil04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nottwil05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nottwil06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nwu02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nwu03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nwu04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nwu05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-nwu06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordFmrib01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordFmrib02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordFmrib03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordFmrib04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordFmrib05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordFmrib06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordFmrib07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordFmrib10_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordOhba01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordOhba02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordOhba03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordOhba04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-oxfordOhba05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-pavia02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-pavia03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-pavia04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-pavia06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-perform01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-perform02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-perform04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-perform05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-perform06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-queensland01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-queensland03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-queensland04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-queensland05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-sherbrooke02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-sherbrooke04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-sherbrooke05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-sherbrooke06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-sherbrooke07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-stanford01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-stanford02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-stanford03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-stanford04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-stanford05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-stanford06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-strasbourg01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-strasbourg02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-strasbourg03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-strasbourg04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-strasbourg05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-strasbourg06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tehranS01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tehranS02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tehranS03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tehranS05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tehranS06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tokyo750w06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tokyo750w07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tokyoIngenia06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tokyoIngenia07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tokyoSkyra06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-tokyoSkyra07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ubc01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ubc02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ubc03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ubc04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ubc05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ubc06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ucdavis01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ucdavis03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ucdavis04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ucdavis06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ucdavis07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ucl01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ucl02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ucl03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-ucl06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-unf03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-unf04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-unf05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-unf06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-unf07_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vallHebron01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vallHebron02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vallHebron03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vallHebron04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vallHebron05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vallHebron06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vuiisAchieva02_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vuiisAchieva04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vuiisAchieva06_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vuiisIngenia01_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vuiisIngenia03_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vuiisIngenia04_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vuiisIngenia05_T2w_PAM50.csv'[0m
+[33mUpdating existing '/home/hurricane/sct_6.4/data/PAM50_normalized_metrics/sub-vuiisIngenia06_T2w_PAM50.csv'[0m
+Removing temporary folders...
+Done!
+
+Removing existing destination folder '/home/hurricane/sct_6.4/data/deepseg_models/t2star_sc'
+Status:   0%|          | 0.00/18.0M [00:00<?, ?B/s]Status:   1%|▏         | 246k/18.0M [00:00<00:09, 1.93MB/s]Status:   4%|▍         | 803k/18.0M [00:00<00:04, 3.85MB/s]Status:  10%|█         | 1.81M/18.0M [00:00<00:02, 6.52MB/s]Status:  15%|█▍        | 2.63M/18.0M [00:00<00:02, 7.16MB/s]Status:  19%|█▉        | 3.46M/18.0M [00:00<00:01, 7.55MB/s]Status:  24%|██▍       | 4.33M/18.0M [00:00<00:01, 7.95MB/s]Status:  29%|██▉       | 5.19M/18.0M [00:00<00:01, 8.12MB/s]Status:  34%|███▎      | 6.07M/18.0M [00:00<00:01, 8.34MB/s]Status:  39%|███▊      | 6.96M/18.0M [00:00<00:01, 8.45MB/s]Status:  44%|████▍     | 7.89M/18.0M [00:01<00:01, 8.71MB/s]Status:  49%|████▉     | 8.87M/18.0M [00:01<00:01, 9.05MB/s]Status:  55%|█████▌    | 9.94M/18.0M [00:01<00:00, 9.54MB/s]Status:  61%|██████    | 10.9M/18.0M [00:01<00:00, 9.40MB/s]Status:  66%|██████▋   | 11.9M/18.0M [00:01<00:00, 9.68MB/s]Status:  72%|███████▏  | 12.9M/18.0M [00:01<00:00, 9.75MB/s]Status:  77%|███████▋  | 13.9M/18.0M [00:01<00:00, 9.80MB/s]Status:  83%|████████▎ | 14.9M/18.0M [00:01<00:00, 9.77MB/s]Status:  88%|████████▊ | 15.9M/18.0M [00:01<00:00, 9.72MB/s]Status:  94%|█████████▍| 17.0M/18.0M [00:01<00:00, 9.12MB/s]Status: 100%|██████████| 18.0M/18.0M [00:02<00:00, 8.80MB/s]
+
+[0;32mValidate installation...[0m
+
+
+--
+Spinal Cord Toolbox (6.4)
+
+sct_check_dependencies 
+--
+
+
+SYSTEM INFORMATION
+------------------
+SCT info:
+- version: 6.4
+- path: /home/hurricane/sct_6.4
+OS: linux (Linux-6.8.0-47-generic-x86_64-with-glibc2.39)
+CPU cores: Available: 8, Used by ITK functions: 8
+RAM: Total: 16426MB, Used: 2830MB, Available: 13240MB
+
+OPTIONAL DEPENDENCIES
+---------------------
+Check FSLeyes version...............................[[92mOK[0m] (1.12.6)
+
+MANDATORY DEPENDENCIES
+----------------------
+Check Python executable.............................[[92mOK[0m]
+  Using bundled python 3.9.20 (main, Oct  3 2024, 07:27:41) 
+[GCC 11.2.0] at /home/hurricane/sct_6.4/python/envs/venv_sct/bin/python
+Check if dipy is installed........................../home/hurricane/sct_6.4/spinalcordtoolbox/scripts/sct_check_dependencies.py:164: UserWarning: Private repos not supported. Skipping.
+  for req in requirements.parse(requirements_txt):
+[[92mOK[0m] (1.8.0)
+Check if ivadomed is installed......................[[92mOK[0m] (2.9.10)
+Check if matplotlib is installed....................[[92mOK[0m] (3.9.1.post1)
+Check if matplotlib-inline is installed.............[[92mOK[0m]
+Check if monai is installed.........................[[92mOK[0m] (1.3.2)
+Check if nibabel is installed.......................[[92mOK[0m] (5.2.1)
+Check if nilearn is installed.......................[[92mOK[0m] (0.10.4)
+Check if nnunetv2 (2.3.1) is installed..............[[92mOK[0m]
+Check if numpy is installed.........................[[92mOK[0m] (1.26.4)
+Check if onnxruntime is installed...................[[92mOK[0m] (1.18.1)
+Check if pandas is installed........................[[92mOK[0m] (1.5.3)
+Check if portalocker is installed...................[[92mOK[0m] (2.10.1)
+Check if psutil is installed........................[[92mOK[0m] (6.0.0)
+Check if pyqt5 (5.12.3) is installed................[[92mOK[0m] (5.12.3)
+Check if pyqt5-sip is installed.....................[[92mOK[0m]
+Check if pystrum is installed.......................[[92mOK[0m] (0.4)
+Check if pytest is installed........................[[92mOK[0m] (8.3.2)
+Check if pytest-cov is installed....................[[92mOK[0m] (5.0.0)
+Check if requests is installed......................[[92mOK[0m] (2.32.3)
+Check if requirements-parser is installed...........[[92mOK[0m] (0.10.2)
+Check if scipy is installed.........................[[92mOK[0m] (1.13.1)
+Check if scikit-image is installed..................[[92mOK[0m] (0.24.0)
+Check if scikit-learn is installed..................[[92mOK[0m] (1.5.1)
+Check if xlwt is installed..........................[[92mOK[0m] (1.3.0)
+Check if tqdm is installed..........................[[92mOK[0m] (4.66.5)
+Check if transforms3d is installed..................[[92mOK[0m] (0.4.2)
+Check if urllib3 is installed.......................[[92mOK[0m] (2.2.2)
+Check if pytest_console_scripts is installed........[[92mOK[0m]
+Check if pyyaml is installed........................[[92mOK[0m] (6.0.2)
+Check if voxelmorph is installed....................[[92mOK[0m] (0.2)
+Check if wquantiles is installed....................[[92mOK[0m] (0.4)
+Check if xlsxwriter is installed....................[[92mOK[0m] (3.2.0)
+Check if spinalcordtoolbox is installed.............[[92mOK[0m]
+Check ANTs compatibility with OS ...................[[92mOK[0m]
+Check PropSeg compatibility with OS ................[[92mOK[0m]
+Check if figure can be opened with PyQt.............[[92mOK[0m]
+Check if figure can be opened with matplotlib.......[[92mOK[0m] (Using GUI backend: 'qtagg')
+Check data dependency 'PAM50'.......................[[92mOK[0m]
+Check data dependency 'deepseg_gm_models'...........[[92mOK[0m]
+Check data dependency 'deepseg_sc_models'...........[[92mOK[0m]
+Check data dependency 'deepseg_lesion_models'.......[[92mOK[0m]
+Check data dependency 'deepreg_models'..............[[92mOK[0m]
+Check data dependency 'PAM50_normalized_metrics'....[[92mOK[0m]
+Check data dependency 'binaries_linux'..............[[92mOK[0m]
+
+
+[0;32mOpen a new Terminal window to load environment variables, or run:
+  source /home/hurricane/.bashrc[0m
+
+
+[0;32mInstallation finished successfully![0m
+

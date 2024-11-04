@@ -1,0 +1,2 @@
+FREESURFER=/home/hurricane/Desktop/BrainSurf-main/sys/libraries/freesurfer
+MATLAB=/home/hurricane/Desktop/BrainSurf-main/sys/libraries/R2024b/bin
