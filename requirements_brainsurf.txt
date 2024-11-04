@@ -1,0 +1,10 @@
+pandas==2.0.0
+matplotlib==3.7.5
+psutil==5.9.2
+numpy==1.23.5
+grpcio==1.50.0
+heudiconv==1.0.1
+prov==2.0.0
+PyGObject==3.48.2
+tqdm==4.66.5
+dcm2niix==1.0.20220715
