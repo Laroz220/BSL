@@ -40,10 +40,9 @@ echo -e "-----------------------------------------------------------------------
 
 echo -e "Downloading libraries and third-party components..\n"
 
-fsqc_dir=$C_HOME/sys/libraries/fsqc
-
-mkdir -p $fsqc_dir
-git clone https://github.com/Deep-MI/fsqc.git $fsqc_dir
+#fsqc_dir=$C_HOME/sys/libraries/fsqc
+#mkdir -p $fsqc_dir
+#git clone https://github.com/Deep-MI/fsqc.git $fsqc_dir
 
 src_temp=$C_HOME/sys/software/temp_dir
 mkdir -p $src_temp
