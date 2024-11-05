@@ -431,7 +431,7 @@ def scale_window(root, scale_factor):
     screen_height = root.winfo_screenheight()
     new_width = int(screen_width * scale_factor)
     new_height = int(screen_height * scale_factor)
-    root.geometry(f"1322x485")
+    root.geometry(f"1355x485")
 
 # Create the main window
 root = tk.Tk()
