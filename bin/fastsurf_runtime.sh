@@ -36,6 +36,7 @@ fi
 
 export FREESURFER_HOME="$freesurfer_path"
 source $C_HOME/bin/max_jobs.sh
+source $C_HOME/bin/gpu_mode.sh
 
 # Define a function to run FastSurfer Docker container
 run_fastsurfer() {
@@ -44,15 +45,25 @@ run_fastsurfer() {
     subject=$(basename "$subject_file")
     subject_no_suffix="${subject%%_T1w-*}"
 
-    #optional: remove/add "--gpus all" to deactivate or activate GPU
-    docker run -v $destination_dir/"$study":/data \
-    -v $C_HOME/OUTPUT/FastSurfer:/output \
-    -v $freesurfer_path:/freesurfer \
-    --rm --user $(id -u):$(id -g) deepmi/fastsurfer:latest \
-    --fs_license /freesurfer/license.txt \
-    --t1 "/data/$subject" \
-    --sid "$subject_no_suffix" --sd /output/"$study" \
-    --parallel --3T
+    # Set this variable to "true" or "false" based on whether you want to use GPU or not
+    USE_GPU=$GPU  # Change to false to disable GPU
+
+    # Construct the command with or without the GPU flag
+    if [ "$USE_GPU" = TRUE ]; then
+        GPU_FLAG="--gpus all"
+    else
+        GPU_FLAG=""
+    fi
+
+    # Run the docker command
+    docker run $GPU_FLAG -v "$destination_dir/$study":/data \
+        -v "$C_HOME/OUTPUT/FastSurfer:/output" \
+        -v "$freesurfer_path:/freesurfer" \
+        --rm --user $(id -u):$(id -g) deepmi/fastsurfer:latest \
+        --fs_license /freesurfer/license.txt \
+        --t1 "/data/$subject" \
+        --sid "$subject_no_suffix" --sd "/output/$study" \
+        --parallel --3T
 }
 
 for subject_folder in "$destination_dir"/*; do
