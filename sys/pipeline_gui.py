@@ -518,6 +518,39 @@ root.grid_columnconfigure(2, weight=1)
 
 #######
 
+#GPU MODE
+#tk.Button(root, text="GPU MODE", command=longitudinal_mode, fg='#000000', bg='#FFFFFF', padx=3, pady=5).grid(row=len(scripts)+3, sticky="E", columnspan=1, column=5, padx=130, pady=1)
+
+def gpu_mode():
+
+    file_path = os.path.join(script_folder, "gpu_mode.txt")
+
+    if toggle_var.get():
+        # Code to enable GPU mode
+        button.config(bg='#00FF00', text="GPU MODE: ON")  # Change button text and color
+        
+        with open(file_path, "w") as f:
+            f.write("TRUE")  # Write TRUE when GPU mode is ON
+        
+    else:
+        # Code to disable GPU mode
+        button.config(bg='#FF0000', text="GPU MODE: OFF")  # Change button text and color
+        
+        with open(file_path, "w") as f:
+            f.write("FALSE")  # Write FALSE when GPU mode is OFF
+
+# Variable to keep track of the toggle state
+toggle_var = tk.BooleanVar(value=False)
+
+# Create the toggle button
+button = tk.Button(root, text="GPU MODE: OFF", command=lambda: [toggle_var.set(not toggle_var.get()), gpu_mode()], 
+                   fg='#000000', bg='#FF0000', padx=3, pady=5)
+
+button.grid(row=len(scripts)+3, sticky="E", columnspan=1, column=5, padx=117, pady=1)
+
+
+######
+
 # Global variable for MAX_JOBS
 MAX_JOBS = None
 
