@@ -17,6 +17,15 @@ current_jobs=0
 
 cd "$data_directory"
 
+source $C_HOME/bin/gpu_mode.sh
+
+if [ "$GPU" = TRUE ]; then
+    mode="0"
+else
+    mode="cpu"
+fi
+
+
 for study_folder in "$data_directory"/*; do
     study=$(basename "$study_folder")
     
@@ -45,8 +54,14 @@ for study_folder in "$data_directory"/*; do
 
                     out_folder=$output/$study/"${subject}_${session}"
 
+                    if [ "$GPU" = TRUE ]; then
+                        echo Processing mode: GPU
+                    else
+                        echo Processing mode: CPU
+                    fi
+
                     # Add "cpu" or "0" at the --device flag to change CPU/GPU-processing. 
-                    lst --t1 $t1w_file --flair $t2w_file --output $out_folder --device cpu &
+                    lst --t1 $t1w_file --flair $t2w_file --output $out_folder --device $mode &
 
                     # Increment current job count
                     ((current_jobs++))
