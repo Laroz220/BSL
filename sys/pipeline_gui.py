@@ -577,7 +577,7 @@ def update_max_jobs():
 custom_font = font.Font(size=14)  # Change size to your desired value
 
 max_jobs_entry = tk.Entry(root, width=3, font=custom_font)  # Set custom font
-max_jobs_entry.grid(row=len(scripts)+3, column=5, padx=130, pady=1, sticky="W")  # Align to West
+max_jobs_entry.grid(row=len(scripts)+3, column=5, padx=145, pady=1, sticky="W")  # Align to West
 max_jobs_entry.insert(0, "1")  # Set default value to 1
 
 
