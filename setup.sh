@@ -97,6 +97,16 @@ deactivate
 cd $C_HOME/bin
 tar -xf Pyment.tar.xz; rm -rf Pyment.tar.xz
 
+# FastSurfer Native
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm ~/miniconda3/miniconda.sh
+
+cd $C_HOME/sys/libraries
+git clone --branch stable https://github.com/Deep-MI/FastSurfer.git
+cd FastSurfer
+
 echo -e "\n----------------------------------------------------------------------------------------------------"
 pip check
 echo -e "----------------------------------------------------------------------------------------------------\n"
