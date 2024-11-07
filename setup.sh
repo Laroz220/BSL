@@ -85,7 +85,7 @@ cd ..
 curl -L -o "$src_temp/greedy" https://github.com/CompImg/LST-AI/releases/download/v1.0.0/greedy
 
 chmod +x "$src_temp/greedy"
-mkdir $C_HOME/sys/libraries/bin
+mkdir -p $C_HOME/sys/libraries/bin
 mv $src_temp/greedy $C_HOME/sys/libraries/bin
 
 # This is also automatically exported in LST_AI bin_script
