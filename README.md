@@ -85,6 +85,5 @@ Final Steps: Updates the system PATH, checks installed Python packages, and conc
 . setup.sh
 ```
 
-Docker is needed for fastsurfer. For installation (if not installed already), please follow these instructions: 'https://docs.docker.com/engine/install/'. FSL is needed for brain age estimation; https://fsl.fmrib.ox.ac.uk/fsl/docs/#/install/index (NB! Install at default location).
-
+FSL is needed for brain age estimation; https://fsl.fmrib.ox.ac.uk/fsl/docs/#/install/index (NB! Install at default location).
 AFTER installation, please modify the "paths.txt" file in the /bin folder. I have entered my personal MATLAB- and Freesurfer paths for illustration purposes only.
