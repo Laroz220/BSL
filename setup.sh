@@ -105,7 +105,7 @@ rm ~/miniconda3/miniconda.sh
 
 cd $C_HOME/sys/libraries
 git clone --branch stable https://github.com/Deep-MI/FastSurfer.git
-cd FastSurfer
+cd FastSurfer; conda env create -f ./env/fastsurfer.yml 
 
 echo -e "\n----------------------------------------------------------------------------------------------------"
 pip check
