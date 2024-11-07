@@ -26,7 +26,7 @@ for subject_folder in "$input_dir"/*; do
         subject_no_suffix="${subject%%_T1w-*}"
 
         # Start the job in the background
-        ./sct_deepseg_sc -i "$subject_file" -c t1 -ofolder "$output_dir" &
+        ./sct_deepseg_sc -i "$subject_file" -c t1 -ofolder "$output_dir"/"$study" &
         ((++count % $MAX_JOBS == 0)) && wait
 
     done
