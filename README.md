@@ -14,7 +14,7 @@ In essence, BSL pushes to accelerate data preparation and dataset harmonization 
 ## Setup and Requirements
 Firstly, ensure that you have Python installed on your system. For consistency and stable resource monitoring, a custom virtual environment created with 'python -m venv' is preferred for the GUI.
 
-At least 16 GB of RAM or VRAM (for GPU mode) is recommended and 14 GB free space. The software has been tested on Linux 20.04 and 22.04, with dual Intel Xeon (Single AMD Radeon pro 5100, GPU mode not supported), Intel Core i7 (Single Nvidia GTX 1080, GPU mode enabled), and AMD Ryzen Threadripper (Dual Nvidia RTX4090 SLI) using python 3.8/3.9, the latter version being a prerequesite from quality control. For MacOS, VirtualBox w/ Linux 20.04 is recommended. 
+At least 16 GB of RAM or VRAM (for GPU mode) is recommended and 40 GB free space, depending on batch size. The software has been tested on Linux 20.04 and 22.04, with dual Intel Xeon (Single AMD Radeon pro 5100, GPU mode not supported), Intel Core i7 (Single Nvidia GTX 1080, GPU mode enabled), and AMD Ryzen Threadripper (Dual Nvidia RTX4090 SLI) using python 3.8/3.9, the latter version being a prerequesite from quality control. For MacOS, VirtualBox w/ Linux 20.04 is recommended. 
 
 Other third-party softwares prerequesites not integrated in this install are: Matlab, FSL and Docker (see part 2c, bottom line).
 
