@@ -59,8 +59,7 @@ fi
 
 cd $FASTSURFER_HOME
 
-source ~/miniconda3/bin/activate
-source activate fastsurfer
+source ~/miniconda3/bin/activate; conda activate fastsurfer
 
 # -------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
