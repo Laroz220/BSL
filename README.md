@@ -16,7 +16,7 @@ Firstly, ensure that you have Python installed on your system. For consistency a
 
 At least 16 GB of RAM or VRAM (for GPU mode) is recommended and 40 GB free space, depending on batch size. The software has been tested on Linux 20.04 and 22.04, with dual Intel Xeon (Single AMD Radeon pro 5100, GPU mode not supported), Intel Core i7 (Single Nvidia GTX 1080, GPU mode enabled), and AMD Ryzen Threadripper (Dual Nvidia RTX4090 SLI, GPU mode enabled) using python 3.8/3.9, the latter version being a prerequesite from quality control. 
 
-For MacOS, VMware Fusion w/ Linux Ubuntu 22.04 or Mint 22 is recommended. 
+For MacOS, VMware Fusion w/ Linux Ubuntu 22.04 or Mint 22 is strongly recommended!
 
 Other third-party softwares prerequesites not integrated in this install are: Matlab, FSL and Docker (see part 2c, bottom line).
 
