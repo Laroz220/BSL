@@ -83,7 +83,7 @@ for subject_folder in "$destination_dir"/*; do
         # NB! If fastsurfer fails at asegdkt during startup, this is most likely due to RAM-issues (RAM or VRAM, depending on CPU/GPU-usage)
         # MRIs with high spatial resolution demand a very high amount of RAM/VRAM
 
-        ./run_fastsurfer.sh --sid sub-0001 --sd $SUBJECTS_DIR/$study --t1 $subject_file --device $GPU_FLAG &
+        ./run_fastsurfer.sh --sid subject_no_suffix --sd $SUBJECTS_DIR/$study --t1 $subject_file --device $GPU_FLAG &
         ((++count % $MAX_JOBS == 0)) && wait
     done
 done
