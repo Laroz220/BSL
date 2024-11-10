@@ -8,3 +8,4 @@ prov==2.0.0
 PyGObject==3.48.2
 tqdm==4.66.5
 dcm2niix==1.0.20220715
+GPUtil==1.4.0  
