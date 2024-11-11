@@ -85,9 +85,9 @@ for qc in "$C_HOME/OUTPUT"; do
             mkdir -p $C_HOME/OUTPUT/QC/FastSurfer/$study
             mkdir -p $TEMP_DIR/Stats/FastSurfer/$study
             
-            rsync -av --include='aseg+DKT.stats' --include='brainvol.stats' --include='cerebellum.CerebNet.stats' --include='wmparc.DKTatlas.mapped.stats' --exclude='*' "$C_HOME"/OUTPUT/FastSurfer/"$study"/"$subject_name"/stats/ "$TEMP_DIR"/Stats/FastSurfer/"$study"/"$subject_name"
+            rsync -av --include='aseg+DKT.stats' --include='brainvol.stats' --include='cerebellum.CerebNet.stats' --include='wmparc.DKTatlas.mapped.stats' --include='hypothalamus.HypVINN.stats' --exclude='*' "$C_HOME"/OUTPUT/FastSurfer/"$study"/"$subject_name"/stats/ "$TEMP_DIR"/Stats/FastSurfer/"$study"/"$subject_name"
             rsync -av $C_HOME/OUTPUT/QC/FastSurfer/$study/screenshots/"$subject_name"/* $C_HOME/QC_images/FastSurfer/
-
+            
         done
     done
 done
@@ -132,6 +132,11 @@ for stat_run in "$TEMP_DIR/Stats"; do
                     echo "Found cerebellum.CerebNet.stats file: $stat_files"
                     output_file="$subject_folder/cerebellum.CerebNet_output.csv"
                     python3 "$C_HOME/bin/fast_stat/datagen_cerebnet.py" "$stat_files" "$output_file"
+
+                elif [ "$stat_files" == "$subject_folder/hypothalamus.HypVINN.stats" ]; then
+                    echo "Found hypothalamus.HypVINN.stats file: $stat_files"
+                    output_file="$subject_folder/hypothalamus.HypVINN_output.csv"
+                    python3 "$C_HOME/bin/fast_stat/datagen_hypothalamus.py" "$stat_files" "$output_file"
 
                 elif [ "$stat_files" == "$subject_folder/wmparc.DKTatlas.mapped.stats" ]; then
                     echo "Found wmparc.DKTatlas.mapped.stats file: $stat_files"
