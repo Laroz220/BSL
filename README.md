@@ -60,7 +60,7 @@ libgirepository1.0-dev \
 python3.8-dev \
 libgtk-3-dev && \
 
-pip install -r requirements_brainsurf.txt && pip check && \
+pip install wheel && pip install -r requirements_brainsurf.txt && pip check && \
 . $env_dir/brain_age/bin/activate && pip install -r requirements_brain_age.txt && pip check && \
 . $env_dir/lst_ai/bin/activate && pip install -r requirements_lst_ai.txt && pip check && \
 . $env_dir/qc_control/bin/activate && pip install fsqc beautifulsoup4 && pip check && \
