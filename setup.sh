@@ -127,5 +127,4 @@ gio set $HOME/Desktop/brainsurf.desktop metadata::trusted true && chmod +x $HOME
 chmod -R +x $C_HOME
 
 echo -e "DONE\n"; sleep 3
-echo Starting GUI..
-. bin/gui_init.sh
+echo Starting GUI..; python $C_HOME/sys/pipeline_gui.py
