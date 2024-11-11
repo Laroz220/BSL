@@ -2,6 +2,7 @@ import os
 import subprocess
 import tkinter as tk
 import psutil
+import GPUtil
 import matplotlib.pyplot as plt
 import threading
 import signal
@@ -285,12 +286,18 @@ def get_system_info():
     ram_percent = psutil.virtual_memory().percent
     storage_percent = psutil.disk_usage('/').percent
 
+    # Get CPU temperature
     temperatures = psutil.sensors_temperatures()
     cpu_temp = None
     if 'coretemp' in temperatures:
         if temperatures['coretemp']:
             cpu_temp = temperatures['coretemp'][0].current
-    return cpu_percent, ram_percent, storage_percent, cpu_temp
+
+    # Get GPU temperature
+    gpus = GPUtil.getGPUs()
+    gpu_temp = gpus[0].temperature if gpus else None
+
+    return cpu_percent, ram_percent, storage_percent, cpu_temp, gpu_temp
 
 cpu_data = []
 ram_data = []
@@ -300,7 +307,7 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
 def update_plot(frame):
-    cpu, ram, storage, cpu_temp = get_system_info()
+    cpu, ram, storage, cpu_temp, gpu_temp = get_system_info()
     cpu_data.append(cpu)
     ram_data.append(ram)
     storage_data.append(storage)
@@ -324,12 +331,19 @@ def update_plot(frame):
     text_offset = 8
     ax.text(mean_cpu, ram + text_offset, storage, f'{mean_cpu:.2f}%', color='black', fontsize=10, ha='center', va='bottom')
 
-    # Check if cpu_temp is None before comparison
+    # CPU Temperature Display
     if cpu_temp is not None:
         temp_color = 'green' if cpu_temp < 50 else 'orange' if cpu_temp < 80 else 'red'
-        ax.text(-50, 0, 110, f'CPU Temp: {cpu_temp}°C', color=temp_color, fontsize=10, ha='left', va='bottom')
+        ax.text(-50, 0, 120, f'CPU Temp: {cpu_temp}°C', color=temp_color, fontsize=10, ha='left', va='bottom')
     else:
-        ax.text(-50, 0, 110, 'CPU Temp: N/A in VM', color='grey', fontsize=10, ha='left', va='bottom')
+        ax.text(-50, 0, 120, 'CPU Temp: N/A', color='grey', fontsize=10, ha='left', va='bottom')
+
+    # GPU Temperature Display
+    if gpu_temp is not None:
+        gpu_temp_color = 'green' if gpu_temp < 60 else 'orange' if gpu_temp < 85 else 'red'
+        ax.text(-50, 0, 105, f'GPU Temp: {gpu_temp}°C', color=gpu_temp_color, fontsize=10, ha='left', va='bottom')
+    else:
+        ax.text(-50, 0, 105, 'GPU Temp: N/A', color='grey', fontsize=10, ha='left', va='bottom')
 
     ax.set_xlim(0, 100)
     ax.set_ylim(0, 100)
