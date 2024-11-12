@@ -8,7 +8,8 @@ def combine_csv_files(directory, output_location, output_file_name):
         "wmparc.DKTatlas_output.csv",
         "cerebellum.CerebNet_output.csv",
         "brainvol_output.csv",
-        "aseg+DKT_output.csv"
+        "aseg+DKT_output.csv",
+        "hypothalamus.HypVINN_output.csv"
     ]
 
     # Initialize an empty DataFrame to store combined data
