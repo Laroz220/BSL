@@ -1,6 +1,6 @@
 # BrainSurf Lab (BSL) - An automated MRI Processing Pipeline and dataset generator
 
-![Screenshot 2024-11-04 at 22 04 36](https://github.com/user-attachments/assets/a6eecf91-2dbc-43ba-86a5-bc6d67d5bf8c)
+![Screenshot from 2024-11-14 16-46-58](https://github.com/user-attachments/assets/f366e0ec-35f2-44bf-a42a-651992c0188a)
 
 ## Introduction
 BSL is an attempt to alleviate the traditionally time-consuming and complex process of manually scripting, organizing, and harmonizing MRI data prior to statistical analyses. Typically, researchers spend significant time and effort preparing MRI data—writing custom scripts for each processing step, ensuring data consistency, and integrating various datasets into a unified format. This manual approach often introduces inefficiencies and the risk of errors, especially when managing large, multi-subject studies.
