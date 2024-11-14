@@ -1,4 +1,4 @@
-# BrainSurf Lab (BSL) - An automated MRI Processing Pipeline and dataset generator
+# BrainSurf Lab (BSL) - An Automated MRI Processing Pipeline and Dataset Generator
 
 ![Screenshot from 2024-11-14 16-46-58](https://github.com/user-attachments/assets/f366e0ec-35f2-44bf-a42a-651992c0188a)
 
