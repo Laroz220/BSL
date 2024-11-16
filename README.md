@@ -100,6 +100,8 @@ This would indicate:
 - ParticipantNumber: 0235 (participant ID 235),
 - SessionNumber: 01 (session 1).
 
+** All subject folders must be placed in the "INPUT" ** 
+
 Guidelines:
 
 Always ensure the StudyName is a short, descriptive abbreviation (e.g., MS, AD or ALS etc.), but is not limited in length as long as it is a singular string. 
