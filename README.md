@@ -96,14 +96,14 @@ This repository uses a specific folder naming convention to organize and manage 
 
 This would indicate:
 
-    StudyName: MS (Multiple Sclerosis study),
-    ParticipantNumber: 0235 (participant ID 235),
-    SessionNumber: 01 (session 1).
+- StudyName: MS (Multiple Sclerosis study),
+- ParticipantNumber: 0235 (participant ID 235),
+- SessionNumber: 01 (session 1).
 
 Guidelines:
 
-    Always ensure the StudyName is a short, descriptive abbreviation (e.g., MS, AD for Alzheimer's Disease, etc.).
-    The ParticipantNumber must be a 4-digit integer. If the participant number is less than 4 digits, pad it with leading zeros (e.g., 0023, 0567).
-    The SessionNumber must be a 2-digit integer. If the session number is less than 2 digits, pad it with a leading zero (e.g., 01, 02, 10).
+Always ensure the StudyName is a short, descriptive abbreviation (e.g., MS, AD for Alzheimer's Disease, etc.).
+The ParticipantNumber must be a 4-digit integer. If the participant number is less than 4 digits, pad it with leading zeros (e.g., 0023, 0567).
+The SessionNumber must be a 2-digit integer. If the session number is less than 2 digits, pad it with a leading zero (e.g., 01, 02, 10).
 
 This folder naming convention is critical for maintaining consistency and for automating processes such as data processing, organization, and analysis.
