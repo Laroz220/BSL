@@ -87,3 +87,23 @@ Final Steps: Updates the system PATH, checks installed Python packages, and conc
 
 FSL is needed for brain age estimation; https://fsl.fmrib.ox.ac.uk/fsl/docs/#/install/index (NB! Install at default location).
 AFTER installation, please modify the "paths.txt" file in the /bin folder. I have entered my personal MATLAB- and Freesurfer paths for illustration purposes only.
+
+## Usage
+
+This repository uses a specific folder naming convention to organize and manage study data efficiently. The folder names should follow this format:
+
+'StudyName_ParticipantNumber_SessionNumber', e.g. MS_0235_01
+
+This would indicate:
+
+    StudyName: MS (Multiple Sclerosis study),
+    ParticipantNumber: 0235 (participant ID 235),
+    SessionNumber: 01 (session 1).
+
+Guidelines:
+
+    Always ensure the StudyName is a short, descriptive abbreviation (e.g., MS, AD for Alzheimer's Disease, etc.).
+    The ParticipantNumber must be a 4-digit integer. If the participant number is less than 4 digits, pad it with leading zeros (e.g., 0023, 0567).
+    The SessionNumber must be a 2-digit integer. If the session number is less than 2 digits, pad it with a leading zero (e.g., 01, 02, 10).
+
+This folder naming convention is critical for maintaining consistency and for automating processes such as data processing, organization, and analysis.
