@@ -102,8 +102,12 @@ This would indicate:
 
 Guidelines:
 
-Always ensure the StudyName is a short, descriptive abbreviation (e.g., MS, AD for Alzheimer's Disease, etc.).
+Always ensure the StudyName is a short, descriptive abbreviation (e.g., MS, AD or ALS etc.), but is not limited in length as long as it is a singular string. 
 The ParticipantNumber must be a 4-digit integer. If the participant number is less than 4 digits, pad it with leading zeros (e.g., 0023, 0567).
 The SessionNumber must be a 2-digit integer. If the session number is less than 2 digits, pad it with a leading zero (e.g., 01, 02, 10).
+
+Flexibility Across Multiple Studies
+
+One of the key features of this system is its flexibility in handling data from multiple studies within the same processing batch. You can safely mix data from different studies (e.g., MS, AD, PD for Alzheimer's Disease, Parkinson's Disease, etc.) in the same dataset or processing pipeline. BSL is designed to automatically filter, sort, and organize the data based on the study identifier embedded in each folder name. It uses the StudyName prefix (like MS, AD, etc.) to categorize and label each participant's data correctly within the dataset.
 
 This folder naming convention is critical for maintaining consistency and for automating processes such as data processing, organization, and analysis.
