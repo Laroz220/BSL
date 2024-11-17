@@ -105,7 +105,7 @@ This would indicate:
 
 Guidelines:
 
-Always ensure the StudyName is a short, descriptive abbreviation (e.g., MS, AD or ALS etc.), but is not limited in length as long as it is a singular string. 
+Always ensure the StudyName is a short, descriptive abbreviation (e.g., MS, AD or STROKE etc.), but is not limited in length as long as it is a singular string. 
 The ParticipantNumber must be a 4-digit integer. If the participant number is less than 4 digits, pad it with leading zeros (e.g., 0023, 0567).
 The SessionNumber must be a 2-digit integer. If the session number is less than 2 digits, pad it with a leading zero (e.g., 01, 02, 10).
 
