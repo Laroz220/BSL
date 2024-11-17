@@ -114,3 +114,7 @@ Flexibility Across Multiple Studies
 One of the key features of this system is its flexibility in handling data from multiple studies within the same processing batch. You can safely mix data from different studies (e.g., MS, AD, PD for Alzheimer's Disease, Parkinson's Disease, etc.) in the same dataset or processing pipeline. BSL is designed to automatically filter, sort, and organize the data based on the study identifier embedded in each folder name. It uses the StudyName prefix (like MS, AD, etc.) to categorize and label each participant's data correctly within the dataset.
 
 This folder naming convention is critical for maintaining consistency and for automating processes such as data processing, organization, and analysis.
+
+**
+
+I hope you find this GUI both helpful and time-saving in your work. May it streamline your processes, enhance your efficiency, and allow you to focus on the more critical aspects of your tasks. Enjoy exploring its features, and feel free to reach out if there are additional functionalities that could further optimize your workflow!
