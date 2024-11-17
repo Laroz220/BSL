@@ -18,7 +18,7 @@ At least 16 GB of RAM or VRAM (for GPU mode) is recommended and 40 GB free space
 
 For MacOS, VMware Fusion w/ Linux Ubuntu 22.04 or Mint 22 is strongly recommended! MacOS without virtualization is currently not supported. 
 
-Other third-party softwares prerequesites not integrated in this install are: Matlab, FSL and Docker (see part 2c, bottom line).
+Other third-party softwares prerequesites not integrated in this install are: Matlab and FSL (see part 2c, bottom line).
 
 The following command updates your system’s package lists and installs several tools: git for version control, wget for downloading files, unzip for extracting ZIP archives, python3 for the Python interpreter, and python3-pip for managing Python packages. The -y flag ensures that the installation proceeds without prompting for confirmation.
 
