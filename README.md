@@ -88,6 +88,7 @@ Final Steps: Updates the system PATH, checks installed Python packages, and conc
 FSL is needed for brain age estimation; https://fsl.fmrib.ox.ac.uk/fsl/docs/#/install/index (NB! Install at default location). In addition, a full MATLAB installation is required because mris_compute_lgi does not support the MATLAB Compiler Runtime (MCR).
 
 AFTER installation, please modify the "paths.txt" file in the /bin folder. I have entered my personal MATLAB- and Freesurfer paths for illustration purposes only.
+If FastSurfer env fails installation, check dependencies, e.g., "pip install charset-normalizer archspec"
 
 ## Usage
 
