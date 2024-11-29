@@ -16,7 +16,9 @@ Firstly, ensure that you have Python installed on your system. For consistency a
 
 At least 16 GB of RAM or VRAM (for GPU mode) is recommended and 40 GB free space, depending on batch size. The software has been tested on Linux Mint 22 and Linux Ubuntu 20/22/24.04, with dual Intel Xeon (Single AMD Radeon pro 5100, GPU mode not supported), Intel Core i7 (Single Nvidia GTX 1080, GPU mode enabled), and AMD Ryzen Threadripper (Dual Nvidia RTX4090 SLI, GPU mode enabled) using python 3.8/3.9, the latter version being a prerequesite for quality control. 
 
-For MacOS, VMware Fusion w/ Linux Ubuntu 22.04/24.04 or Mint 22 is recommended! MacOS without virtualization is currently not supported. Temperature monitoring for CPU and GPU is currently not available in VM. The Apple Silicone (M-chips), Linux OS must support ARM (e.g., Ubuntu 25.04).   
+For MacOS, VMware Fusion w/ Linux Ubuntu 22.04/24.04 or Mint 22 is recommended! MacOS without virtualization is currently not supported. Temperature monitoring for CPU and GPU is currently not available in VM. 
+
+For Apple Silicone (M-chips), Linux OS must support ARM. A current work-around this problem is to install Ubuntu server arm64 and then add ubuntu-desktop gdm3.   
 
 Other third-party softwares prerequesites not integrated in this install are: Matlab and FSL (see part 2c, bottom line).
 
