@@ -22,6 +22,13 @@ sleep 5
 
 find "$C_HOME/Data/BIDS" -mindepth 1 -maxdepth 1 ! -name "code" -exec rm -rf {} +
 
+### DCM sanity check / Prestep conversion to uncompressed DICOMs
+for input in "$C_HOME"/INPUT/*; do
+    echo -e "[INFO]: Evaluating --> $input.."
+    python $C_HOME/bin/dcm_decomp.py -i $input #> /dev/null 2>&1
+
+done; echo [INFO]: Decompression completed!
+
 ### Anonymization
 source $C_HOME/bin/anon_script/init_anon.sh
 
@@ -121,43 +128,74 @@ source $C_HOME/bin/data_filter.sh             #    Revised - OK!!
 # Set directories
 destination_dir="$TEMP_DIR/Surf" # Destination directory
 
-mkdir -p $destination_dir/Docker_img
+mkdir -p $destination_dir/Docker_img $C_HOME/Data/BIDS/Series_description
+sd_label_dir=$C_HOME/Data/BIDS/Series_description
 
 ### Transfer T1w- and T2w-files from BIDS-folders to $destination_dir at //Surf/$Study and //Surf/Docker_img
+mkdir -p "$destination_dir/Docker_img" "$C_HOME/Data/BIDS/Series_description"
+sd_label_dir="$C_HOME/Data/BIDS/Series_description"
+
+# Loop through subjects
 for subject_folder in "$output"/*; do
     study=$(basename "$subject_folder")
-    mkdir "$destination_dir/$study"
+    mkdir -p "$destination_dir/$study"  # Ensure the directory exists
 
-    #loop over subject_dir, transferring required files
+    # Check if .heudiconv exists before proceeding
+    if [[ ! -d "$subject_folder/.heudiconv" ]]; then
+        echo "Skipping $subject_folder (no .heudiconv directory found)"
+        continue
+    fi
+
+    # Loop over .tsv files inside .heudiconv but exclude unwanted folders
+    find "$subject_folder/.heudiconv" -type f -name "dicominfo_*.tsv" | while read -r file; do
+        parent_folder=$(basename "$(dirname "$(dirname "$file")")")
+
+        # Skip specific folders
+        if [[ "$parent_folder" == "longitudinal_data" || "$parent_folder" == "cross_sectional_data" ]]; then
+            continue
+        fi
+
+        filename=$(basename "$file")
+        dest="$sd_label_dir/$filename"
+
+        # Rename if file already exists
+        if [[ -e "$dest" ]]; then
+            timestamp=$(date +"%Y%m%d_%H%M%S")
+            new_name="${filename%.tsv}_$timestamp.tsv"
+            dest="$sd_label_dir/$new_name"
+        fi
+
+        rsync -av --quiet "$file" "$dest"
+    done
+
+    # Loop over subject directories
     for subject_dir in "$subject_folder"/sub-*/ses-*; do
-        # Check if the subject directory contains an 'anat' subdirectory
-        if [ -d "$subject_dir/anat" ]; then
-            # Get a list of T1w files matching the specified criteria
-            t1w_files="$(ls "$subject_dir/anat"/*T1* 2>/dev/null | grep -E 'NC' | grep -E -v 'CE' | grep '\.nii\.gz$')"
+        if [[ -d "$subject_dir/anat" ]]; then
+            # Copy T1w files
+            t1w_files=$(find "$subject_dir/anat" -type f -name "*T1*NC*.nii.gz" ! -name "*CE*" 2>/dev/null)
+            for file in $t1w_files; do
+                cp "$file" "$destination_dir/$study"
+                cp "$file" "$destination_dir/Docker_img"
+            done
 
-            # Check if there are any T1w files before attempting to copy
-            if [ -n "$t1w_files" ]; then
-                cp -r $t1w_files "$destination_dir/$study"
-                cp -r $t1w_files "$destination_dir/Docker_img"
-            fi
+            # Copy T2w files
+            t2w_files=$(find "$subject_dir/anat" -type f -name "*T2w*flair*.nii.gz" 2>/dev/null)
+            for file in $t2w_files; do
+                cp "$file" "$destination_dir/$study"
+            done
 
-            # Get a list of T2w files matching the specified criteria
-            t2w_files="$(ls "$subject_dir/anat"/*T2w* 2>/dev/null | grep -E 'flair' | grep '\.nii\.gz$')"
-
-            # Check if there are any T2w files before attempting to copy
-            if [ -n "$t2w_files" ]; then
-                cp -r $t2w_files "$destination_dir/$study"
-            fi
-
-            echo Copying "$(basename "$t1w_files")" and "$(basename "$t2w_files")" to "$destination_dir" and //Docker_img...
-
+            echo "Copying $(basename "$file") to $destination_dir and Docker_img..."
         fi
     done
 done
 
 ### Cleanup
 rm -rf $destination_dir/longitudinal_data $destination_dir/cross_sectional_data
-sleep 2; echo Transfer completed
+sleep 2; echo -e "\nTransfer completed!\n"
+
+### Create a dicominfo_all.tsv
+cd $sd_label_dir; python $C_HOME/bin/merge_tsv.py $C_HOME/Data/BIDS/tsv_all.tsv
+echo INFO]: tsv_all.tsv located at $sd_label_dir
 
 echo T1w- and T2w-files transferred from BIDS-folders to $destination_dir
 echo -e "\nData preprocessing done""!""\n\n****************************************************************************************************\n"
