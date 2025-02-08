@@ -4,27 +4,37 @@ import time
 
 def move_file(source, destination):
     """
-    Move a file from source to destination without printing the filename.
+    Move a file from source to destination without printing the filename. If the destination file already exists,
+    add a numerical suffix to the filename to avoid overwriting.
     """
+    base_name, extension = os.path.splitext(os.path.basename(source))
+    destination_path = os.path.join(destination, os.path.basename(source))
+    
+    # Handle duplicates by adding a numerical suffix
+    counter = 1
+    while os.path.exists(destination_path):
+        destination_path = os.path.join(destination, f"{base_name}_{counter}{extension}")
+        counter += 1
+    
     try:
-        shutil.move(source, destination)
+        shutil.move(source, destination_path)
     except Exception as e:
-        print(f"Failed to move {os.path.basename(source)} to {destination}: {e}")
+        print(f"Failed to move {os.path.basename(source)} to {destination_path}: {e}")
 
-def extract_files_to_subfolder(subdir):
+def extract_files_to_parent(subdir, parent_dir):
     """
-    Move all files from sub-subdirectories to the immediate subfolder.
+    Move all files from subdirectories (including deeper ones) to the immediate parent directory.
+    If files already exist, add a numerical suffix to avoid overwriting.
     """
-    if all(os.path.isfile(os.path.join(subdir, item)) for item in os.listdir(subdir)):
-        return
-
     for root, dirs, files in os.walk(subdir, topdown=False):
         for file_name in files:
-            if file_name != '.DS_Store':
+            if file_name != '.DS_Store':  # Skip .DS_Store files (macOS)
                 file_path = os.path.join(root, file_name)
-                if os.path.isfile(file_path) and root != subdir:
-                    move_file(file_path, os.path.join(subdir, file_name))
+                if os.path.isfile(file_path) and root != parent_dir:
+                    # Move each file to the parent directory
+                    move_file(file_path, parent_dir)
 
+        # Remove empty directories after files have been moved
         for dir_name in dirs:
             dir_path = os.path.join(root, dir_name)
             if os.path.isdir(dir_path):
@@ -36,9 +46,14 @@ def remove_directory_with_retry(dir_path, retries=3, delay=2):
     """
     for _ in range(retries):
         try:
-            os.rmdir(dir_path)
-            print(f"Successfully removed {dir_path}")
-            break
+            # Remove directory only if it's empty
+            if not os.listdir(dir_path):  # Check if directory is empty
+                os.rmdir(dir_path)
+                print(f"Successfully removed empty directory: {dir_path}")
+                break
+            else:
+                print(f"Directory {dir_path} is not empty, skipping removal.")
+                break
         except OSError as e:
             if e.errno == 66:  # Directory not empty
                 print(f"Failed to remove {dir_path}: {e}. Retrying...")
@@ -47,48 +62,9 @@ def remove_directory_with_retry(dir_path, retries=3, delay=2):
                 print(f"Failed to remove {dir_path}: {e}")
                 break
 
-def remove_empty_directory_with_files(dir_path, retries=3, delay=2):
-    """
-    Attempt to remove a directory, including any files it contains.
-    """
-    for _ in range(retries):
-        try:
-            # Remove all contents
-            for item in os.listdir(dir_path):
-                item_path = os.path.join(dir_path, item)
-                if os.path.isdir(item_path):
-                    remove_empty_directory_with_files(item_path)
-                else:
-                    os.remove(item_path)
-            
-            # Remove the directory itself
-            os.rmdir(dir_path)
-            print(f"Successfully removed {dir_path}")
-            break
-        except Exception as e:
-            print(f"Failed to remove {dir_path}: {e}. Retrying...")
-            time.sleep(delay)
-
-def rename_files_in_subfolder(subdir, prefix):
-    """
-    Rename files in the subfolder to include the prefix (parent_folder_subfolder_name)
-    only if the subfolder name is a number.
-    """
-    if not subdir.split(os.sep)[-1].isdigit():
-        return
-
-    for file_name in os.listdir(subdir):
-        if file_name != '.DS_Store':
-            file_path = os.path.join(subdir, file_name)
-            if os.path.isfile(file_path):
-                new_file_name = f"{prefix}_{file_name}"
-                new_file_path = os.path.join(subdir, new_file_name)
-                os.rename(file_path, new_file_path)
-
 def process_folders(folder_path):
     """
-    Process each subfolder to extract files to the subfolder and then rename them
-    if the subfolder name is a number.
+    Process each subfolder to extract files to the parent folder.
     """
     parent_folders_to_check = []
     for study_folder in os.listdir(folder_path):
@@ -98,33 +74,7 @@ def process_folders(folder_path):
             for session_folder in os.listdir(study_folder_path):
                 session_folder_path = os.path.join(study_folder_path, session_folder)
                 if os.path.isdir(session_folder_path):
-                    extract_files_to_subfolder(session_folder_path)
-                    if session_folder.isdigit():
-                        rename_files_in_subfolder(session_folder_path, f"{study_folder}_{session_folder}")
-                        new_session_folder_name = f"{study_folder}_{session_folder}"
-                        new_session_folder_path = os.path.join(folder_path, new_session_folder_name)
-                        os.rename(session_folder_path, new_session_folder_path)
-                    else:
-                        # If the session folder name is not a number, move files up one level without renaming
-                        for item in os.listdir(session_folder_path):
-                            item_path = os.path.join(session_folder_path, item)
-                            if os.path.isfile(item_path):
-                                shutil.move(item_path, os.path.join(study_folder_path, item))
-                        remove_empty_directory_with_files(session_folder_path)
-
-def remove_empty_parent_folders(parent_folders):
-    """
-    Remove parent folders if they are empty.
-    """
-    for folder in parent_folders:
-        try:
-            os.rmdir(folder)
-            print(f"Successfully removed empty parent folder: {folder}")
-        except OSError as e:
-            if e.errno == 39:  # Directory not empty
-                print(f"Parent folder not empty, skipping removal: {folder}")
-            else:
-                print(f"Failed to remove {folder}: {e}")
+                    extract_files_to_parent(session_folder_path, study_folder_path)
 
 def main():
     folder_path = os.getcwd()  # Use the current working directory
