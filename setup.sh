@@ -77,9 +77,8 @@ cd ..
 
 git clone https://github.com/MIC-DKFZ/HD-BET
 cd HD-BET
-#pip install -e .
-pip install .
-
+git checkout ae160681324d524db3578e4135bf781f8206e146
+pip install -e .
 cd ..
 
 curl -L -o "$src_temp/greedy" https://github.com/CompImg/LST-AI/releases/download/v1.0.0/greedy
