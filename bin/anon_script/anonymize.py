@@ -1,7 +1,13 @@
 import os
 import pydicom
 import argparse
-from tqdm import tqdm  # Import tqdm for progress bar
+from tqdm import tqdm
+import sys
+import os
+
+# Redirect all output (stdout and stderr) to /dev/null
+sys.stdout = open(os.devnull, 'w')
+sys.stderr = open(os.devnull, 'w')
 
 def anonymize_dicom(input_file, output_file, study_id_value):
     try:
@@ -72,22 +78,17 @@ def anonymize_dicom_files_in_directory(input_dir, output_dir):
             input_file_path = os.path.join(root, file)
             all_files.append(input_file_path)
 
-    # Initialize progress bar
-    with tqdm(total=len(all_files), desc="Processing DICOM files") as pbar:
-        # Process each file
-        for input_file_path in all_files:
-            # Construct the corresponding output path
-            relative_path = os.path.relpath(input_file_path, input_dir)
-            output_file_path = os.path.join(output_dir, relative_path)
-            
-            # Create the necessary directories in the output path
-            os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+    # Process each file
+    for input_file_path in all_files:
+        # Construct the corresponding output path
+        relative_path = os.path.relpath(input_file_path, input_dir)
+        output_file_path = os.path.join(output_dir, relative_path)
 
-            # Try to anonymize the DICOM file with the StudyID set to the input directory name
-            anonymize_dicom(input_file_path, output_file_path, study_id_value)
-            
-            # Update progress bar
-            pbar.update(1)
+        # Create the necessary directories in the output path
+        os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+
+        # Try to anonymize the DICOM file with the StudyID set to the input directory name
+        anonymize_dicom(input_file_path, output_file_path, study_id_value)
 
 def main():
     parser = argparse.ArgumentParser(description="Anonymize DICOM files by removing specific tags and clearing others.")
