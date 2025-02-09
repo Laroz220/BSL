@@ -23,8 +23,8 @@ file_names = os.listdir(os.path.join(directory_path, 'raw'))
 # Initialize an empty list to store rows
 rows = []
 
-# Regular expression pattern to match the filenames
-pattern = re.compile(r'^sub-.*_ses-\d{2}_T1w-.*\.nii\.gz$')
+# Regular expression pattern to match only .nii.gz files
+pattern = re.compile(r'.*\.nii\.gz$')
 
 # Process each filename and create rows for the CSV
 for file_name in file_names:
