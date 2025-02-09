@@ -6,6 +6,8 @@ def create_key(template, outtype=('nii.gz',), annotation_classes=None):
     return template, outtype, annotation_classes
 
 def infotodict(seqinfo):
+
+    # For t1w-images, please add the suffix "NC", if non-contrast, or "PC" for post-contract, in order for pipeline processing to work properly
     t1w_mprage = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w-mprage_NC')
     t1w_cube = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w-cube_NC')
     t1w_space = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w-space_NC')
